@@ -16,9 +16,9 @@ The best solution to this is to run `sbt clean cleanFiles`.  This is not quite a
 
 ### IOError - could not create directory, `_global/inputStreams`
 
-(this answer is speculative - constructed from memory - edit if you have confidence that another answer is correct)
+I don't know why this happens.  I have a lot of info on the symptoms and a solution that seems to work.  Solution first - run this on your host machine (not in the container).  `rm -rf universal-application-tool-0.0.1/target/*`.  Seems scary but this is just output cache stuff.  Everything works fine once you do this.
 
-`sbt` will spew the same error repeatedly in a tight retry loop - it's trying to create an output directory structure, and it can't do that.  This error indicates that you have two `sbt` commands running at the same time in the same project.  It can be hard to find the other one, if for instance you've launched it in IntelliJ where it seems to exit but does not.  Find the shell where `sbt` is running, and type `exit` (or just find the process using `ps` and `kill` it).
+The bind mount in docker just doesn't copy subdirectories of `target/streams/`.  I can't figure out why to save my life, it makes no sense, it copies files in the `target` directory just fine, picks up changes to that directory fine.  There's no symlinks or hardlinks that it's failing to follow, as far as I can tell.  But if you delete the directory it works okay.  Google is no help - "bind mount missing subdirectory" and related searches are full of people confused about the wrong thing.  Please edit this if you figure out why - I hate mysteries!  But at least there's a fix.
 
 ## docker
 
