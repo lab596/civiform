@@ -14,6 +14,9 @@ Each section is composed of one or more **questions**. Each question, in turn, i
 * A boolean flag specifying whether or not this question is **required**
 * A **input type** specifying the type of form field(s) that will be used to gather the applicant's answer.
 
+
+### Input types
+
 The **input type** can be any of the following **primitive input types**:
 
 * Text
@@ -61,3 +64,11 @@ Some example questions could look like:
 | Description | Only enter if you are employed. |
 | Required | False |
 | Input type | Address |
+
+### Custom input types
+
+UAT admins can also create their own **custom widget** by specifying the list of **sub-inputs** it contains. They must specify the primitive input type for each sub-input. For instance, the Car widget could contain Make [Text], Model [Text], Year [Integer], and Color [Dropdown]. This widget could then be used for questions like, "What car do you currently drive?" or "What car did you drive 3 years ago?".
+
+### Repeated questions
+
+A set of questions within a section may be marked as **repeated**.
