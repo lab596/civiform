@@ -14,6 +14,16 @@ The best solution to this is to run `sbt clean cleanFiles`.  This is not quite a
 
 ## sbt
 
+### sbt is behaving weird.
+
+Examples: it's not running tests, or it's telling you there are compiler warnings even though there aren't.
+
+SBT has a lot of caching built in, and it doesn't always clean itself up quite right.  There is no single way to clean up the entire cache.
+
+Try `bin/sbt clean`, and if that doesn't work you might try `rm -rf universal-application-tool-0.0.1/target/ universal-application-tool-0.0.1/project/project universal-application-tool-0.0.1/project/target universal-application-tool-0.0.1/logs/`.
+
+You might also try `docker-compose down --remove-orphans` or `docker system prune`, if you suspect the problem might be a rogue docker container locking the sbt directory.
+
 ### IOError - could not create directory, `_global/inputStreams`
 
 I don't know why this happens.  I have a lot of info on the symptoms and a solution that seems to work.  Solution first - run this on your host machine (not in the container).  `rm -rf universal-application-tool-0.0.1/target/*`.  Seems scary but this is just output cache stuff.  Everything works fine once you do this.
