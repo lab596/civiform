@@ -38,14 +38,13 @@ If the database is in an inconsistent state, it is usually easier to trash the p
 
 If we want to undo a schema change, we can create new evolution scripts that change the schema or simply remove existing scripts that create the schema we don't want. If we choose the latter, we likely need to manually reconcile existing database state or we have to start a new one.
 
-# Run tests
+## Run tests
 
 To run the tests, run `bin/run-test`. This include all tests under `test/`.
 
+# Development standards
 
-## Development standards
-
-### Client-server concerns
+## Client-server concerns
 
 The client should be as simple as is practical to implement the desired user experience.
 
@@ -55,13 +54,13 @@ The client should be as simple as is practical to implement the desired user exp
 
 For example, enable/disable logic in forms can be specified server-side with HTML [data attributes](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes) then implemented with generic client-side JS that responds to DOM events relevant to the attribute-specified elements. [Here's a simple example](https://jsfiddle.net/c8g6y0ru/1/).
 
-### Java code
+## Java code
 
 Java code should conform to the Google Java [styleguide](https://google.github.io/styleguide/javaguide.html). The project makes use of a linter and autoformatter for Java to help with this, just run `bin/fmt` and your code should be automatically formatted.
 
 Prefer using immutable collection types provided by [Guava](https://github.com/google/guava) ([API docs](https://guava.dev/releases/snapshot/api/docs/)) over the Java standard library's mutable collections unless impractical. Include a comment justifying the use of a mutable collection if you use one.
 
-#### Async request handling
+### Async request handling
 
 __Summary: Controllers handling requests from applicants or trusted intermediaries should be implemented asynchronously. All other controllers should be implemented synchronously.__
 
@@ -69,7 +68,7 @@ __Summary: Controllers handling requests from applicants or trusted intermediari
 
 We anticipate relatively low [QPS](https://en.wikipedia.org/wiki/Queries_per_second) for deployments of UAT. However, if a large jurisdiction uses UAT, QPS from applicants could get high enough to present scaling concerns. To balance the needs of development velocity and future scalability, we opt to optimize the applicant and intermediary code paths for scale while leaving the code paths that are unlikely to ever see significantly high QPS implemented synchronously.
 
-#### Separation of concerns
+### Separation of concerns
 
 See [wikipedia definition](https://en.wikipedia.org/wiki/Separation_of_concerns).
 
@@ -79,11 +78,11 @@ Code in **Play controllers** should be limited to brokering interaction between 
 
 Code in **ebean models** should be limited to brokering interaction between the server's business logic and the database. Code in models should never directly implement business logic concerns.
 
-### Routing and controller methods
+## Routing and controller methods
 
 APIs should follow [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) when possible with the appropriate HTTP verb. Routing should be [resource-oriented](https://www.oreilly.com/library/view/restful-web-services/9780596529260/ch04.html) ([relevant AIP](https://google.aip.dev/121)). Path names should be [kebab-case](https://en.wikipedia.org/wiki/Letter_case#Special_case_styles).
 
-#### HTML routing convention
+### HTML routing convention
 
 For a resource called "programs" that implements the standard actions via HTML requests the routes would be:
 
@@ -97,7 +96,7 @@ For a resource called "programs" that implements the standard actions via HTML r
 |POST     |/programs/:id        |ProgramsController#update |Update an existing program                                                                                                                               |
 |POST     |/programs/:id/delete |ProgramsController#destroy|Delete an existing program, probably redirect to the #index method                                                                                       |
 
-#### API routing convention
+### API routing convention
 
 For the same resource accessed via JSON API the routes should be under the "/api" namespace and naturally do not require form-serving endpoints:
 
@@ -109,7 +108,7 @@ For the same resource accessed via JSON API the routes should be under the "/api
 |PATCH/PUT|/api/programs/:id     |ProgramsApiController#update |Update an existing program                                             |
 |DELETE   |/api/programs/:id     |ProgramsApiController#destroy|Delete an existing program                                             |
 
-### Testing
+## Testing
 
 We aim for complete unit test coverage of all execution paths in the system. If you submit code that is infeasible or impractical to get full test coverage for, consider refactoring. If you would like to make an exception, include a clear explanation for why in your PR description.
 
@@ -119,7 +118,7 @@ All major user-facing features should be covered by a functional browser test.
 
 Tests that require a play application should either use `extends play.test.WithApplication` or `extends repository.WithPostgresContainer`, opting for the latter if a database is required. By default, using `extends play.test.WithApplication` will produce an application with a binding to an in-memory postgres database that is incompatible with everything and is pretty much useless.
 
-#### Controller tests
+### Controller tests
 
 Controller tests should test the integration of business logic behind each HTTP endpoint. Most controller tests should likely extend `WithResettingPostgresContainer` which provides a real database. Controllers should contain very little if any conditional logic and delegate business logic and network interactions (database, auth service, file services, etc) to service classes.
 
@@ -129,7 +128,7 @@ Controller tests should test the integration of business logic behind each HTTP 
 
 See [AdminProgramControllerTest.java ](https://github.com/seattle-uat/universal-application-tool/pull/167/files#diff-643f94cff692c6554cd33c8e4c542b9f2bc65b4756bf027a623ce8f203d28677) for a good example of a controller test. See the [Play documentation](https://www.playframework.com/documentation/2.8.x/JavaTest#Unit-testing-controllers) for information on framework-provided testing tools.
 
-#### View tests
+### View tests
 
 [`BaseHtmlView`](https://github.com/seattle-uat/universal-application-tool/blob/main/universal-application-tool-0.0.1/app/views/BaseHtmlView.java) provides a number of HTML tag producing methods, for example [`Tag submitButton(String textContents)`](https://github.com/seattle-uat/universal-application-tool/blob/main/universal-application-tool-0.0.1/app/views/BaseHtmlView.java#L33). These methods tend to be fairly simple, with unit tests that are brittle to small, inconsequential changes. Whether or not to test these types of methods is at the discretion of the implementer and code reviewer(s).
 
