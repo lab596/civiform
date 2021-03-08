@@ -1,3 +1,20 @@
+- [Technology overview](#technology-overview)
+  * [Views](#views)
+- [Running a local server](#running-a-local-server)
+  * [Dev database](#dev-database)
+  * [Run tests](#run-tests)
+- [Development standards](#development-standards)
+  * [Client-server concerns](#client-server-concerns)
+  * [Java code](#java-code)
+    + [Async request handling](#async-request-handling)
+    + [Separation of concerns](#separation-of-concerns)
+  * [Routing and controller methods](#routing-and-controller-methods)
+    + [HTML routing convention](#html-routing-convention)
+    + [API routing convention](#api-routing-convention)
+  * [Testing](#testing)
+    + [Controller tests](#controller-tests)
+    + [View tests](#view-tests)
+
 # Technology overview
 
 The UAT is built on [Play Framework](https://www.playframework.com/) in Java, and backed by a [PostgreSQL](https://www.postgresql.org/) database.
