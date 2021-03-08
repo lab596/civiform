@@ -1,6 +1,6 @@
 # Contributing
 
-First, please read our [code of conduct](code_of_conduct.md).
+First, please read our [code of conduct](https://github.com/seattle-uat/universal-application-tool/blob/main/code_of_conduct.md).
 
 ## Issue tracking
 
