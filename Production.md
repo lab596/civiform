@@ -1,0 +1,1 @@
+Our production infrastructure is managed declaratively by cloudformation. To deploy, `run bin/deploy-prod`. You will need the AWS CLI - `brew install awscli`.
