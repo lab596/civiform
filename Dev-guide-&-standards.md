@@ -137,7 +137,7 @@ Tests that require a play application should either use `extends play.test.WithA
 
 ### Controller tests
 
-Controller tests should test the integration of business logic behind each HTTP endpoint. Most controller tests should likely extend `WithResettingPostgresContainer` which provides a real database. Controllers should contain very little if any conditional logic and delegate business logic and network interactions (database, auth service, file services, etc) to service classes.
+Controller tests should test the integration of business logic behind each HTTP endpoint. Most controller tests should likely extend `WithPostgresContainer` which provides a real database. Controllers should contain very little if any conditional logic and delegate business logic and network interactions (database, auth service, file services, etc) to service classes.
 
 * Assertions should be on the method's `Result` rather than the rendered HTML
 * Assertions may also be on the database state after the controller method has completed
