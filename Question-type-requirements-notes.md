@@ -1,7 +1,5 @@
-UAT Question Type Requirements
+# UAT Question Type Requirements: General comments
 
-General comments
-================
 All question types have the following configuration options:
 
 -   Title (text shown to the user)
