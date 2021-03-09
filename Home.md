@@ -2,6 +2,8 @@ Welcome to the universal-application-tool wiki!
 
 Please find pages for individual topics in the right nav ➡️.
 
+We also have a [Google Drive folder](https://drive.google.com/drive/folders/1_uVkq1uOD14p19DvQzbXs2s0XhSOQjgF?usp=sharing) for other types of documents and files.
+
 * [Technology overview](https://github.com/seattle-uat/universal-application-tool/wiki/Dev-guide-&-standards#technology-overview)
   * [Views](https://github.com/seattle-uat/universal-application-tool/wiki/Dev-guide-&-standards#views)
 * [Running a local server](https://github.com/seattle-uat/universal-application-tool/wiki/Dev-guide-&-standards#running-a-local-server)
