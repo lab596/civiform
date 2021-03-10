@@ -50,10 +50,14 @@ As the database is configured today, it does not persist data after it terminate
 If you wish to create new table(s) or change schema, please add the SQL(s) under `conf/evolutions/default`.
 You will need to create corresponding EBean model(s) under `app/models`, and potentially a repository under `app/repository` for how you'd like to interact with the table(s).
 
-In dev mode, whenever you first start the app, Play confirms with you if the database is up-to-date and whether you want to apply the evolution scrtips to set up schema or if the database is out-of-sync and needs manual resolution.
-If the database is in an inconsistent state, it is usually easier to trash the problem database and start a new one in dev mode.
+In dev mode, Play automatically applies the evolution scripts to set up the schema, including making destructive changes if the database is out-of-sync.  You'll be notified if it needs manual resolution.
+If the database is in an inconsistent state in dev mode, it is usually easier to trash the problem database and start a new one.
 
 If we want to undo a schema change, we can create new evolution scripts that change the schema or simply remove existing scripts that create the schema we don't want. If we choose the latter, we likely need to manually reconcile existing database state or we have to start a new one.
+
+### Dev integration with IDCS and AD
+
+Integration with identity providers requires some secrets which we can't disseminate to everyone.  If you work for google.org and are able to access AWS, you can run `bin/refresh-secrets` after authenticating to AWS using one of the methods on the AWS splash page.  From there, all subsequent runs of `bin/run-dev` will integrate cleanly with AD and IDCS.  If that's not possible, you should use the OIDC provider that we use for unit tests.  See `test/app/SecurityBrowserTest.java` for examples of how to interact with that.
 
 ## Run tests
 
