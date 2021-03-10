@@ -4,7 +4,7 @@ First, please read our [code of conduct](https://github.com/seattle-uat/universa
 
 Development tasks are managed in the [GitHub issues](https://github.com/seattle-uat/universal-application-tool/issues) for this repository. When you begin working on an issue, please self-assign or comment on it indicating you're beginning work to avoid duplicate effort.
 
-If you're just getting started, check out issues labeled with [Good First Issue](https://github.com/seattle-uat/universal-application-tool/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22). Also check out issues in the [next milestone](https://github.com/seattle-uat/universal-application-tool/milestones) so you can work on the highest-priority tasks.
+If you're just getting started, check out issues labeled with [Good First Issue](https://github.com/seattle-uat/universal-application-tool/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22). Also check out issues in the [next milestone](https://github.com/seattle-uat/universal-application-tool/milestones?direction=asc&sort=due_date&state=open) so you can work on the highest-priority tasks.
 
 ## Pull requests
 
