@@ -1,4 +1,23 @@
-First, please read our [code of conduct](https://github.com/seattle-uat/universal-application-tool/blob/main/code_of_conduct.md).
+**First, please read our [code of conduct](https://github.com/seattle-uat/universal-application-tool/blob/main/code_of_conduct.md).**
+
+* [Getting started](#getting-started)
+  * [A note on IDEs](#a-note-on-ides)
+* [Issue tracking](#issue-tracking)
+* [Pull requests](#pull-requests)
+  * [Approval and merging](#approval-and-merging)
+
+## Getting started
+
+1. Download [Docker Desktop](https://www.docker.com/get-started) if you don't already have it
+1. [Clone](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) this repository
+1. In your terminal, navigate to the `universal-application-tool` directory you just created by cloning
+1. Run `docker build -t uat .` to build the Docker container (may take a few minutes)
+1. Run `bin/run-dev` to confirm you can bring up the server (this also enables hot reloading)
+1. Navigate to http://localhost:9000 to view the running app
+
+### A note on IDEs
+
+You may use whichever IDE you prefer, though DO NOT use the IDE's built-in sbt (Scala Build Tool) shell if it has one. Instead, run `bin/sbt` to bring up an sbt shell inside the Docker container. The sbt shell allows you to compile, run tests, and run any other sbt commands you may need
 
 ## Issue tracking
 
