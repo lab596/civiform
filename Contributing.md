@@ -1,4 +1,4 @@
-**First, please read our [code of conduct](https://github.com/seattle-uat/universal-application-tool/blob/main/code_of_conduct.md).**
+**First, please read our [code of conduct](https://github.com/seattle-uat/civiform/blob/main/code_of_conduct.md).**
 
 * [Getting started](#getting-started)
   * [A note on IDEs](#a-note-on-ides)
@@ -10,7 +10,7 @@
 
 1. Download [Docker Desktop](https://www.docker.com/get-started) if you don't already have it
 1. [Clone](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) this repository
-1. In your terminal, navigate to the `universal-application-tool` directory you just created by cloning
+1. In your terminal, navigate to the `civiform` directory you just created by cloning
 1. Run `docker build -t uat .` to build the Docker container (may take a few minutes)
 1. Run `bin/run-dev` to confirm you can bring up the server (this also enables hot reloading)
 1. Navigate to http://localhost:9000 to view the running app
@@ -21,9 +21,9 @@ You may use whichever IDE you prefer, though DO NOT use the IDE's built-in sbt (
 
 ## Issue tracking
 
-Development tasks are managed in the [GitHub issues](https://github.com/seattle-uat/universal-application-tool/issues) for this repository. When you begin working on an issue, please self-assign or comment on it indicating you're beginning work to avoid duplicate effort.
+Development tasks are managed in the [GitHub issues](https://github.com/seattle-uat/civiform/issues) for this repository. When you begin working on an issue, please self-assign or comment on it indicating you're beginning work to avoid duplicate effort.
 
-If you're just getting started, check out issues labeled with [Good First Issue](https://github.com/seattle-uat/universal-application-tool/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22). Also check out issues in the [next milestone](https://github.com/seattle-uat/universal-application-tool/milestones?direction=asc&sort=due_date&state=open) so you can work on the highest-priority tasks.
+If you're just getting started, check out issues labeled with [Good First Issue](https://github.com/seattle-uat/civiform/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22). Also check out issues in the [next milestone](https://github.com/seattle-uat/civiform/milestones?direction=asc&sort=due_date&state=open) so you can work on the highest-priority tasks.
 
 ## Pull requests
 
