@@ -1,4 +1,4 @@
-# UAT Question Type Requirements: General comments
+# CiviForm Question Type Requirements: General comments
 
 All question types have the following configuration options:
 
