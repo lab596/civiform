@@ -41,3 +41,8 @@ The tests run a postgres docker container for full integration testing.  We used
 Instead, we cheat a little.  The docker client communicates with the docker daemon using a unix socket located at `/var/run/docker.sock`.  So, we just mount the host machine's `/var/run/docker.sock` inside the container's `/var/run`, the container's docker client communicates with the host system's docker daemon, and everything works fine.  Add the magic string `-v /var/run/docker.sock:/var/run/docker.sock` to the `docker run` invocation.
 
 If you find yourself needing to do this during a `docker build` command - for instance because you'd like to run unit tests during container build, as we used to be able to do - you're not likely to succeed and I'd recommend finding another way to do what you need to do.  Volume mounts (which allow this end-running of docker-in-docker) are not available at container build time.
+
+## auth
+
+### Test `app.SecurityBrowserTest.basicOidcLogin` failed
+The error message says expecting `"username@example.com"` to be contained in the html content. This is likely you have a stale `oidc-provider` docker image. Simply run `docker pull public.ecr.aws/t1q6b4h2/oidc-provider:latest` to get the latest image and try again.
