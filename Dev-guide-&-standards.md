@@ -23,12 +23,12 @@ The UAT is built on [Play Framework](https://www.playframework.com/) in Java, an
 
 Instead of the default templating language for Play (Twirl), UAT uses the [J2Html](https://j2html.com/) Java library to render HTML.
 
-All view classes should extend [`BaseHtmlView`](https://github.com/seattle-uat/universal-application-tool/blob/main/universal-application-tool-0.0.1/app/views/BaseHtmlView.java), which has some helpful common tag helper methods. Its `makeCsrfTokenInputTag` must be added to all UAT forms.
+All view classes should extend [`BaseHtmlView`](https://github.com/seattle-uat/civiform/blob/main/universal-application-tool-0.0.1/app/views/BaseHtmlView.java), which has some helpful common tag helper methods. Its `makeCsrfTokenInputTag` must be added to all UAT forms.
 
-[`ViewUtils`](https://github.com/seattle-uat/universal-application-tool/blob/main/universal-application-tool-0.0.1/app/views/ViewUtils.java) is a utility class for accessing stateful view dependencies.
+[`ViewUtils`](https://github.com/seattle-uat/civiform/blob/main/universal-application-tool-0.0.1/app/views/ViewUtils.java) is a utility class for accessing stateful view dependencies.
 
-See [`J2HtmlDemoController`](https://github.com/seattle-uat/universal-application-tool/blob/main/universal-application-tool-0.0.1/app/controllers/J2HtmlDemoController.java
-) and [`J2HtmlDemo`](https://github.com/seattle-uat/universal-application-tool/blob/main/universal-application-tool-0.0.1/app/views/J2HtmlDemo.java) for a working example.
+See [`J2HtmlDemoController`](https://github.com/seattle-uat/civiform/blob/main/universal-application-tool-0.0.1/app/controllers/J2HtmlDemoController.java
+) and [`J2HtmlDemo`](https://github.com/seattle-uat/civiform/blob/main/universal-application-tool-0.0.1/app/views/J2HtmlDemo.java) for a working example.
 
 
 # Running a local server
@@ -147,11 +147,11 @@ Controller tests should test the integration of business logic behind each HTTP 
 * Assertions may also be on the database state after the controller method has completed
 * Should not rely heavily on mocking
 
-See [AdminProgramControllerTest.java ](https://github.com/seattle-uat/universal-application-tool/pull/167/files#diff-643f94cff692c6554cd33c8e4c542b9f2bc65b4756bf027a623ce8f203d28677) for a good example of a controller test. See the [Play documentation](https://www.playframework.com/documentation/2.8.x/JavaTest#Unit-testing-controllers) for information on framework-provided testing tools.
+See [AdminProgramControllerTest.java ](https://github.com/seattle-uat/civiform/pull/167/files#diff-643f94cff692c6554cd33c8e4c542b9f2bc65b4756bf027a623ce8f203d28677) for a good example of a controller test. See the [Play documentation](https://www.playframework.com/documentation/2.8.x/JavaTest#Unit-testing-controllers) for information on framework-provided testing tools.
 
 ### View tests
 
-[`BaseHtmlView`](https://github.com/seattle-uat/universal-application-tool/blob/main/universal-application-tool-0.0.1/app/views/BaseHtmlView.java) provides a number of HTML tag producing methods, for example [`Tag submitButton(String textContents)`](https://github.com/seattle-uat/universal-application-tool/blob/main/universal-application-tool-0.0.1/app/views/BaseHtmlView.java#L33). These methods tend to be fairly simple, with unit tests that are brittle to small, inconsequential changes. Whether or not to test these types of methods is at the discretion of the implementer and code reviewer(s).
+[`BaseHtmlView`](https://github.com/seattle-uat/civiform/blob/main/universal-application-tool-0.0.1/app/views/BaseHtmlView.java) provides a number of HTML tag producing methods, for example [`Tag submitButton(String textContents)`](https://github.com/seattle-uat/civiform/blob/main/universal-application-tool-0.0.1/app/views/BaseHtmlView.java#L33). These methods tend to be fairly simple, with unit tests that are brittle to small, inconsequential changes. Whether or not to test these types of methods is at the discretion of the implementer and code reviewer(s).
 
 View classes that render a complete page should not be unit tested, but instead should have corresponding browser test(s) that asserts the key interactions for a user on that page.
 
