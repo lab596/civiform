@@ -20,3 +20,4 @@ We also have a [Google Drive folder](https://drive.google.com/drive/folders/1_uV
   * [Testing](https://github.com/seattle-uat/civiform/wiki/Dev-guide-&-standards#testing)
     * [Controller tests](https://github.com/seattle-uat/civiform/wiki/Dev-guide-&-standards#controller-tests)
     * [View tests](https://github.com/seattle-uat/civiform/wiki/Dev-guide-&-standards#view-tests)
+* [Weekly Demo Days Videos](https://github.com/seattle-uat/civiform/wiki/Weekly-Demo-Days)
