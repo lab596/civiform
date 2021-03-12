@@ -11,7 +11,6 @@
 1. Download [Docker Desktop](https://www.docker.com/get-started) if you don't already have it
 1. [Clone](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) this repository
 1. In your terminal, navigate to the `civiform` directory you just created by cloning
-1. Run `docker build -t uat .` to build the Docker container (may take a few minutes)
 1. Run `bin/run-dev` to confirm you can bring up the server (this also enables hot reloading)
 1. Navigate to http://localhost:9000 to view the running app
 
