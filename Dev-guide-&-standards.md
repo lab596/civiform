@@ -85,6 +85,8 @@ __Summary: Controllers handling requests from applicants or trusted intermediari
 
 We anticipate relatively low [QPS](https://en.wikipedia.org/wiki/Queries_per_second) for deployments of CiviForm. However, if a large jurisdiction uses CiviForm, QPS from applicants could get high enough to present scaling concerns. To balance the needs of development velocity and future scalability, we opt to optimize the applicant and intermediary code paths for scale while leaving the code paths that are unlikely to ever see significantly high QPS implemented synchronously.
 
+Exception handling in asynchronous execution deserves a special mention as `CompletionException` is unchecked and can be easily missed. We should always explicitly catch `CompletionException` when joining a future in a synchronous context. When returning `CompletionStage<Result>` to users, we should provide exception handling through `CompletableFuture#exceptionally` API.
+
 ### Separation of concerns
 
 See [wikipedia definition](https://en.wikipedia.org/wiki/Separation_of_concerns).
