@@ -48,7 +48,7 @@ You will need to create or update corresponding EBean model(s) under `app/models
 In dev mode, Play automatically applies the evolution scripts to set up the schema, including making destructive changes if the database is out-of-sync.  You'll be notified if it needs manual resolution.
 If the database is in an inconsistent state in dev mode, it is usually easier to trash the problem database and start a new one.
 
-If we want to undo a schema change, we create new evolution scripts that modify the schema or simply remove existing scripts that create the schema we don't want.
+If we want to undo a schema change, we create new evolution scripts that modify the schema.
 
 ### Dev integration with IDCS and AD
 
