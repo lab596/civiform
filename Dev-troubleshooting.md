@@ -14,7 +14,7 @@ The best solution to this is to run `sbt clean cleanFiles`.  This is not quite a
 
 ## sbt
 
-### sbt is behaving weird.
+### sbt is behaving weird
 
 Examples: it's not running tests, or it's telling you there are compiler warnings even though there aren't.
 
