@@ -33,8 +33,6 @@ See [`J2HtmlDemoController`](https://github.com/seattle-uat/civiform/blob/main/u
 
 # Running a local server
 
-To build the container that runs the app, type `docker build -t uat .`  Running this takes ~3 minutes, but it bakes in most of the dependencies you will need to download, so if you make a significant change to the dependencies you may want to re-build.
-
 To run the application, run `bin/run-dev`, which uses `docker-compose` (see `docker-compose.yaml`).
 This enables java and javascript hot-reloading - when you modify most files, the server will recompile and restart.  This is pretty time-consuming on first page load, but after that, it's not so bad.
 After this, you can access the server at localhost:9000.
