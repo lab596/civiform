@@ -39,19 +39,16 @@ After this, you can access the server at localhost:9000.
 
 ## Dev database
 
-Whenever a new database container is created, it is empty, i.e. it is not linked to any external storage.
-Note if you restart a paused container, you could see the change(s) applied from last session.
-You can obtain a fresh container by removing the existing one on docker dashboard.
-
-As the database is configured today, it does not persist data after it terminates, but this can be changed.
+Dev database container is not linked to any external storage so if you delete the container, you will lose all data previously persisted.
+Note if you restart a paused container, you could still see the change(s) applied from previous session(s).
 
 If you wish to create new table(s) or change schema, please add the SQL(s) under `conf/evolutions/default`.
-You will need to create corresponding EBean model(s) under `app/models`, and potentially a repository under `app/repository` for how you'd like to interact with the table(s).
+You will need to create or update corresponding EBean model(s) under `app/models`, and potentially one or more repositories under `app/repository` for how you'd like to interact with the table(s).
 
 In dev mode, Play automatically applies the evolution scripts to set up the schema, including making destructive changes if the database is out-of-sync.  You'll be notified if it needs manual resolution.
 If the database is in an inconsistent state in dev mode, it is usually easier to trash the problem database and start a new one.
 
-If we want to undo a schema change, we can create new evolution scripts that change the schema or simply remove existing scripts that create the schema we don't want. If we choose the latter, we likely need to manually reconcile existing database state or we have to start a new one.
+If we want to undo a schema change, we create new evolution scripts that modify the schema or simply remove existing scripts that create the schema we don't want.
 
 ### Dev integration with IDCS and AD
 
