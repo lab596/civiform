@@ -2,6 +2,7 @@
   * [Views](#views)
 - [Running a local server](#running-a-local-server)
   * [Dev database](#dev-database)
+  * [Dev integration with IDCS and AD](#dev-integration-with-idcs-and-ad)
   * [Run tests](#run-tests)
 - [Development standards](#development-standards)
   * [Client-server concerns](#client-server-concerns)
