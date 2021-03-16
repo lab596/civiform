@@ -1,5 +1,7 @@
 **First, please read our [code of conduct](https://github.com/seattle-uat/civiform/blob/main/code_of_conduct.md).**
 
+**Second, we highly recommend joining [our Slack workgroup](https://join.slack.com/t/civiform/shared_invite/zt-niap7ys1-RAICICUpDJfjpizjyjBr7Q) if you are interested in contributing. Slack makes for much quicker and easier communication than purely relying on GitHub issues.**
+
 * [Getting started](#getting-started)
   * [A note on IDEs](#a-note-on-ides)
 * [Issue tracking](#issue-tracking)
