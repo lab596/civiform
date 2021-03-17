@@ -7,6 +7,7 @@
 * [Issue tracking](#issue-tracking)
 * [Pull requests](#pull-requests)
   * [Approval and merging](#approval-and-merging)
+* [Long-term contributions](#long-term-contributions)
 
 ## Getting started
 
@@ -38,3 +39,15 @@ It's easy for the intention of code review comments to be unclear or get misinte
 Reviewers should grant approval if they do not feel additional review is necessary before merging. This does not necessarily mean no more changes are required before merging, but that any further changes are expected to be minor enough to not require review.
 
 If the pull request does not require additional changes, the reviewer should merge it immediately after approving. Otherwise, once they have addressed all comments marked `(blocking)` or `nit`, the pull request author should either merge if able or re-request review and merging from a maintainer if not. Authors are encouraged to at least reply to `(non-blocking)` and `(if-minor)` comments if they do not address them with code changes.
+
+## Long-term contributions
+
+Interested in contributing on a more regular basis? Awesome! Please see the following to get you up to speed on the project:
+
+1. Read the [code of conduct](https://github.com/seattle-uat/civiform/blob/main/code_of_conduct.md)
+1. Join our [Slack workgroup](https://join.slack.com/t/civiform/shared_invite/zt-niap7ys1-RAICICUpDJfjpizjyjBr7Q)
+1. Check out the [Google Drive](https://drive.google.com/drive/folders/1_uVkq1uOD14p19DvQzbXs2s0XhSOQjgF?usp=sharing) containing our design docs
+1. If you are a technical contributor:
+   1. Read through our [dev guide & standards](https://github.com/seattle-uat/civiform/wiki/Dev-guide-&-standards)
+   1. Work on at least one issue tagged with [`good first issue`](https://github.com/seattle-uat/civiform/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22) before moving to others - feel free to ask for task recommendations in Slack
+   1. Pair program with one of the project's main engineers - reach out on Slack, we're happy to help!
