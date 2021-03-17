@@ -7,7 +7,7 @@
 * [Issue tracking](#issue-tracking)
 * [Pull requests](#pull-requests)
   * [Approval and merging](#approval-and-merging)
-* [Long-term contributions](#long-term-contributions)
+* [Getting up to speed](#getting-up-to-speed)
 
 ## Getting started
 
@@ -40,9 +40,9 @@ Reviewers should grant approval if they do not feel additional review is necessa
 
 If the pull request does not require additional changes, the reviewer should merge it immediately after approving. Otherwise, once they have addressed all comments marked `(blocking)` or `nit`, the pull request author should either merge if able or re-request review and merging from a maintainer if not. Authors are encouraged to at least reply to `(non-blocking)` and `(if-minor)` comments if they do not address them with code changes.
 
-## Long-term contributions
+## Getting up to speed
 
-Interested in contributing on a more regular basis? Awesome! Please see the following to get you up to speed on the project:
+Want to get up to speed on this project? Awesome! Please see the following:
 
 1. Read the [code of conduct](https://github.com/seattle-uat/civiform/blob/main/code_of_conduct.md)
 1. Join our [Slack workgroup](https://join.slack.com/t/civiform/shared_invite/zt-niap7ys1-RAICICUpDJfjpizjyjBr7Q)
