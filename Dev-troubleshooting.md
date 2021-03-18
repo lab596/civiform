@@ -34,7 +34,7 @@ The bind mount in docker just doesn't copy subdirectories of `target/streams/`. 
 
 ### I cannot download the latest dev docker image
 
-`bin/run-dev` pulls the latest dev image from the public registry. If for any reason, you cannot download the image, you can build it yourself locally. To build the container that runs the app, type `docker build -t uat .` Running this takes ~5 minutes, but it bakes in most of the dependencies you will need to download, so if you make a significant change to the dependencies you may want to re-build. Once the image is built, set environment variable `USE_LOCAL_UAT=1` so that `bin/run-dev` will use the image you just built.
+`bin/run-dev` pulls the latest dev image from the public registry. If for any reason, you cannot download the image, you can build it yourself locally. To build the container that runs the app, type `docker build -t civiform .` Running this takes ~5 minutes, but it bakes in most of the dependencies you will need to download, so if you make a significant change to the dependencies you may want to re-build. Once the image is built, set environment variable `USE_LOCAL_CIVIFORM=1` so that `bin/run-dev` will use the image you just built.
 
 ### The docker container is not picking up my changes
 The docker container no longer requires the volume mount, so it could be that you ran the container without the volume mapping.  Try adding `-v $PWD/universal-application-tool-0.0.1:/usr/src/universal-application-tool-0.0.1`.  If you're running with `docker-compose` or `bin/run-dev`, check that you're running the command from the correct directory (the root of the git repo, one directory above the `build.sbt` file).
