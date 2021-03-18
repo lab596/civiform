@@ -6,11 +6,11 @@ This is a collection of docs, links and design resources for UX as it relates to
 + Sprint summary (contains core users, CUJs and 3 prototypes): [tiny.cc/cvf-sprint-recap](tiny.cc/cvf-sprint-recap)
 
 
-## UX resources
+## Resources
 + Wireframing kit/sample sketch file [link↗](https://drive.google.com/file/d/1Z30VjV3D0UAh3Ep1B-sF58U8HVxtqTXg/view)
 + UX Design starter [tasks↗](https://docs.google.com/presentation/d/1bChSlWQAjyejyBdQh_jfvXEuqVPQ68AsKWFHB1DAvx0/edit#slide=id.gc75122569a_0_1564)
 
-## UX contributions
+## Contributing
 + Use the channel `product-ux` on the team slack for UX discussion & updates.
 + Miro [tiny.cc/cvf-flow](tiny.cc/cvf-flow) is our main interface for design output and collaboration (comments, mockups etc.). Use the cvf-flow project to create boards, add screenshots/images/links to mockups/prototypes and for comments. Anything that can be translated here through a screenshot should, but if you link out to a prototype or mockup, please make sure it's publicly accessible.
 + Tasks are listed as Github under the UX label [here](https://github.com/seattle-uat/civiform/issues?q=is%3Aopen+is%3Aissue+label%3AUX)
