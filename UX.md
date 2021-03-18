@@ -12,7 +12,7 @@ This is a collection of docs, links and design resources for UX as it relates to
 
 ## Contributing
 + Use the channel `product-ux` on the team slack for UX discussion & updates.
-+ Miro [tiny.cc/cvf-flow](tiny.cc/cvf-flow) is our main interface for design output and collaboration (comments, mockups etc.). Use the cvf-flow project to create boards, add screenshots/images/links to mockups/prototypes and for comments. Anything that can be translated here through a screenshot should, but if you link out to a prototype or mockup, please make sure it's publicly accessible.
++ Miro: [tiny.cc/cvf-flow](tiny.cc/cvf-flow) is our main interface for design output and collaboration (comments, mockups etc.). Use the cvf-flow project to create boards, add screenshots/images/links to mockups/prototypes and for comments. Anything that can be translated here through a screenshot should, but if you link out to a prototype or mockup, please make sure it's publicly accessible.
 + Tasks are listed as Github under the UX label [here](https://github.com/seattle-uat/civiform/issues?q=is%3Aopen+is%3Aissue+label%3AUX)
 + There's a `Design & UX` Folder in the team [Google Drive](https://github.com/seattle-uat/civiform/wiki/Google-Drive) that can be used to store any source assets. 
 
