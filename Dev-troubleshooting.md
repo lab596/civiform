@@ -50,5 +50,5 @@ If you find yourself needing to do this during a `docker build` command - for in
 
 ## auth
 
-### Test `app.SecurityBrowserTest.basicOidcLogin` failed
+### Test `app.SecurityBrowserTest.basicOidcLogin` or Test `app.SecurityBrowserTest.mergeLogins` failed
 The error message says expecting `"username@example.com"` to be contained in the html content. This is likely you have a stale `oidc-provider` docker image. Simply run `docker pull public.ecr.aws/t1q6b4h2/oidc-provider:latest` to get the latest image and try again.
