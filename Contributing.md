@@ -1,6 +1,6 @@
 **First, please read our [code of conduct](https://github.com/seattle-uat/civiform/blob/main/code_of_conduct.md).**
 
-**Second, we highly recommend joining [our Slack workgroup](https://join.slack.com/t/civiform/shared_invite/zt-niap7ys1-RAICICUpDJfjpizjyjBr7Q) if you are interested in contributing. Slack makes for much quicker and easier communication than purely relying on GitHub issues.**
+**Second, we highly recommend joining our [Slack workgroup](https://join.slack.com/t/civiform/shared_invite/zt-niap7ys1-RAICICUpDJfjpizjyjBr7Q) if you are interested in contributing. Slack makes for much quicker and easier communication than purely relying on GitHub issues.**
 
 * [Getting started](#getting-started)
   * [A note on IDEs](#a-note-on-ides)
@@ -51,3 +51,4 @@ Want to get up to speed on this project? Awesome! Please see the following:
    1. Read through our [dev guide & standards](https://github.com/seattle-uat/civiform/wiki/Dev-guide-&-standards)
    1. Work on at least one issue tagged with [`good first issue`](https://github.com/seattle-uat/civiform/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22) before moving to others - feel free to ask for task recommendations in Slack
    1. Pair program with one of the project's main engineers - reach out on Slack, we're happy to help!
+1. If you are a UX contributor, check out our [UX guide](https://github.com/seattle-uat/civiform/wiki/UX) 
