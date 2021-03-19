@@ -1,10 +1,9 @@
 ## Onboarding
-This is a collection of docs, links and design resources for UX as it relates to the CiviForm project. To get started, first check out the [contributing](https://github.com/seattle-uat/civiform/wiki/Contributing) wiki that has instructions on code of conduct, joining the slack group etc.
+This is a collection of docs, links and design resources for UX as it relates to the CiviForm project. To get started, first check out the [contributing wiki](https://github.com/seattle-uat/civiform/wiki/Contributing) & follow the general instructions for code of conduct, joining the slack group etc.
 
 ## Background and research
 + Foundational research (conducted with several intermediaries/community-based-organizations in the City of Seattle) : [tiny.cc/cvf-things](http://tiny.cc/cvf-things)
 + Sprint summary (contains core users, CUJs and 3 prototypes): [tiny.cc/cvf-sprint-recap](http://tiny.cc/cvf-sprint-recap)
-
 
 ## Resources
 + Wireframing kit/sample sketch file [link↗](https://drive.google.com/file/d/1Z30VjV3D0UAh3Ep1B-sF58U8HVxtqTXg/view)
