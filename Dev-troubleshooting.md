@@ -24,6 +24,8 @@ Try `bin/sbt clean`, and if that doesn't work you might try `rm -rf universal-ap
 
 You might also try `docker-compose down --remove-orphans` or `docker system prune`, if you suspect the problem might be a rogue docker container locking the sbt directory.
 
+If the problem persists even after trying the tips above, you can try increasing Docker memory and CPU usage limit.
+
 ### IOError - could not create directory, `_global/inputStreams`
 
 I don't know why this happens.  I have a lot of info on the symptoms and a solution that seems to work.  Solution first - run this on your host machine (not in the container).  `rm -rf universal-application-tool-0.0.1/target/*`.  Seems scary but this is just output cache stuff.  Everything works fine once you do this.
