@@ -8,6 +8,7 @@ This is a collection of docs, links and design resources for UX as it relates to
 ## Resources
 + Wireframing kit/sample sketch file [link↗](https://drive.google.com/file/d/1Z30VjV3D0UAh3Ep1B-sF58U8HVxtqTXg/view)
 + UX Design starter [tasks↗](https://docs.google.com/presentation/d/1bChSlWQAjyejyBdQh_jfvXEuqVPQ68AsKWFHB1DAvx0/edit#slide=id.gc75122569a_0_1564)
++ City of Seattle Design system and [style guide ↗](https://app.uxpin.com/design-system/3f410cc070aa87dbff70/city-of-seattle-digital-style-guide)
 
 ## Contributing
 + Use the channel `product-ux` on the team slack for UX discussion & updates.
