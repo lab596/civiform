@@ -9,6 +9,7 @@ Weekly, for the duration of the Google.org Fellowship (through Jun 2021).  Thurs
 
 Past recordings (all link to YouTube, content breakdown in-process):  
 * [March 18](https://youtu.be/fXZj_0S6onI)
+    - [Logging in](https://www.youtube.com/watch?v=fXZj_0S6onI&t=290s) via Oracle IDCS and Active Directory accounts
 * [March 4](https://youtu.be/MKY5JfVsJRg)
 * [February 25](https://youtu.be/c7IXc4I94Zc)
 * [February 18](https://youtu.be/s8ls93Omx4w)
