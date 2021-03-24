@@ -13,6 +13,7 @@
     + [HTML routing convention](#html-routing-convention)
     + [API routing convention](#api-routing-convention)
   * [Testing](#testing)
+    + [Functional browser tests](#functional-browser-tests)
     + [Controller tests](#controller-tests)
     + [View tests](#view-tests)
 
@@ -136,6 +137,26 @@ For Java, classes generally have their own unit tests. The unit test file should
 All major user-facing features should be covered by a functional browser test.
 
 Tests that require a play application should either use `extends play.test.WithApplication` or `extends repository.WithPostgresContainer`, opting for the latter if a database is required. By default, using `extends play.test.WithApplication` will produce an application with a binding to an in-memory postgres database that is incompatible with everything and is pretty much useless.
+
+### Functional browser tests
+
+Functional browser tests use the [Playwright](https://playwright.dev) browser automation TypeScript library with the [Jest](https://jestjs.io/) test runner. The code for those tests lives in the [browser-test](https://github.com/seattle-uat/civiform/tree/main/browser-test) subdirectory.
+
+Browser tests run against an application stack that is very similar to the local development stack. The test stack has its own application server, postgres database, and fake IDCS server that all run in Docker, separate from the test code. The test stack is intended to stay up between test runs to reduce the iteration time for running the tests while developing. To run the tests:
+
+- `./bin/build-browser-tests` - build the Docker image for running the playwright tests. This only needs to be done once.
+- `./bin/run-browser-test-env` - bring up the local test environment. Leave this running while you are working for faster browser test runs.
+- `./bin/run-browser-tests` - run the playwright tests in a docker container.
+
+To run a test in a specific file, you can pass the file path relative to the `browser-test/src` directory e.g. `./bin/run-browser-tests landing_page.test.ts`.
+
+Debugging tips:
+
+You can take screenshots of the browser during test runs and save them to `browser-test/tmp`. (that directory [is mounted as a volume](https://github.com/seattle-uat/civiform/blob/main/bin/run-browser-tests) in the Docker test container). For example, to take a full-page screenshot and save it in a file called `screenshot.png`: `await page.screenshot({ path: 'tmp/screenshot.png', fullPage: true })`. **Note that you must prefix the filename with `tmp/`**. [More info on taking screenshots with Playwright here](https://playwright.dev/docs/screenshots).
+
+#### Guidelines for functional browser tests
+
+In contrast to unit tests, browser tests do not and should attempt to exhaustively test all code paths and states possible for the system under test.
 
 ### Controller tests
 
