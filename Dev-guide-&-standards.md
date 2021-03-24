@@ -166,7 +166,7 @@ In contrast to unit tests, browser tests do not and should attempt to exhaustive
 
 - be fewer and larger, covering major features of the application
 - only create state in the database by interacting with the UI (e.g. when testing the applicant experience for answering of a certain type, first login as an admin, create a question and a program with that question)
-- encapsulate UI interaction details into classes
+- encapsulate UI interaction details into [page object classes](https://playwright.dev/docs/pom/)
 
 ### Controller tests
 
