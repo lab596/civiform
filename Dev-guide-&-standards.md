@@ -150,13 +150,17 @@ Browser tests run against an application stack that is very similar to the local
 
 To run a test in a specific file, you can pass the file path relative to the `browser-test/src` directory e.g. `./bin/run-browser-tests landing_page.test.ts`.
 
-Debugging tips:
+#### Debugging browser tests
 
 You can take screenshots of the browser during test runs and save them to `browser-test/tmp`. (that directory [is mounted as a volume](https://github.com/seattle-uat/civiform/blob/main/bin/run-browser-tests) in the Docker test container). For example, to take a full-page screenshot and save it in a file called `screenshot.png`: `await page.screenshot({ path: 'tmp/screenshot.png', fullPage: true })`. **Note that you must prefix the filename with `tmp/`**. [More info on taking screenshots with Playwright here](https://playwright.dev/docs/screenshots).
 
 #### Guidelines for functional browser tests
 
-In contrast to unit tests, browser tests do not and should attempt to exhaustively test all code paths and states possible for the system under test.
+In contrast to unit tests, browser tests do not and should attempt to exhaustively test all code paths and states possible for the system under test. Browser tests should:
+
+- be fewer and larger, covering major features of the application
+- only create state in the database by interacting with the UI (e.g. when testing the applicant experience for answering of a certain type, first login as an admin, create a question and a program with that question)
+- encapsulate UI interaction details into classes
 
 ### Controller tests
 
