@@ -152,7 +152,13 @@ To run a test in a specific file, you can pass the file path relative to the `br
 
 #### Debugging browser tests
 
-You can take screenshots of the browser during test runs and save them to `browser-test/tmp`. (that directory [is mounted as a volume](https://github.com/seattle-uat/civiform/blob/main/bin/run-browser-tests) in the Docker test container). For example, to take a full-page screenshot and save it in a file called `screenshot.png`: `await page.screenshot({ path: 'tmp/screenshot.png', fullPage: true })`. **Note that you must prefix the filename with `tmp/`**. [More info on taking screenshots with Playwright here](https://playwright.dev/docs/screenshots).
+You can take screenshots of the browser during test runs and save them to `browser-test/tmp`. (that directory [is mounted as a volume](https://github.com/seattle-uat/civiform/blob/main/bin/run-browser-tests) in the Docker test container). For example, to take a full-page screenshot and save it in a file called `screenshot.png`:
+
+```typescript
+await page.screenshot({ path: 'tmp/screenshot.png', fullPage: true })
+```
+
+**Note that you must prefix the filename with `tmp/`**. [More info on taking screenshots with Playwright here](https://playwright.dev/docs/screenshots).
 
 #### Guidelines for functional browser tests
 
