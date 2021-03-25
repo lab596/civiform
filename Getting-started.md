@@ -41,6 +41,8 @@ The `bin/run-dev` script uses `docker-compose` (see [`docker-compose.yaml`](http
 
 # Running tests
 
+This section will help you run CiviForm unit and browser tests in a basic way. For more information on _writing_ and _debugging_ these tests, check out this [Testing](https://github.com/seattle-uat/civiform/wiki/Dev-guide-&-standards#testing) guide.
+
 ## Running unit tests
 
 To run the unit tests (includes all tests under [`test/`](https://github.com/seattle-uat/civiform/tree/main/universal-application-tool-0.0.1/test)), run the following:
@@ -48,8 +50,6 @@ To run the unit tests (includes all tests under [`test/`](https://github.com/sea
 ```
 bin/run-test
 ```
-
-For more information on our testing strategy and helpers, see [Testing](https://github.com/seattle-uat/civiform/wiki/Dev-guide-&-standards#testing).
 
 ## Running browser tests
 
@@ -72,7 +72,6 @@ there are three steps:
 
        bin/run-browser-tests
 
-For more information on browser testing and debugging, see [Functional browser tests](https://github.com/seattle-uat/civiform/wiki/Dev-guide-&-standards#functional-browser-tests).
 
 # What's next?
 
