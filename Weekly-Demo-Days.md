@@ -1,13 +1,17 @@
-What are Weekly Demo Days?
-Established for folks to keep up to speed on technical updates for CiviForm, from infrastructure architecture to product features.  These sessions are meant to be casual and informative.  They are also recorded.
+## What are Weekly Demo Days?
 
-Who should attend?
-Anyone is invited, but this event is geared toward a technical audience (Seattle IT, Google Engineering, Google Product Management).  Members from the open-source community are also invited.
+Established for folks to keep up to speed on technical updates for CiviForm, from infrastructure architecture to product features. These sessions are meant to be casual and informative.  They are also recorded.
 
-When are they?
-Weekly, for the duration of the Google.org Fellowship (through Jun 2021).  Thursdays 11-11:30 AM PT at meet.google.com/ffi-hmms-ryk
+## Who should attend?
 
-Past recordings (all link to YouTube, content breakdown in-process):  
+Anyone is invited, but this event is geared toward a technical audience (Seattle IT, Google Engineering, Google Product Management). Members from the open-source community are also invited.
+
+## When are they?
+
+Weekly, for the duration of the Google.org Fellowship (through Jun 2021).  Thursdays 11-11:30 AM PT at <meet.google.com/ffi-hmms-ryk>.
+
+## Past recordings (all link to YouTube, content breakdown in-process)
+  
 * [March 18](https://youtu.be/fXZj_0S6onI)
     - [Creating a question](https://www.youtube.com/watch?v=fXZj_0S6onI&t=244) styling updates
     - [Logging in](https://www.youtube.com/watch?v=fXZj_0S6onI&t=290s) via Oracle IDCS and Active Directory accounts
