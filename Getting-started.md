@@ -2,7 +2,7 @@
 
 This guide helps you get started running and interacting with a local development server, as well as tests.
 
-## Getting started with Git and cloning the CiviForm repo
+## Getting started with Git, Docker, and the CiviForm repo
 
 Start here! This step is a prerequisite for everything that follows, even if you only want to interact with a local development server without pushing changes.
 
@@ -12,7 +12,11 @@ Start here! This step is a prerequisite for everything that follows, even if you
 
    b. Follow [this guide](https://github.com/git-guides/install-git) for installing git on your machine.
 
-2. Clone the CiviForm repo. This will create a copy of the codebase on your machine:
+1. Install Docker:
+
+   a. TODO
+
+1. Clone the CiviForm repo. This will create a copy of the codebase on your machine:
   
    a. Open a terminal.
 
@@ -21,6 +25,7 @@ Start here! This step is a prerequisite for everything that follows, even if you
    c. In that directory, run the following:
 
           git clone git@github.com:seattle-uat/civiform.git
+
 
 ## Running a local server
 
