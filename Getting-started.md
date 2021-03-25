@@ -10,9 +10,7 @@ Start here! This step is a prerequisite for everything that follows, even if you
 
    b. Follow [this guide](https://github.com/git-guides/install-git) for installing git on your machine.
 
-1. Install Docker:
-
-   a. TODO
+1. Download [Docker Desktop](https://www.docker.com/get-started) if you don't already have it.
 
 1. Clone the CiviForm repo. This will create a copy of the codebase on your machine:
   
@@ -26,14 +24,12 @@ Start here! This step is a prerequisite for everything that follows, even if you
 
 # Running a local server
 
-To check out the current state of the CiviForm app, follow these steps.
-
 1. To run the application, navigate to the top-level `civiform` directory and run the following:
 
        bin/run-dev
 
 2. Once you see "Server started" in your terminal (it will take some time for the server to start up),
-   you can access the server in a browser at `localhost:9000`.
+   you can access the server in a browser at http://localhost:9000.
    Be patient on the initial page load since it will take some time for all the sources to compile.
 
 The `bin/run-dev` script uses `docker-compose` (see [`docker-compose.yaml`](https://github.com/seattle-uat/civiform/blob/main/docker-compose.yml)). It enables Java and Javascript hot-reloading: when you modify most files, the server will recompile and restart. This is pretty time-consuming on first page load, but after that, it's not so bad.
