@@ -1,3 +1,7 @@
+* [Client-server concerns](#client-server-concerns)
+* [Java code](#Java-code)
+* [Routing and controller methods](#router-and-controller-methods)
+
 ## Client-server concerns
 
 The client should be as simple as is practical to implement the desired user experience.
