@@ -15,7 +15,7 @@ If you haven't already, please start on our [Contributing](https://github.com/se
 + City of Seattle Design system and [style guide ↗](https://app.uxpin.com/design-system/3f410cc070aa87dbff70/city-of-seattle-digital-style-guide)
 
 ## Contributing
-+ Use the channel `product-ux` on the team slack for UX discussion & updates.
++ Use the channel `#product-ux` on the team slack for UX discussion & updates.
 + Miro: [tiny.cc/cvf-flow](http://tiny.cc/cvf-flow) is our main interface for design output and collaboration (comments, mockups etc.). Use the cvf-flow project to create boards, add screenshots/images/links to mockups/prototypes and for comments. Anything that can be translated here through a screenshot should, but if you link out to a prototype or mockup, please make sure it's publicly accessible.
 + Tasks are listed as Github under the `UX` label [here](https://github.com/seattle-uat/civiform/issues?q=is%3Aopen+is%3Aissue+label%3AUX).  We do try to keep some labeled as `good first issue`, which are great for first-time contributors.  Feel free to ask in Slack if you don't see any good first time issues to tackle.
 + There's a `Design & UX` Folder in the team [Google Drive](https://github.com/seattle-uat/civiform/wiki/Google-Drive) that can be used to store any source assets. 
