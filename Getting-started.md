@@ -16,9 +16,7 @@ Start here! This step is a prerequisite for everything that follows, even if you
 
 1. Clone the CiviForm repo. This will create a copy of the codebase on your machine:
   
-   a. Open a terminal.
-
-   b. Navigate to a directory you'd like the copy of the codebase to live.
+   a. Open a terminal and navigate to the directory you'd like the copy of the CiviForm codebase to live.
 
    c. In that directory, run the following:
 
