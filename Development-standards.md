@@ -10,7 +10,7 @@ For example, enable/disable logic in forms can be specified server-side with HTM
 
 ## Java code
 
-Java code should conform to the Google Java [styleguide](https://google.github.io/styleguide/javaguide.html). The project makes use of a linter and autoformatter for Java to help with this, just run `bin/fmt` and your code should be automatically formatted.
+Java code should conform to the [Google Java style guide](https://google.github.io/styleguide/javaguide.html). The project makes use of a linter and auto-formatter for Java to help with this, just run `bin/fmt` and your code should be automatically formatted.
 
 Prefer using immutable collection types provided by [Guava](https://github.com/google/guava) ([API docs](https://guava.dev/releases/snapshot/api/docs/)) over the Java standard library's mutable collections unless impractical. Include a comment justifying the use of a mutable collection if you use one.
 
