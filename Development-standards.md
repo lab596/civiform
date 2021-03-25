@@ -1,6 +1,6 @@
 * [Client-server concerns](#client-server-concerns)
 * [Java code](#Java-code)
-* [Routing and controller methods](#router-and-controller-methods)
+* [Routing and controller methods](#routing-and-controller-methods)
 
 ## Client-server concerns
 
