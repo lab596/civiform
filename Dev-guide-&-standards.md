@@ -166,7 +166,9 @@ await page.screenshot({ path: 'tmp/screenshot.png', fullPage: true })
 
 **Debug mode**
 
-You can step through a test run line by line with the browser by running the tests locally (i.e. not in docker) with debug mode turned on. - This requires installing node.js, [yarn](https://yarnpkg.com/), and running `yarn install` in the `browers-test` directory. To run the tests locally: `./bin/run-browser-tests-local`. To run them in debug mode with the open browser add the `PWDEBUG` environment variable: `PWDEBUG=1 ./bin/run-browser-tests-local`. 
+You can step through a test run line by line with the browser by running the tests locally (i.e. not in docker) with debug mode turned on. - This requires installing node.js, [yarn](https://yarnpkg.com/), and running `yarn install` in the `browers-test` directory. To run the tests locally: `./bin/run-browser-tests-local`. To run them in debug mode with the open browser add the `PWDEBUG` environment variable: `PWDEBUG=1 ./bin/run-browser-tests-local`.
+
+Note that when running browser tests locally, to specify a specific test file for a run you must pass the relative path from the root project directory e.g. `PWDEBUG=1 ./bin/run-browser-tests-local browser-test/src/application_review.test.ts`.
 
 #### Guidelines for functional browser tests
 
