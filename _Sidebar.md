@@ -2,7 +2,7 @@
 
 #### [Contributing](https://github.com/seattle-uat/civiform/wiki/Contributing)
 * [Technical contribution guide](https://github.com/seattle-uat/civiform/wiki/Technical-contribution-guide)
-* [UX contribution guide](https://github.com/seattle-uat/civiform/wiki/UX)
+* [UX contribution guide](https://github.com/seattle-uat/civiform/wiki/UX-contribution-guide)
 
 #### Developer guide
 * [Getting started](https://github.com/seattle-uat/civiform/wiki/Getting-started)
