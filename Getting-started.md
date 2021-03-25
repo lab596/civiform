@@ -1,4 +1,4 @@
-This guide helps you get started running and interacting with a local development server, as well as tests.
+This guide helps you get started running and interacting with a local development server and tests.
 
 ## Setting up your environment
 
