@@ -1,9 +1,13 @@
-## Onboarding
-This is a collection of docs, links and design resources for UX as it relates to the CiviForm project. To get started, first check out the [contributing wiki](https://github.com/seattle-uat/civiform/wiki/Contributing) & follow the general instructions for code of conduct, joining the slack group etc.
+This is a collection of docs, links and design resources for UX as it relates to the CiviForm project.
+
+If you haven't already, please start on our [Contributing](https://github.com/seattle-uat/civiform/wiki/Contributing) page, and **read our [code of conduct](https://github.com/seattle-uat/civiform/blob/main/code_of_conduct.md).**
 
 ## Background and research
-+ Foundational research (conducted with several intermediaries/community-based-organizations in the City of Seattle) : [tiny.cc/cvf-things](http://tiny.cc/cvf-things) and [Seattle's Innovation and Performance Team Research](https://drive.google.com/file/d/1-pjrb5zo5ZfILcVqgFW3hTD24q-envoa/view?usp=sharing)
-+ Sprint summary (contains core users, CUJs and 3 prototypes): [tiny.cc/cvf-sprint-recap](http://tiny.cc/cvf-sprint-recap)
++ Foundational research (conducted with several intermediaries/community-based-organizations in the City of Seattle):
+  + [tiny.cc/cvf-things](http://tiny.cc/cvf-things)
+  + [Seattle's Innovation and Performance Team Research](https://drive.google.com/file/d/1-pjrb5zo5ZfILcVqgFW3hTD24q-envoa/view?usp=sharing)
++ Sprint summary (contains core users, CUJs and 3 prototypes):
+  + [tiny.cc/cvf-sprint-recap](http://tiny.cc/cvf-sprint-recap)
 
 ## Resources
 + Wireframing kit/sample sketch file [link↗](https://drive.google.com/file/d/1Z30VjV3D0UAh3Ep1B-sF58U8HVxtqTXg/view)
