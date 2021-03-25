@@ -6,20 +6,24 @@ Start here! This step is a prerequisite for everything that follows, even if you
 
 1. Join GitHub and install git:
 
-   a. If you haven't already, [join GitHub](https://github.com/join).
+    1. If you haven't already, [join GitHub](https://github.com/join).
 
-   b. Follow [this guide](https://github.com/git-guides/install-git) for installing git on your machine.
+    1. Follow [this guide](https://github.com/git-guides/install-git) for installing git on your machine.
 
 1. Download [Docker Desktop](https://www.docker.com/get-started) if you don't already have it.
 
 1. Clone the CiviForm repo. This will create a copy of the codebase on your machine:
-  
-   a. Open a terminal and navigate to the directory you'd like the copy of the CiviForm codebase to live.
 
-   c. In that directory, run the following (and/or refer to
-      [this guide](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)):
+    1. Open a terminal and navigate to the directory you'd like the copy of the CiviForm codebase to live.
 
-          git clone git@github.com:seattle-uat/civiform.git
+    1. In that directory, run the following (and/or refer to
+       [this guide](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)):
+
+           git clone git@github.com:seattle-uat/civiform.git
+
+## A note on IDEs
+
+You may use whichever IDE you prefer, though _DO NOT_ use the IDE's built-in sbt (Scala Build Tool) shell if it has one. Instead, run `bin/sbt` to bring up an sbt shell inside the Docker container. The sbt shell allows you to compile, run tests, and run any other sbt commands you may need
 
 
 # Running a local server
@@ -29,7 +33,7 @@ Start here! This step is a prerequisite for everything that follows, even if you
        bin/run-dev
 
 2. Once you see "Server started" in your terminal (it will take some time for the server to start up),
-   you can access the server in a browser at http://localhost:9000.
+   you can access the app in a browser at http://localhost:9000.
    Be patient on the initial page load since it will take some time for all the sources to compile.
 
 The `bin/run-dev` script uses `docker-compose` (see [`docker-compose.yaml`](https://github.com/seattle-uat/civiform/blob/main/docker-compose.yml)). It enables Java and Javascript hot-reloading: when you modify most files, the server will recompile and restart. This is pretty time-consuming on first page load, but after that, it's not so bad.
@@ -45,6 +49,16 @@ To run the unit tests (includes all tests under [`test/`](https://github.com/sea
 ```
 bin/run-test
 ```
+
+If you'd like to run a specific test or set of tests, and/or save sbt startup time each time you run the test(s), use these steps:
+
+1. Bring up an sbt shell inside the Docker container by running:
+
+       bin/sbt
+
+1. Run any sbt commands! For example:
+
+       testOnly services.question.QuestionDefinitionTest
 
 ## Running browser tests
 
