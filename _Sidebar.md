@@ -8,7 +8,7 @@
 * [Getting started](https://github.com/seattle-uat/civiform/wiki/Getting-started)
 * [Dev guide & standards](https://github.com/seattle-uat/civiform/wiki/Dev-guide-&-standards)
 * [Adding a new question type](https://github.com/seattle-uat/civiform/wiki/Adding-a-new-question-type)
-* [Dev troubleshooting](https://github.com/seattle-uat/civiform/wiki/Dev-troubleshooting)
+* [Troubleshooting](https://github.com/seattle-uat/civiform/wiki/Dev-troubleshooting)
 * [Production](https://github.com/seattle-uat/civiform/wiki/Production)
 
 #### Other resources
