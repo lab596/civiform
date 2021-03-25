@@ -2,7 +2,7 @@ CiviForm is built on the [Play Framework](https://www.playframework.com/) in Jav
 
 ## Views
 
-Instead of the default templating language for Play (Twirl), CiviForm uses the [J2Html](https://j2html.com/) Java library to render HTML.
+Instead of the default templating language for Play (Twirl), CiviForm uses the [J2Html](https://j2html.com/) Java library to render HTML (server-side).
 
 All view classes should extend [`BaseHtmlView`](https://github.com/seattle-uat/civiform/blob/main/universal-application-tool-0.0.1/app/views/BaseHtmlView.java), which has some helpful common tag helper methods. Its `makeCsrfTokenInputTag` must be added to all CiviForm forms.
 
