@@ -4,7 +4,7 @@ If you haven't already, please start on our [Contributing]() page, and **read ou
 
 # Getting started
 
-To set up your environment and learn how to run a local server and run tests, see [Getting started](https://github.com/seattle-uat/civiform/wiki/Getting-started).
+To set up your environment and learn how to run a local CiviForm server and run tests, see [Getting started](https://github.com/seattle-uat/civiform/wiki/Getting-started).
 
 # Issue tracking
 
