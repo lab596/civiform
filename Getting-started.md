@@ -1,6 +1,6 @@
 This guide helps you get started running and interacting with a local development server, as well as tests.
 
-# Getting started with Git, Docker, and the CiviForm repo
+# Getting started with git, Docker, and the CiviForm repo
 
 Start here! This step is a prerequisite for everything that follows, even if you only want to interact with a local development server without pushing changes.
 
