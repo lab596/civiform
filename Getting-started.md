@@ -1,6 +1,6 @@
 This guide helps you get started running and interacting with a local development server, as well as tests.
 
-## Getting started with Git, Docker, and the CiviForm repo
+# Getting started with Git, Docker, and the CiviForm repo
 
 Start here! This step is a prerequisite for everything that follows, even if you only want to interact with a local development server without pushing changes.
 
@@ -25,7 +25,7 @@ Start here! This step is a prerequisite for everything that follows, even if you
           git clone git@github.com:seattle-uat/civiform.git
 
 
-## Running a local server
+# Running a local server
 
 1. To run the application, navigate to the top-level `civiform` directory and run the following:
 
@@ -37,9 +37,9 @@ Start here! This step is a prerequisite for everything that follows, even if you
 
 The `bin/run-dev` script uses `docker-compose` (see [`docker-compose.yaml`](https://github.com/seattle-uat/civiform/blob/main/docker-compose.yml)). It enables Java and Javascript hot-reloading: when you modify most files, the server will recompile and restart. This is pretty time-consuming on first page load, but after that, it's not so bad.
 
-## Running tests
+# Running tests
 
-### Running unit tests
+## Running unit tests
 
 To run the unit tests (includes all tests under [`test/`](https://github.com/seattle-uat/civiform/tree/main/universal-application-tool-0.0.1/test)), run the following:
 
@@ -49,7 +49,7 @@ bin/run-test
 
 For more information on our testing strategy and helpers, see [Testing](https://github.com/seattle-uat/civiform/wiki/Dev-guide-&-standards#testing).
 
-### Running browser tests
+## Running browser tests
 
 To run the browser tests (includes all the [Playwright](https://playwright.dev/) tests in
 [`civiform/browser-test/src/`](https://github.com/seattle-uat/civiform/tree/main/browser-test/src),
@@ -72,6 +72,6 @@ there are three steps:
 
 For more information on browser testing and debugging, see [Functional browser tests](https://github.com/seattle-uat/civiform/wiki/Dev-guide-&-standards#functional-browser-tests).
 
-## What's next?
+# What's next?
 
 Check out our [Development guide and standards](https://github.com/seattle-uat/civiform/wiki/Dev-guide-&-standards) to get started contributing.
