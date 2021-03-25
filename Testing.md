@@ -1,6 +1,6 @@
 This guide offers best practices for writing unit and browser tests for CiviForm, as well as debugging tips and practices.
 
-## What to test where
+## What to test
 
 In general, all execution paths in the system should be covered by [unit tests](#unit-tests). If you submit code that is infeasible or impractical to get full test coverage for, consider refactoring. If you would like to make an exception, include a clear explanation for why in your PR description.
 
