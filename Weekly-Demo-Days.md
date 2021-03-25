@@ -26,5 +26,8 @@ Past recordings (all link to YouTube, content breakdown in-process):
     - [Overview of the database schema](https://youtu.be/c7IXc4I94Zc?t=925)
     - [Overview of roles](https://youtu.be/c7IXc4I94Zc?t=1100)
 * [February 18](https://youtu.be/s8ls93Omx4w)
+    - [Universal Application Tool (UAT) Architecture](https://youtu.be/s8ls93Omx4w?t=516)
+    - [Monitoring strategy](https://youtu.be/s8ls93Omx4w?t=807)
+    - [UAT view system](https://youtu.be/s8ls93Omx4w?t=1103)
 
 
