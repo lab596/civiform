@@ -144,21 +144,29 @@ Functional browser tests use the [Playwright](https://playwright.dev) browser au
 
 Browser tests run against an application stack that is very similar to the local development stack. The test stack has its own application server, postgres database, and fake IDCS server that all run in Docker, separate from the test code. The test stack is intended to stay up between test runs to reduce the iteration time for running the tests while developing. To run the tests:
 
-- `./bin/build-browser-tests` - build the Docker image for running the playwright tests. This only needs to be done once.
-- `./bin/run-browser-test-env` - bring up the local test environment. Leave this running while you are working for faster browser test runs.
-- `./bin/run-browser-tests` - run the playwright tests in a docker container.
+- `./bin/build-browser-tests` - build the Docker image for running the playwright tests. This only needs to be done once
+- `./bin/run-browser-test-env` - bring up the local test environment. Leave this running while you are working for faster browser test runs
+- `./bin/run-browser-tests` - run the playwright tests in a docker container
 
 To run a test in a specific file, you can pass the file path relative to the `browser-test/src` directory e.g. `./bin/run-browser-tests landing_page.test.ts`.
 
 #### Debugging browser tests
 
-You can take screenshots of the browser during test runs and save them to `browser-test/tmp`. (that directory [is mounted as a volume](https://github.com/seattle-uat/civiform/blob/main/bin/run-browser-tests) in the Docker test container). For example, to take a full-page screenshot and save it in a file called `screenshot.png`:
+Please see the [playwright docs](https://playwright.dev/docs/debug) for a lot more info on this topic.
+
+**Screenshots**
+
+With both `bin/run-browser-tests` and `bin/run-browser-tests-local` you can take screenshots of the browser during test runs and save them to `browser-test/tmp`. (that directory [is mounted as a volume](https://github.com/seattle-uat/civiform/blob/main/bin/run-browser-tests) in the Docker test container). For example, to take a full-page screenshot and save it in a file called `screenshot.png`:
 
 ```typescript
 await page.screenshot({ path: 'tmp/screenshot.png', fullPage: true })
 ```
 
 **Note that you must prefix the filename with `tmp/`**. [More info on taking screenshots with Playwright here](https://playwright.dev/docs/screenshots).
+
+**Debug mode**
+
+You can step through a test run line by line with the browser by running the tests locally (i.e. not in docker) with debug mode turned on. - This requires installing node.js, [yarn](https://yarnpkg.com/), and running `yarn install` in the `browers-test` directory. To run the tests locally: `./bin/run-browser-tests-local`. To run them in debug mode with the open browser add the `PWDEBUG` environment variable: `PWDEBUG=1 ./bin/run-browser-tests-local`. 
 
 #### Guidelines for functional browser tests
 
@@ -167,6 +175,7 @@ In contrast to unit tests, browser tests do not and should attempt to exhaustive
 - be fewer and larger, covering major features of the application
 - only create state in the database by interacting with the UI (e.g. when testing the applicant experience for answering of a certain type, first login as an admin, create a question and a program with that question)
 - encapsulate UI interaction details into [page object classes](https://playwright.dev/docs/pom/)
+- as much as is practical navigate using the UI and not by directly referencing URL paths
 
 ### Controller tests
 
