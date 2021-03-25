@@ -18,7 +18,8 @@ Start here! This step is a prerequisite for everything that follows, even if you
   
    a. Open a terminal and navigate to the directory you'd like the copy of the CiviForm codebase to live.
 
-   c. In that directory, run the following (and/or use [this guide](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository):
+   c. In that directory, run the following (and/or refer to
+      [this guide](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)):
 
           git clone git@github.com:seattle-uat/civiform.git
 
