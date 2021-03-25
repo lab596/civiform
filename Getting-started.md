@@ -4,7 +4,7 @@ This guide helps you get started running and interacting with a local developmen
 
 Start here! This step is a prerequisite for everything that follows, even if you only want to interact with a local server without pushing changes.
 
-1. Join GitHub](https://github.com/join).
+1. [Join GitHub](https://github.com/join).
 
 1. [Install git](https://github.com/git-guides/install-git) on your machine.
 
