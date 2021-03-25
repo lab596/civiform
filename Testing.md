@@ -12,6 +12,22 @@ For Java, classes generally have their own unit tests. The unit test file should
 
 Tests that require a Play application should either use `extends play.test.WithApplication`, or `extends repository.WithPostgresContainer` if a database is required. By default, using `extends play.test.WithApplication` will produce an application with a binding to an in-memory postgres database that is incompatible with everything and is pretty much useless.
 
+To run the unit tests (includes all tests under [`test/`](https://github.com/seattle-uat/civiform/tree/main/universal-application-tool-0.0.1/test)), run the following:
+
+```
+bin/run-test
+```
+
+If you'd like to run a specific test or set of tests, and/or save sbt startup time each time you run the test(s), use these steps:
+
+1. Bring up an sbt shell inside the Docker container by running:
+
+       bin/sbt
+
+1. Run any sbt commands! For example:
+
+       testOnly services.question.QuestionDefinitionTest
+
 ### Controller tests
 
 Controller tests should test the integration of business logic behind each HTTP endpoint. Most controller tests should likely extend `WithPostgresContainer` which provides a real database. Controllers should contain very little if any conditional logic and delegate business logic and network interactions (database, auth service, file services, etc.) to service classes.
