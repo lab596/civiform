@@ -73,6 +73,8 @@ To run the tests:
 
        bin/run-browser-tests landing_page.test.ts
 
+   Use the `--debug` flag to print debug logs as the test runs.
+
 ### Debugging browser tests
 
 Please see the [Playwright debug docs](https://playwright.dev/docs/debug) for a lot more info on this topic.
