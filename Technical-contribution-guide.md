@@ -31,6 +31,6 @@ Want to get up to speed on this project? Awesome! Please see the following:
 1. Read the [code of conduct](https://github.com/seattle-uat/civiform/blob/main/code_of_conduct.md).
 1. Join our [Slack workgroup](https://join.slack.com/t/civiform/shared_invite/zt-niap7ys1-RAICICUpDJfjpizjyjBr7Q).
 1. Check out the [Google Drive](https://drive.google.com/drive/folders/1_uVkq1uOD14p19DvQzbXs2s0XhSOQjgF?usp=sharing) containing our design docs.
-1. Read through our [dev guide & standards](https://github.com/seattle-uat/civiform/wiki/Dev-guide-&-standards).
+1. Read through our Developer guide wikis in the right nav. [Technology overview](https://github.com/seattle-uat/civiform/wiki/Technology-overview) and [Development standards](https://github.com/seattle-uat/civiform/wiki/Development-standards) are good places to start.
 1. Work on at least one issue tagged with [`good first issue`](https://github.com/seattle-uat/civiform/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22) before moving to others. Feel free to ask for task recommendations in Slack.
 1. Pair program with one of the project's main engineers. Reach out on Slack - we're happy to help!
