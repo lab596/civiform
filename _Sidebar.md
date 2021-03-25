@@ -8,9 +8,9 @@
 * [Getting started](https://github.com/seattle-uat/civiform/wiki/Getting-started)
 * [Technology overview](https://github.com/seattle-uat/civiform/wiki/Technology-overview)
 * [Development standards](https://github.com/seattle-uat/civiform/wiki/Development-standards)
-* [Dev guide & standards](https://github.com/seattle-uat/civiform/wiki/Dev-guide-&-standards)
-* [Testing](https://github.com/seattle-uat/civiform/wiki/Testing)
+* [Development stack](https://github.com/seattle-uat/civiform/wiki/Development-stack)
 * [Adding a new question type](https://github.com/seattle-uat/civiform/wiki/Adding-a-new-question-type)
+* [Testing](https://github.com/seattle-uat/civiform/wiki/Testing)
 * [Troubleshooting](https://github.com/seattle-uat/civiform/wiki/Dev-troubleshooting)
 * [Production](https://github.com/seattle-uat/civiform/wiki/Production)
 
