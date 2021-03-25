@@ -19,6 +19,7 @@ We also have a [Google Drive folder](https://drive.google.com/drive/folders/1_uV
     * [HTML routing convention](https://github.com/seattle-uat/civiform/wiki/Dev-guide-&-standards#html-routing-convention)
     * [API routing convention](https://github.com/seattle-uat/civiform/wiki/Dev-guide-&-standards#api-routing-convention)
   * [Testing](https://github.com/seattle-uat/civiform/wiki/Dev-guide-&-standards#testing)
+    * [Functional browser tests](https://github.com/seattle-uat/civiform/wiki/Dev-guide-&-standards#functional-browser-tests)
     * [Controller tests](https://github.com/seattle-uat/civiform/wiki/Dev-guide-&-standards#controller-tests)
     * [View tests](https://github.com/seattle-uat/civiform/wiki/Dev-guide-&-standards#view-tests)
 * [Weekly Demo Days Videos](https://github.com/seattle-uat/civiform/wiki/Weekly-Demo-Days)
