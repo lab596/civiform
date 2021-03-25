@@ -79,6 +79,10 @@ there are three steps:
 
        bin/run-browser-tests
 
+   Or, to run a test in a specific file, you can pass the file path relative to the `browser-test/src` directory:
+
+       bin/run-browser-tests landing_page.test.ts
+
 
 ## What's next?
 
