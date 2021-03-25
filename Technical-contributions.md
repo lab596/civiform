@@ -1,6 +1,6 @@
 This is a guide for making technical contributions to CiviForm.
 
-If you haven't already, please start on our [Contributing]() page, and **read our [code of conduct](https://github.com/seattle-uat/civiform/blob/main/code_of_conduct.md).**
+If you haven't already, please start on our [Contributing](https://github.com/seattle-uat/civiform/wiki/Contributing) page, and **read our [code of conduct](https://github.com/seattle-uat/civiform/blob/main/code_of_conduct.md).**
 
 # Getting started
 
