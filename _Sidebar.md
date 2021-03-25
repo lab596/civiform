@@ -12,7 +12,7 @@
 * [Dev troubleshooting](https://github.com/seattle-uat/civiform/wiki/Dev-troubleshooting)
 * [Production](https://github.com/seattle-uat/civiform/wiki/Production)
 
-***
+#### Other resources
 
 * [CiviForm Google Drive](https://github.com/seattle-uat/civiform/wiki/Google-Drive)
 * [Weekly demo days](https://github.com/seattle-uat/civiform/wiki/Weekly-Demo-Days)
