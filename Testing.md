@@ -104,7 +104,7 @@ await page.screenshot({ path: 'tmp/screenshot.png', fullPage: true })
 
 **Note**: You must prefix the filename with `tmp/`. [More info on taking screenshots with Playwright here](https://playwright.dev/docs/screenshots).
 
-#### Guidelines for functional browser tests
+### Guidelines for functional browser tests
 
 In contrast to unit tests, browser tests do not and should attempt to exhaustively test all code paths and states possible for the system under test. Browser tests should:
 
