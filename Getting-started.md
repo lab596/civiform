@@ -1,5 +1,3 @@
-# Getting started
-
 This guide helps you get started running and interacting with a local development server, as well as tests.
 
 ## Getting started with Git, Docker, and the CiviForm repo
