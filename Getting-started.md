@@ -1,6 +1,6 @@
 This guide helps you get started running and interacting with a local development server, as well as tests.
 
-# Setting up your environment
+## Setting up your environment
 
 Start here! This step is a prerequisite for everything that follows, even if you only want to interact with a local server without pushing changes.
 
@@ -19,12 +19,12 @@ Start here! This step is a prerequisite for everything that follows, even if you
 
            git clone git@github.com:seattle-uat/civiform.git
 
-## A note on IDEs
+### A note on IDEs
 
 You may use whichever IDE you prefer, though _DO NOT_ use the IDE's built-in sbt (Scala Build Tool) shell if it has one. Instead, run `bin/sbt` to bring up an sbt shell inside the Docker container. The sbt shell allows you to compile, run tests, and run any other sbt commands you may need
 
 
-# Running a local server
+## Running a local server
 
 1. To run the application, navigate to the `civiform` directory you created when you cloned the repo and run the following:
 
@@ -36,11 +36,11 @@ You may use whichever IDE you prefer, though _DO NOT_ use the IDE's built-in sbt
 
 The `bin/run-dev` script uses `docker-compose` (see [`docker-compose.yaml`](https://github.com/seattle-uat/civiform/blob/main/docker-compose.yml)). It enables Java and Javascript hot-reloading: when you modify most files, the server will recompile and restart. This is pretty time-consuming on first page load, but after that, it's not so bad.
 
-# Running tests
+## Running tests
 
 This section will help you run CiviForm unit and browser tests in a basic way. For more information on _writing_ and _debugging_ these tests, check out this [Testing](https://github.com/seattle-uat/civiform/wiki/Dev-guide-&-standards#testing) guide.
 
-## Running unit tests
+### Running unit tests
 
 To run the unit tests (includes all tests under [`test/`](https://github.com/seattle-uat/civiform/tree/main/universal-application-tool-0.0.1/test)), run the following:
 
@@ -58,7 +58,7 @@ If you'd like to run a specific test or set of tests, and/or save sbt startup ti
 
        testOnly services.question.QuestionDefinitionTest
 
-## Running browser tests
+### Running browser tests
 
 To run the browser tests (includes all the [Playwright](https://playwright.dev/) tests in
 [`civiform/browser-test/src/`](https://github.com/seattle-uat/civiform/tree/main/browser-test/src),
@@ -80,6 +80,6 @@ there are three steps:
        bin/run-browser-tests
 
 
-# What's next?
+## What's next?
 
 Check out our [Technical contribution guide](https://github.com/seattle-uat/civiform/wiki/Technical-contributions) and [Development guide and standards](https://github.com/seattle-uat/civiform/wiki/Dev-guide-&-standards) to get started contributing.
