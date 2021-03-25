@@ -36,6 +36,10 @@ You may use whichever IDE you prefer, though _DO NOT_ use the IDE's built-in sbt
 
 The `bin/run-dev` script uses `docker-compose` (see [`docker-compose.yaml`](https://github.com/seattle-uat/civiform/blob/main/docker-compose.yml)). It enables Java and Javascript hot-reloading: when you modify most files, the server will recompile and restart. This is pretty time-consuming on first page load, but after that, it's not so bad.
 
+### Help! It's not working!
+
+We know setting up a development environment can have some snags in the road. If something isn't working, check out our [Troubleshooting](https://github.com/seattle-uat/civiform/wiki/Dev-troubleshooting) guide or reach out on [Slack](https://join.slack.com/t/civiform/shared_invite/zt-niap7ys1-RAICICUpDJfjpizjyjBr7Q).
+
 ## Running tests
 
 This section will help you run CiviForm unit and browser tests in a basic way. For more information on _writing_ and _debugging_ these tests, check out the [Testing](https://github.com/seattle-uat/civiform/wiki/Testing) guide.
