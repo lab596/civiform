@@ -6,6 +6,7 @@
 
 #### Developer guide
 * [Getting started](https://github.com/seattle-uat/civiform/wiki/Getting-started)
+* [Technology overview](https://github.com/seattle-uat/civiform/wiki/Technology-overview)
 * [Dev guide & standards](https://github.com/seattle-uat/civiform/wiki/Dev-guide-&-standards)
 * [Adding a new question type](https://github.com/seattle-uat/civiform/wiki/Adding-a-new-question-type)
 * [Troubleshooting](https://github.com/seattle-uat/civiform/wiki/Dev-troubleshooting)
