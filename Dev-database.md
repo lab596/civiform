@@ -9,6 +9,6 @@ If the database is in an inconsistent state in dev mode, it is usually easier to
 
 If we want to undo a schema change, we create new evolution scripts that modify the schema.
 
-### Dev integration with IDCS and AD
+## Dev integration with IDCS and AD
 
 Integration with identity providers requires some secrets which we can't disseminate to everyone.  If you work for google.org and are able to access AWS, you can run `bin/refresh-secrets` after authenticating to AWS using one of the methods on the AWS splash page.  From there, all subsequent runs of `bin/run-dev` will integrate cleanly with AD and IDCS.  If that's not possible, you should use the OIDC provider that we use for unit tests.  See `test/app/SecurityBrowserTest.java` for examples of how to interact with that.
