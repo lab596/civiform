@@ -26,7 +26,7 @@ You may use whichever IDE you prefer, though _DO NOT_ use the IDE's built-in sbt
 
 # Running a local server
 
-1. To run the application, navigate to the top-level `civiform` directory and run the following:
+1. To run the application, navigate to the `civiform` directory you created when you cloned the repo and run the following:
 
        bin/run-dev
 
@@ -82,4 +82,4 @@ there are three steps:
 
 # What's next?
 
-Check out our [Development guide and standards](https://github.com/seattle-uat/civiform/wiki/Dev-guide-&-standards) to get started contributing.
+Check out our [Technical contribution guide](https://github.com/seattle-uat/civiform/wiki/Technical-contributions) and [Development guide and standards](https://github.com/seattle-uat/civiform/wiki/Dev-guide-&-standards) to get started contributing.
