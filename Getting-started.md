@@ -4,13 +4,11 @@ This guide helps you get started running and interacting with a local developmen
 
 Start here! This step is a prerequisite for everything that follows, even if you only want to interact with a local development server without pushing changes.
 
-1. Join GitHub and install git:
+1. Join GitHub](https://github.com/join).
 
-    1. If you haven't already, [join GitHub](https://github.com/join).
+1. [Install git](https://github.com/git-guides/install-git) on your machine.
 
-    1. Follow [this guide](https://github.com/git-guides/install-git) for installing git on your machine.
-
-1. Download [Docker Desktop](https://www.docker.com/get-started) if you don't already have it.
+1. Download [Docker Desktop](https://www.docker.com/get-started).
 
 1. Clone the CiviForm repo. This will create a copy of the codebase on your machine:
 
