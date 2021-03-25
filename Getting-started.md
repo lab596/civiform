@@ -27,6 +27,8 @@ Start here! This step is a prerequisite for everything that follows, even if you
 
 # Running a local server
 
+To check out the current state of the CiviForm app, follow these steps.
+
 1. To run the application, navigate to the top-level `civiform` directory and run the following:
 
        bin/run-dev
