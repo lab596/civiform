@@ -8,7 +8,7 @@ Anyone is invited, but this event is geared toward a technical audience (Seattle
 
 ## When are they?
 
-Weekly, for the duration of the Google.org Fellowship (through Jun 2021).  Thursdays 11-11:30 AM PT at <meet.google.com/ffi-hmms-ryk>.
+Weekly, for the duration of the Google.org Fellowship (through Jun 2021).  Thursdays 11-11:30 AM PT at [meet.google.com/ffi-hmms-ryk](https://meet.google.com/ffi-hmms-ryk).
 
 ## Past recordings (all link to YouTube, content breakdown in-process)
   
