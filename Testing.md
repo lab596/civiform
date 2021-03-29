@@ -83,10 +83,10 @@ Please see the [Playwright debug docs](https://playwright.dev/docs/debug) for a 
 
 You can step through a test run line-by-line with the browser by running the tests locally (i.e. not in Docker) with debug mode turned on.
 
-This requires:
-1. Installing node.js.
-1. Installing [yarn](https://yarnpkg.com/).
-1. Running `yarn install` in the `browers-test` directory.
+Before you can run the browser tests locally, you need to do the following:
+1. Install node.js.
+1. Install [yarn](https://yarnpkg.com/).
+1. Run `yarn install` in the [`brower-test/`](https://github.com/seattle-uat/civiform/tree/main/browser-test) directory.
 
 To run the tests locally, use:
 
