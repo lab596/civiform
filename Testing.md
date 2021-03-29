@@ -4,7 +4,7 @@ This guide offers best practices for writing unit and browser tests for CiviForm
 
 In general, all execution paths in the system should be covered by [unit tests](#unit-tests). If you submit code that is infeasible or impractical to get full test coverage for, consider refactoring. If you would like to make an exception, include a clear explanation for why in your PR description.
 
-In contrast, [Functional browser tests](#functional-browser-tests should cover all major user-facing features to make sure the system generally works from a user's point of view, rather than exhaustively test all execution paths.
+In contrast, [Functional browser tests](#functional-browser-tests) should cover all major user-facing features to make sure the system generally works from a user's point of view, rather than exhaustively test all execution paths.
 
 ## Unit tests
 
