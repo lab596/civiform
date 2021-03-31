@@ -44,4 +44,43 @@ Once we've got Tailwind prototypes in place, it all comes down to the implementa
 
 ### Becomes this Java code
 ```
+    ContainerTag wrappedWarningSvg =
+        div()
+            .withClasses(Styles.FLEX_NONE, Styles.PR_2)
+            .with(
+                Icons.svg(Icons.WARNING_SVG_PATH, 20)
+                    .attr("fill-rule", "evenodd")
+                    .withClasses(Styles.INLINE_BLOCK, Styles.H_6, Styles.W_6));
+    ContainerTag messageSpan = span(BANNER_TEXT);
+    ContainerTag dismissButton =
+        div("x")
+            .withId("warning-message-dismiss")
+            .withClasses(
+                Styles.FONT_BOLD,
+                Styles.PL_6,
+                Styles.OPACITY_40,
+                Styles.CURSOR_POINTER,
+                StyleUtils.hover(Styles.OPACITY_100));
+
+    return div(wrappedWarningSvg, messageSpan, dismissButton)
+        .withId("warning-message")
+        .withClasses(
+            Styles.ABSOLUTE,
+            Styles.FLEX,
+            Styles.FLEX_ROW,
+            Styles.BG_RED_400,
+            Styles.BORDER_RED_500,
+            Styles.BG_OPACITY_90,
+            Styles.MAX_W_MD,
+            Styles.PX_2,
+            Styles.PY_2,
+            Styles.TEXT_GRAY_700,
+            Styles.TOP_2,
+            Styles.ROUNDED_SM,
+            Styles.SHADOW_LG,
+            Styles.TRANSFORM,
+            Styles._TRANSLATE_X_1_2,
+            Styles.LEFT_1_2,
+            Styles.HIDDEN);
+  }
 ```
