@@ -58,5 +58,5 @@ The error message says expecting `"username@example.com"` to be contained in the
 ### Bean not found error
 If you see an error when running `bin/run-dev` like `[CompletionException: javax.persistence.EntityNotFoundException: Bean not found during lazy load or refresh. id[1] type[class models.Account]]`, you probably have a cookie set in the browser from the last time you loaded the site, but the associated account doesn't exist in the fresh local database. To fix, simply clear your browser cookie(s) for localhost (in Chrome, this can be accomplished by clicking the info/lock icon next to the URL, then selecting "cookies" - click "Remove" to remove all associated cookies for localhost).
 
-## Null pointer exceptions
+### Null pointer exceptions
 Sometimes you have partial db information.  A fix is to fully clear the db with `docker-compose down --remove-orphans`
