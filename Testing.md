@@ -75,6 +75,15 @@ To run the tests:
 
    Use the `--debug` flag to print debug logs as the test runs.
 
+### Guidelines for functional browser tests
+
+In contrast to unit tests, browser tests do not and should attempt to exhaustively test all code paths and states possible for the system under test. Browser tests should:
+
+- be fewer and larger, covering major features of the application
+- only create state in the database by interacting with the UI (e.g. when testing the applicant experience for answering of a certain type, first login as an admin, create a question and a program with that question)
+- encapsulate UI interaction details into [page object classes](https://playwright.dev/docs/pom/)
+- as much as is practical navigate using the UI and not by directly referencing URL paths
+
 ### Debugging browser tests
 
 Please see the [Playwright debug docs](https://playwright.dev/docs/debug) for a lot more info on this topic.
@@ -105,12 +114,3 @@ await page.screenshot({ path: 'tmp/screenshot.png', fullPage: true })
 ```
 
 **Note**: You must prefix the filename with `tmp/`. [More info on taking screenshots with Playwright here](https://playwright.dev/docs/screenshots).
-
-### Guidelines for functional browser tests
-
-In contrast to unit tests, browser tests do not and should attempt to exhaustively test all code paths and states possible for the system under test. Browser tests should:
-
-- be fewer and larger, covering major features of the application
-- only create state in the database by interacting with the UI (e.g. when testing the applicant experience for answering of a certain type, first login as an admin, create a question and a program with that question)
-- encapsulate UI interaction details into [page object classes](https://playwright.dev/docs/pom/)
-- as much as is practical navigate using the UI and not by directly referencing URL paths
