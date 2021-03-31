@@ -19,7 +19,7 @@ If you're really comfortable in HTML and CSS, the best place to get started is t
 You can view some examples of tailwind component [here](https://tailwindcomponents.com/components). Feel free to implement a mock or just start from scratch and roll your own.  [Tailwind Play](https://play.tailwindcss.com/) is an excellent resource for creating and sharing quick tailwind mocks in your browser. We've also provided links to some of our Tailwind prototypes as a springboard for you to get started.
  
 ### Tailwind Play Examples
-
+TODO
 
 ## Implementation
 Once we've got Tailwind prototypes in place, it all comes down to the implementation phase. Do you like slinging Java code? Well have we got a job for you! Convert the DOM structure to J2HTML then use the Tailwind prototypes as a reference for the CSS.
