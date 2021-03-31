@@ -84,6 +84,14 @@ In contrast to unit tests, browser tests do not and should attempt to exhaustive
 - encapsulate UI interaction details into [page object classes](https://playwright.dev/docs/pom/)
 - as much as is practical navigate using the UI and not by directly referencing URL paths
 
+#### Formatting browser tests code
+
+We have an auto-formatter for our browser test code. Please run the following command.
+
+```
+browser-test/bin/fmt
+```
+
 ### Debugging browser tests
 
 Please see the [Playwright debug docs](https://playwright.dev/docs/debug) for a lot more info on this topic.
