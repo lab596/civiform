@@ -32,4 +32,4 @@
     1. Applicant flow
         1. Can you fill out the question?
         1. Do error messages render correctly
-1. Add browser tests
+1. Add a helper function in the browser tests for the new question type: [`admin_question.ts`](https://github.com/seattle-uat/civiform/blob/main/browser-test/src/support/admin_questions.ts)
