@@ -13,7 +13,10 @@ Weekly, for the duration of the Google.org Fellowship (through Jun 2021).  Thurs
 ## Past recordings (all link to YouTube, content breakdown in-process)
 
 * [April 1](https://youtu.be/ooutDHPRjFI)
+    - Github 101 - Product management workflow ([video](https://youtu.be/ooutDHPRjFI&t=26)) ([deck](https://docs.google.com/presentation/d/1r6adPS2h-2WtKRoOYuZp-9ktcNQnh9ZoUJ-A55M2ReI/edit#slide=id.p))
+    - [Github 101 - Pull requests](https://youtu.be/ooutDHPRjFI&t=866)
 * [March 25](https://youtu.be/JDVjjoLKCyg)
+    - [Automated browser functional testing](https://youtu.be/JDVjjoLKCyg)
 * [March 18](https://youtu.be/fXZj_0S6onI)
     - [Creating a question](https://www.youtube.com/watch?v=fXZj_0S6onI&t=244) styling updates
     - [Logging in](https://www.youtube.com/watch?v=fXZj_0S6onI&t=290s) via Oracle IDCS and Active Directory accounts
