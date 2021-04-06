@@ -11,7 +11,9 @@ Anyone is invited, but this event is geared toward a technical audience (Seattle
 Weekly, for the duration of the Google.org Fellowship (through Jun 2021).  Thursdays 11-11:30 AM PT at [meet.google.com/ffi-hmms-ryk](https://meet.google.com/ffi-hmms-ryk).
 
 ## Past recordings (all link to YouTube, content breakdown in-process)
-  
+
+* [April 1](https://youtu.be/ooutDHPRjFI)
+* [March 25](https://youtu.be/JDVjjoLKCyg)
 * [March 18](https://youtu.be/fXZj_0S6onI)
     - [Creating a question](https://www.youtube.com/watch?v=fXZj_0S6onI&t=244) styling updates
     - [Logging in](https://www.youtube.com/watch?v=fXZj_0S6onI&t=290s) via Oracle IDCS and Active Directory accounts
