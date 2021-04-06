@@ -19,9 +19,9 @@ of the "remote debug" type.
 
 ![Use the remote debug option.](https://imgur.com/t3GJtY2.png)
 
-The page should prepopulate with most of these options - fill in `9999` for the port.
+The page should prepopulate with most of these options - fill in `8457` for the port.
 
-![Fill in the port, 9999, and check the rest of the settings.](https://imgur.com/JB3Kxgd.png)
+![Fill in the port, 8457, and check the rest of the settings.](https://i.imgur.com/hpWWwYp.png)
 
 # Running the debugger
 
