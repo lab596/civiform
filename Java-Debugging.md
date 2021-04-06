@@ -25,5 +25,5 @@ The page should prepopulate with most of these options - fill in `8457` for the 
 
 # Running the debugger
 
-First, run `bin/run-dev` to run a debuggable process.  You'll know it's debuggable if it prints `Listening for transport dt_socket at address: 9999` in the startup logs.  Then, click the bug icon to start debugging with your new debug configuration.  You should see this:
+First, run `bin/run-dev` to run a debuggable process.  You'll know it's debuggable if it prints `Listening for transport dt_socket at address: 8457` in the startup logs.  Then, click the bug icon to start debugging with your new debug configuration.  You should see this:
 ![Debugger example.](https://imgur.com/NHbx2Km.png)
