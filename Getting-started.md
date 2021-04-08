@@ -1,5 +1,19 @@
 This guide helps you get started running and interacting with a local development server and tests.
 
+## Prerequisites
+
+1. A 64-bit OS and computer
+
+1. At least 4 GB of RAM
+
+## Recommendations
+
+* The preferred IDE is [IntelliJ IDEA](https://www.jetbrains.com/idea/download/) because it’s designed around Java-based projects
+
+    * Recommended plugins: Docker, Database Navigator
+
+* The preferred platform is Unix-based since there is less overhead for running Docker Engine due to resource isolation features of Linux kernels which does not require the need of virtual machines 
+
 ## Setting up your environment
 
 Start here! This step is a prerequisite for everything that follows, even if you only want to interact with a local server without pushing changes.
@@ -8,20 +22,46 @@ Start here! This step is a prerequisite for everything that follows, even if you
 
 1. [Install git](https://github.com/git-guides/install-git) on your machine.
 
-1. Download [Docker Desktop](https://www.docker.com/get-started).
-
 1. Clone the CiviForm repo. This will create a copy of the codebase on your machine:
 
     1. Open a terminal and navigate to the directory you'd like the copy of the CiviForm codebase to live.
-
     1. In that directory, run the following (and/or refer to
        [this guide](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)):
 
            git clone git@github.com:seattle-uat/civiform.git
 
+1. Next we will set up Docker which process differs per platform
+
+
+### For Windows
+
+Note that this only works for Windows 10 and a machine that supports Hyper-V (must be enabled in the BIOS).
+
+1. [Install Windows Subsystem for Linux 2](https://docs.microsoft.com/en-us/windows/wsl/install-win10) (WSL 2) with any Linux distribution (Ubuntu is tested to work with this project)
+    * If Windows Subsystem for Linux 1 (WSL 1) is already installed, skip to steps 4 and 5 in the linked guide to update to WSL 2
+
+1. [Install Docker Desktop on Windows](https://docs.docker.com/docker-for-windows/install/)
+
+
+### For macOS
+
+Note that VirtualBox prior to version 4.3.30 is not compatible with Docker Desktop and must be uninstalled or updated to the latest version.
+
+1. [Install Docker Desktop on Mac](https://docs.docker.com/docker-for-mac/install/)
+
+
+### For Linux/Unix
+
+Docker provides official support for the following distributions: Ubuntu, Debian, Fedora, CentOS, and Raspbian.
+
+1. [Install Docker Engine](https://docs.docker.com/engine/install/)
+
+1. [Install Docker Compose](https://docs.docker.com/compose/install/)
+
+
 ### A note on IDEs
 
-You may use whichever IDE you prefer, though _DO NOT_ use the IDE's built-in sbt (Scala Build Tool) shell if it has one. Instead, run `bin/sbt` to bring up an sbt shell inside the Docker container. The sbt shell allows you to compile, run tests, and run any other sbt commands you may need
+You may use whichever IDE you prefer, though _DO NOT_ use the IDE's built-in sbt (Scala Build Tool) shell if it has one. Instead, run `bin/sbt` to bring up an sbt shell inside the Docker container. The sbt shell allows you to compile, run tests, and run any other sbt commands you may need.
 
 
 ## Running a local server
