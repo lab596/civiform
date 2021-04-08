@@ -73,9 +73,9 @@ Note that VirtualBox prior to version 4.3.30 is not compatible with Docker Deskt
 
 Docker provides official support for the following distributions: Ubuntu, Debian, Fedora, CentOS, and Raspbian.
 
-1. [Install Docker Engine](https://docs.docker.com/engine/install/)
+1. [Install Docker Engine](https://docs.docker.com/engine/install/).
 
-1. [Install Docker Compose](https://docs.docker.com/compose/install/)
+1. [Install Docker Compose](https://docs.docker.com/compose/install/).
 
 1. Launch a new terminal instance and type `docker -v` and `docker-compose -v` to confirm that Docker Engine and Docker Compose were installed correctly.
 
@@ -99,13 +99,16 @@ You may use whichever IDE you prefer, though _DO NOT_ use the IDE's built-in sbt
 
 The `bin/run-dev` script uses `docker-compose` (see [`docker-compose.yaml`](https://github.com/seattle-uat/civiform/blob/main/docker-compose.yml)). It enables Java and Javascript hot-reloading: when you modify most files, the server will recompile and restart. This is pretty time-consuming on first page load, but after that, it's not so bad.
 
+
 ### Help! It's not working!
 
 We know setting up a development environment can have some snags in the road. If something isn't working, check out our [Troubleshooting](https://github.com/seattle-uat/civiform/wiki/Dev-troubleshooting) guide or reach out on [Slack](https://join.slack.com/t/civiform/shared_invite/zt-niap7ys1-RAICICUpDJfjpizjyjBr7Q).
 
+
 ## Running tests
 
 This section will help you run CiviForm unit and browser tests in a basic way. For more information on _writing_ and _debugging_ these tests, check out the [Testing](https://github.com/seattle-uat/civiform/wiki/Testing) guide.
+
 
 ### Running unit tests
 
@@ -125,18 +128,16 @@ If you'd like to run a specific test or set of tests, and/or save sbt startup ti
 
        testOnly services.question.QuestionDefinitionTest
 
+
 ### Running browser tests
 
-To run the browser tests (includes all the [Playwright](https://playwright.dev/) tests in
-[`civiform/browser-test/src/`](https://github.com/seattle-uat/civiform/tree/main/browser-test/src),
-there are three steps:
+To run the browser tests (includes all the [Playwright](https://playwright.dev/) tests in [`civiform/browser-test/src/`](https://github.com/seattle-uat/civiform/tree/main/browser-test/src), there are three steps:
 
 1. Build the Docker image for running the playwright tests. This only needs to be done once:
 
        bin/build-browser-tests
 
-1. Bring up the local test environment. This step can be done in a separate terminal window while the
-   above step is still building.
+1. Bring up the local test environment. This step can be done in a separate terminal window while the above step is still building.
    Leave this running while you are working for faster browser test runs:
 
        bin/run-browser-test-env
