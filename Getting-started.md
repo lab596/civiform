@@ -90,6 +90,6 @@ there are three steps:
 
 ## What's next?
 
-To learn more about how to make code contributions, head to [Technical contribution guide](https://github.com/seattle-uat/civiform/wiki/Technical-contributions).
+To learn more about how to make code contributions, head to [Technical contribution guide](https://github.com/seattle-uat/civiform/wiki/Technical-contribution-guide).
 
-To learn about the CiviForm tech stack and standards, head to [Technology overview](https://github.com/seattle-uat/civiform/wiki/Dev-guide-&-standards) and [Development standards](https://github.com/seattle-uat/civiform/wiki/Development-standards).
+To learn about the CiviForm tech stack and standards, head to [Technology overview](https://github.com/seattle-uat/civiform/wiki/Technology-overview) and [Development standards](https://github.com/seattle-uat/civiform/wiki/Development-standards).
