@@ -30,24 +30,43 @@ Start here! This step is a prerequisite for everything that follows, even if you
 
            git clone git@github.com:seattle-uat/civiform.git
 
-1. Next we will set up Docker which process differs per platform
+1. Next we will set up Docker which process differs per platform (see below)
 
 
 ### For Windows
 
 Note that this only works for Windows 10 and a machine that supports Hyper-V (must be enabled in the BIOS).
 
-1. [Install Windows Subsystem for Linux 2](https://docs.microsoft.com/en-us/windows/wsl/install-win10) (WSL 2) with any Linux distribution (Ubuntu is tested to work with this project)
-    * If Windows Subsystem for Linux 1 (WSL 1) is already installed, skip to steps 4 and 5 in the linked guide to update to WSL 2
+1. [Install Windows Subsystem for Linux 2](https://docs.microsoft.com/en-us/windows/wsl/install-win10) (WSL 2) with any Linux distribution (Ubuntu is tested to work with this project).
 
-1. [Install Docker Desktop on Windows](https://docs.docker.com/docker-for-windows/install/)
+    * If Windows Subsystem for Linux 1 (WSL 1) is already installed, skip to steps 4 and 5 in the linked guide to update to WSL 2.
+
+1. [Install Docker Desktop on Windows](https://docs.docker.com/docker-for-windows/install/).
+
+1. Startup Docker Desktop to enable the use of `docker` and `docker-compose` in WSL 2.
+
+1. Open up PowerShell or Command Prompt and type `wsl -l -v` to make sure that you installed Docker Desktop and WSL 2 correctly.
+
+    * You should have your Linux distribution(s) listed followed by `docker-desktop-data` and `docker-desktop`.
+
+    * In addition, all distributions should be running at version 2.
+
+1. Type `wsl` to go into the Bash shell.
+
+1. Navigate to where you saved the CiviForm repo and type `docker build` to build the Docker images of the project.
 
 
 ### For macOS
 
 Note that VirtualBox prior to version 4.3.30 is not compatible with Docker Desktop and must be uninstalled or updated to the latest version.
 
-1. [Install Docker Desktop on Mac](https://docs.docker.com/docker-for-mac/install/)
+1. [Install Docker Desktop on Mac](https://docs.docker.com/docker-for-mac/install/).
+
+1. Startup Docker Desktop to enable the use of `docker` and `docker-compose` in Zsh.
+
+1. Launch Zsh and type `docker -v` and `docker-compose -v` to confirm that Docker Desktop was installed correctly.
+
+1. Navigate to where you saved the CiviForm repo and type `docker build` to build the Docker images of the project.
 
 
 ### For Linux/Unix
@@ -57,6 +76,10 @@ Docker provides official support for the following distributions: Ubuntu, Debian
 1. [Install Docker Engine](https://docs.docker.com/engine/install/)
 
 1. [Install Docker Compose](https://docs.docker.com/compose/install/)
+
+1. Launch a new terminal instance and type `docker -v` and `docker-compose -v` to confirm that Docker Engine and Docker Compose were installed correctly.
+
+1. Navigate to where you saved the CiviForm repo and type `docker build` to build the Docker images of the project
 
 
 ### A note on IDEs
