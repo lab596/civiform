@@ -53,7 +53,7 @@ Note that this only works for Windows 10 and a machine that supports Hyper-V (mu
 
 1. Type `wsl` to go into the Bash shell.
 
-1. Navigate to where you saved the CiviForm repo and type `docker build` to build the Docker images of the project.
+1. Navigate to where you saved the CiviForm repo and type `bin/run-dev` to get the latest Docker images of the project.
 
 
 ### For macOS
@@ -66,7 +66,7 @@ Note that VirtualBox prior to version 4.3.30 is not compatible with Docker Deskt
 
 1. Launch Zsh and type `docker -v` and `docker-compose -v` to confirm that Docker Desktop was installed correctly.
 
-1. Navigate to where you saved the CiviForm repo and type `docker build` to build the Docker images of the project.
+1. Navigate to where you saved the CiviForm repo and type `bin/run-dev` to get the latest Docker images of the project.
 
 
 ### For Linux/Unix
@@ -79,7 +79,7 @@ Docker provides official support for the following distributions: Ubuntu, Debian
 
 1. Launch a new terminal instance and type `docker -v` and `docker-compose -v` to confirm that Docker Engine and Docker Compose were installed correctly.
 
-1. Navigate to where you saved the CiviForm repo and type `docker build` to build the Docker images of the project
+1. Navigate to where you saved the CiviForm repo and type `bin/run-dev` to get the latest Docker images of the project.
 
 
 ### A note on IDEs
