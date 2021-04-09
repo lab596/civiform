@@ -105,7 +105,7 @@ There are two options for configuring an IDE:
 
 1. From WSL, `git clone` the CiviForm repository somewhere in your Windows file system (`/mnt/c/...`).
 2. Install jdk 11 for Windows: **[https://www.oracle.com/java/technologies/javase-jdk11-downloads.html](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)**
-3. Install sbt 1.3.13 for Windows: **[https://www.scala-sbt.org/download.html](https://www.scala-sbt.org/download.htmlr)**
+3. Install sbt 1.3.13 for Windows: **[https://www.scala-sbt.org/download.html](https://www.scala-sbt.org/download.html)**
 4. Install and configure IntelliJ in windows from **[https://www.jetbrains.com/idea/](https://www.jetbrains.com/idea/)**
 5. Open IntelliJ, download the Scala plugin, and restart IntelliJ.
 6. Open IntelliJ and open the **[`universal-application-tool-0.0.1/build.sbt`](https://github.com/seattle-uat/civiform/blob/main/universal-application-tool-0.0.1/build.sbt)** file as a project.
