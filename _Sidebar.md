@@ -6,6 +6,7 @@
 
 #### Developer guide
 * [Getting started](https://github.com/seattle-uat/civiform/wiki/Getting-started)
+* [Getting started with Windows](https://github.com/seattle-uat/civiform/wiki/Getting-started-with-Windows)
 * [Technology overview](https://github.com/seattle-uat/civiform/wiki/Technology-overview)
 * [Development standards](https://github.com/seattle-uat/civiform/wiki/Development-standards)
 * [Development stack](https://github.com/seattle-uat/civiform/wiki/Development-stack)
