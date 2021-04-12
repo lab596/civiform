@@ -14,11 +14,11 @@ Follow the **[Windows WSL Installation Guide](https://docs.microsoft.com/en-us/w
 Windows Insider Program may not be available on corporate devices. 
 
 ### System Requirements
-You’ll need to have virtualization enabled on your machine. To check if you have virtualization enabled open the Task Manager, go to the Performance tab, and under CPU check to see if `Virtualization: Enabled`.
+You’ll need to have virtualization enabled on your machine. To check if you have virtualization enabled: open the Task Manager, go to the Performance tab, and under CPU verify `Virtualization: Enabled`.
 
 ![Windows task manager virtualization check](https://drive.google.com/uc?id=1jknfSqD_qUEU8ulsFko52PG31eYs6QSm)
 
-:bangbang: | If virtualization is disabled, you’ll need to boot up into the BIOS and enable virtualization. If your machine does not support virtualization you will not be able to proceed.
+:bangbang: | If virtualization is disabled, you’ll need to boot up into the BIOS and enable virtualization. If your machine does not support virtualization you won't be able to proceed.
 :---: | :---
 
 ## Is it working?
@@ -26,34 +26,34 @@ Follow **[Windows guide to running WSL](https://docs.microsoft.com/en-us/windows
 
 ## Problems
 ### "WSL is not recognized as the name of a cmdlet"
-Powershell does not recognize `wsl` command.
+PowerShell does not recognize `wsl` command.
 
 **Solution**: Reinstall WSL, making sure you run everything with administrator privileges.
 
 ### "The service cannot be started"
-Running `wsl` commands with Powershell generates the following error:
+Running `wsl` commands with PowerShell generates the following error:
 
 ![WSL error: service cannot be started](https://drive.google.com/uc?id=1pwt7Lp-_sjS99lCv08EriPjM01K5hYtN)
 
-**Solution**: **[From WSL GitHub issue 3386](https://github.com/Microsoft/WSL/issues/3386): in the command prompt (not Powershell)** with administrator privileges, execute `sc config LxssManager start=auto` 
+**Solution**: **[From WSL GitHub issue 3386](https://github.com/Microsoft/WSL/issues/3386): in the command prompt (not PowerShell)** with administrator privileges, execute `sc config LxssManager start=auto` 
 
 ### Unable to access the Microsoft Store
-You will not be able to install a Linux distribution from the Microsoft Store if you don't have privileges to access the store. 
+You won't be able to install a Linux distribution from the Microsoft Store if you don't have privileges to access the store. 
 
-**Solution**: you'll have to follow **[Microsoft's guide to manually install a distribution](https://docs.microsoft.com/en-us/windows/wsl/install-manual#downloading-distributions)**.
+**Solution**: You'll have to follow **[Microsoft's guide to manually install a distribution](https://docs.microsoft.com/en-us/windows/wsl/install-manual#downloading-distributions)**.
 
 ### WSL is not connected to the internet
 In your WSL distribution, you can `ping` your favorite website to check for internet connectivity. 
 
 **Multi-part solution**:
-First, make sure your Linux distribution is connected to the right DNS server. The DNS server used by windows can be identified with `IPCONFIG /ALL | FIND /I "DNS Server"` in the command prompt. The DNS server used by Linux is found in `/etc/resolv.conf` file. They should be the same.
+First, make sure your Linux distribution is connected to the right DNS server. The DNS server used by Windows can be identified with `IPCONFIG /ALL | FIND /I "DNS Server"` in the command prompt. The DNS server used by Linux is found in the `/etc/resolv.conf` file. They should be the same.
 
-**If it is still broken**, follow the **[stackoverflow solution for no internet connection on WSL Ubuntu](https://stackoverflow.com/questions/62314789/no-internet-connection-on-wsl-ubuntu-windows-subsystem-for-linux)**.
+**If it's still broken**, follow the **[stackoverflow solution for no internet connection on WSL Ubuntu](https://stackoverflow.com/questions/62314789/no-internet-connection-on-wsl-ubuntu-windows-subsystem-for-linux)**.
 
 **If resetting your network says "Access is denied"**, try **[this solution](https://davidvielmetter.com/tricks/netsh-int-ip-reset-says-access-denied/)**.
 
 ## Installing and configuring Docker
-:bangbang: | If you already had Docker installed before setting up WSL 2, you may want to uninstall and reinstall Docker so that it installs with the required components required for WSL 2.
+:bangbang: | If you already had Docker installed before setting up WSL 2, you may want to uninstall and reinstall Docker so it installs with the required components for WSL 2.
 :---: | :---
 
 As you install Docker, make sure you install the required Windows components for WSL 2.
@@ -64,7 +64,7 @@ Once installed, check `Settings > General` to make sure WSL is used.
 
 ![Docker is using WSL](https://drive.google.com/uc?id=1KsFOCAgWTQ7evWJSD324Z1Biwjc47fvi)
 
-and check `Settings > General > Resources > WSL Integration` to select your Linux distribution.
+Also check `Settings > General > Resources > WSL Integration` to select your Linux distribution.
 
 ![Docker is using specified Linux distribution](https://drive.google.com/uc?id=1qyuU2k_fCiwCWglWms_kv3EHnhbF2XJ0)
 
@@ -74,22 +74,22 @@ Docker may not be able to find any WSL 2 distributions. This means your distribu
 
 ![Docker error: no WSL 2 distributions found](https://drive.google.com/uc?id=1R7JMIZZuL4qZZ5Q4iALhJ7IWRa6dBTTx)
 
-**Solution**: you can try to upgrade the distribution with `wsl --set-version <distro-name> 2` (e.g. `wsl --set-version Ubuntu-20.04 2`). If this doesn't work you can uninstall and reinstall it.
+**Solution**: You can try to upgrade the distribution with `wsl --set-version <distro-name> 2` (e.g. `wsl --set-version Ubuntu-20.04 2`). If this doesn't work, you can uninstall and reinstall it.
 
 #### Linux distribution is not running
 For some reason, the distribution may not be running. You can check by running `wsl -l -v`. You'll want everything to be running with version 2:
 
 ![WSL all instances running with version 2](https://drive.google.com/uc?id=1JXndL2-z2Gqvhs5P-JClaIjlTxIAXVty)
 
-**Solution**: follow the **[Windows guide to running WSL](https://docs.microsoft.com/en-us/windows/wsl/wsl-config#ways-to-run-wsl)** to run your virtual machine with WSL 2.
+**Solution**: Follow the **[Windows guide to running WSL](https://docs.microsoft.com/en-us/windows/wsl/wsl-config#ways-to-run-wsl)** to run your virtual machine with WSL 2.
 
 #### Docker fails to start
-**Solution**: in Docker Desktop, click the bug icon in the top right corner. Try `Restart Docker Desktop` and restart your computer. If that isn't strong enough, try `Reset to factory defaults` and restart your computer. If that still doesn't work uninstall Docker and reinstall it. 
+**Solution**: In Docker Desktop, click the bug icon in the top right corner. Try `Restart Docker Desktop` and restart your computer. If that isn't strong enough, try `Reset to factory defaults` and restart your computer. If that still doesn't work, uninstall Docker and reinstall it. 
 
 ## Is it working?
-If things are working, you'll be able to run CiviForm in WSL with Docker by following the following steps:
+If things are working, you'll be able to run CiviForm in WSL with Docker using the following steps:
 1. In WSL, clone **[the CiviForm repository](https://github.com/seattle-uat/civiform)**.
-2. Run **[`/bin/run-dev`](https://github.com/seattle-uat/civiform/blob/main/bin/run-dev)** to start the application
+2. Run **[`/bin/run-dev`](https://github.com/seattle-uat/civiform/blob/main/bin/run-dev)** to start the application.
 3. In a browser, go to `localhost:9000`, and then wait for the application to load.
 
 # Getting an IDE
@@ -100,7 +100,7 @@ There are two options for configuring an IDE:
 2. **(more setup, faster development time)**: Store, edit, and run everything from within WSL 2.
 
 ## Developing with files stored in Windows
-:bangbang: | It is slow to run start and test the application when the files are stored in Windows because Docker runs in WSL, and will be accessing files through the `/mnt/c` mount. 
+:bangbang: | It's slow to run start and test the application when the files are stored in Windows because Docker runs in WSL, and will be accessing files through the `/mnt/c` mount. 
 :---: | :---
 
 1. From WSL, `git clone` the CiviForm repository somewhere in your Windows file system (`/mnt/c/...`).
