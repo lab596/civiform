@@ -1,6 +1,6 @@
 
 There are special considerations involved with getting an environment set up in Windows, notably with:
-1. Setting up Docker with WSL 2 backend
+1. Setting up Docker with a Windows Subsystem for Linux (WSL 2) backend
 2. Setting up an IDE
 
 # Docker (with WSL 2 backend)
