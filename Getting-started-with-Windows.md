@@ -64,7 +64,7 @@ Once installed, check `Settings > General` to make sure WSL is used.
 
 ![Docker is using WSL](https://drive.google.com/uc?id=1KsFOCAgWTQ7evWJSD324Z1Biwjc47fvi)
 
-Also check `Settings > General > Resources > WSL Integration` to select your Linux distribution.
+Also check `Settings > Resources > WSL Integration` to select your Linux distribution.
 
 ![Docker is using specified Linux distribution](https://drive.google.com/uc?id=1qyuU2k_fCiwCWglWms_kv3EHnhbF2XJ0)
 
