@@ -21,6 +21,7 @@
 ## 4. Allow the admin to create questions of this new type
 1. Add a new `MyTypeQuestionForm` class - see [`TextQuestionForm`](https://github.com/seattle-uat/civiform/blob/main/universal-application-tool-0.0.1/app/forms/TextQuestionForm.java) as an example
 1. Update [`QuestionEditView`](https://github.com/seattle-uat/civiform/blob/main/universal-application-tool-0.0.1/app/views/admin/questions/QuestionEditView.java) to create the right form for your new type
+1. Update [`QuestionController`](https://github.com/seattle-uat/civiform/blob/main/universal-application-tool-0.0.1/app/controllers/admin/QuestionController.java) to bind the new form
 1. Update [`QuestionConfig`](https://github.com/seattle-uat/civiform/blob/main/universal-application-tool-0.0.1/app/views/admin/questions/QuestionConfig.java) to handle the new type. If the new question type has custom validation or configuration options, add logic for rendering those inputs here.
 1. Select an appropriate icon for this question type from [Heroicons](https://heroicons.com/). Copy the SVG code for the desired icon and use it in [`Icons`](https://github.com/seattle-uat/civiform/blob/main/universal-application-tool-0.0.1/app/views/components/Icons.java) for your new type
 
