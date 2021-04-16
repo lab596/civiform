@@ -12,6 +12,8 @@ Weekly, for the duration of the Google.org Fellowship (through Jun 2021).  Thurs
 
 ## Past recordings (all link to YouTube, content breakdown in-process)
 
+* [April 15](https://youtu.be/f-zrLrBjT9E)
+* [April 8](https://youtu.be/6thdtKcsszw)
 * [April 1](https://youtu.be/ooutDHPRjFI)
     - Github 101 - Product management workflow ([video](https://youtu.be/ooutDHPRjFI&t=26)) ([deck](https://docs.google.com/presentation/d/1r6adPS2h-2WtKRoOYuZp-9ktcNQnh9ZoUJ-A55M2ReI/edit#slide=id.p))
     - [Github 101 - Pull requests](https://youtu.be/ooutDHPRjFI&t=866)
