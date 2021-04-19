@@ -18,7 +18,7 @@ Weekly, for the duration of the Google.org Fellowship (through Jun 2021).  Thurs
     - CiviForm AWS Set-Up - S3 Demo File Upload ([video](https://youtu.be/6thdtKcsszw?t=20))
     - CiviForm Question Types ([video](https://youtu.be/6thdtKcsszw?t=530))([deck](https://docs.google.com/presentation/d/1eSGjcwNQsmf6r9W1zfy8w5j3b4ppzEaGXHdK8ca-vY4/edit?resourcekey=0-nYEabceCxNrL71hHEvza0Q#slide=id.p))
 * [April 1](https://youtu.be/ooutDHPRjFI)
-    - Github 101 - Product management workflow ([video](https://youtu.be/ooutDHPRjFI&t=26)) ([deck](https://docs.google.com/presentation/d/1r6adPS2h-2WtKRoOYuZp-9ktcNQnh9ZoUJ-A55M2ReI/edit#slide=id.p))
+    - Github 101 - Product management workflow ([video](https://youtu.be/ooutDHPRjFI&t=26)) ([deck](https://docs.google.com/presentation/d/1MkRQ65lf8HChpipiMqMR3Tl8euW6byZQP0QIh5Jqakg/edit?resourcekey=0-y-EmLEeTXeLlRa9bvJD0HA#slide=id.p))
     - [Github 101 - Pull requests](https://youtu.be/ooutDHPRjFI&t=866)
 * [March 25](https://youtu.be/JDVjjoLKCyg)
     - [Automated browser functional testing](https://youtu.be/JDVjjoLKCyg)
