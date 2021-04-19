@@ -13,7 +13,7 @@ Weekly, for the duration of the Google.org Fellowship (through Jun 2021).  Thurs
 ## Past recordings (all link to YouTube, content breakdown in-process)
 
 * [April 15](https://youtu.be/f-zrLrBjT9E)
-    - ([Roadshow Presentation] (https://youtu.be/f-zrLrBjT9E?t=88)) ([(Link to deck)](https://seattlegov.sharepoint.com/:p:/r/sites/IAC-EXT/AP/_layouts/15/Doc.aspx?sourcedoc=%7BB8617A54-52F7-417F-89F2-05F4BC4364BE%7D&file=CiviForm%20-%20City%20Budget%20Office%20(April%205%202021).pptx&action=edit&mobileredirect=true&cid=e4058b47-00aa-4084-8d71-0322af13a740&PreviousSessionID=0e1847c7-ac6c-f68a-9dc0-113e40993eac)) ([(Link to test plan and calendar)](https://docs.google.com/document/d/10tboNC3OI9ArC3l-GW-7cninoyeVHRTZqFcA6iyjQbs/edit?resourcekey=0-GrHFt4VvyTMozY-jOMm-Fw))
+    - [Roadshow Presentation](https://youtu.be/f-zrLrBjT9E?t=88) [(Link to deck)](https://seattlegov.sharepoint.com/:p:/r/sites/IAC-EXT/AP/_layouts/15/Doc.aspx?sourcedoc=%7BB8617A54-52F7-417F-89F2-05F4BC4364BE%7D&file=CiviForm%20-%20City%20Budget%20Office%20(April%205%202021).pptx&action=edit&mobileredirect=true&cid=e4058b47-00aa-4084-8d71-0322af13a740&PreviousSessionID=0e1847c7-ac6c-f68a-9dc0-113e40993eac) [(Link to Test Plan and Calendar)](https://docs.google.com/document/d/10tboNC3OI9ArC3l-GW-7cninoyeVHRTZqFcA6iyjQbs/edit?resourcekey=0-GrHFt4VvyTMozY-jOMm-Fw#heading=h.fn4t1o4h81r8)
 * [April 8](https://youtu.be/6thdtKcsszw)
     - CiviForm AWS Set-Up - S3 Demo File Upload
     - CiviForm Question Types
