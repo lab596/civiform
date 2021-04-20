@@ -2,5 +2,5 @@
 
 This suite will consist of several products:
 
-- A product to make the discovery of benefit programs easier
+- A platform to make the discovery of benefit programs easier
 - A product to improve the process of apply for benefit programs (Civiform)
