@@ -15,4 +15,4 @@ The `View` classes are generally organized by which role(s) they are viewable by
 # AWS Infra for Seattle Instance
 
 -  Archimate [Files](https://drive.google.com/drive/folders/1dtYkqGzPgjmzLmB7Yu0uULH-vhrmSygd?usp=sharing)
--  Archimate Output [Diagram](https://drive.google.com/file/d/1-9DUhniTg_ZiChfbM5pWeWd7QtdDEML5/view?usp=sharing)
+-  Archimate Output [Diagram](https://drive.google.com/file/d/1qWBlDo8g5ZPydpt9NbC8lqfT3BwfhELo/view?usp=sharing)
