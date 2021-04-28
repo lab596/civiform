@@ -11,6 +11,7 @@
 * [Technology overview](https://github.com/seattle-uat/civiform/wiki/Technology-overview)
 * [Development standards](https://github.com/seattle-uat/civiform/wiki/Development-standards)
 * [Development stack](https://github.com/seattle-uat/civiform/wiki/Development-stack)
+* [Adding a new supported language](https://github.com/seattle-uat/civiform/wiki/Adding-a-new-supported-language)
 * [Adding a new question type](https://github.com/seattle-uat/civiform/wiki/Adding-a-new-question-type)
 * [Testing](https://github.com/seattle-uat/civiform/wiki/Testing)
 * [Troubleshooting](https://github.com/seattle-uat/civiform/wiki/Dev-troubleshooting)
