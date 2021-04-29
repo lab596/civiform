@@ -13,7 +13,9 @@ Weekly, for the duration of the Google.org Fellowship (through Jun 2021).  Thurs
 ## Past recordings (all link to YouTube, content breakdown in-process)
 
 * [April 29](https://youtu.be/-0A1KTU3G28)
+    - Admin managed language translations 
 * [April 22](https://youtu.be/ZtPshNbw--Q)
+    - Repeater question overview
 * [April 15](https://youtu.be/f-zrLrBjT9E)
     - Roadshow presentation ([video](https://youtu.be/f-zrLrBjT9E?t=88)) ([deck](https://drive.google.com/file/d/1aOXA2MrnkiIUiGiwZ6QFcmciKMScJcJP/view?usp=sharing)) ([test plan and calendar](https://docs.google.com/document/d/10tboNC3OI9ArC3l-GW-7cninoyeVHRTZqFcA6iyjQbs/edit?resourcekey=0-GrHFt4VvyTMozY-jOMm-Fw#heading=h.fn4t1o4h81r8))
 * [April 8](https://youtu.be/6thdtKcsszw)
