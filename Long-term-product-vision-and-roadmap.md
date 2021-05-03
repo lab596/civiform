@@ -38,7 +38,7 @@ CiviForm's roadmap for July to December 2021 is focused around 3 key pillars:
 - UI for admins to design eligibility criteria to support eligibility features in applicant experience
 - APIs for Seattle IT to integrate CiviForm with existing CRM and automation applications
 
-## Adoption & usage by Trusted Intermediaries
+### Adoption & usage by Trusted Intermediaries
 - Ability for applicants to provide access to existing accounts to TIs for assistance in application completion
 - Dashboards for impact and other reports 
 
