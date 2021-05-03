@@ -1,5 +1,8 @@
 [Home](https://github.com/seattle-uat/civiform/wiki)
 
+#### About the project
+* [Product roadmap and vision](https://github.com/seattle-uat/civiform/wiki/Long-term-product-vision-and-roadmap)
+
 #### [Contributing](https://github.com/seattle-uat/civiform/wiki/Contributing)
 * [Technical contribution guide](https://github.com/seattle-uat/civiform/wiki/Technical-contribution-guide)
 * [UX contribution guide (mockups)](https://github.com/seattle-uat/civiform/wiki/UX-contribution-guide)
