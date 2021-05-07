@@ -11,7 +11,9 @@ Anyone is invited, but this event is geared toward a technical audience (Seattle
 Weekly, for the duration of the Google.org Fellowship (through Jun 2021).  Thursdays 11-11:30 AM PT at [meet.google.com/ffi-hmms-ryk](https://meet.google.com/ffi-hmms-ryk).
 
 ## Past recordings (all link to YouTube, content breakdown in-process)
-
+* [May 6](https://youtu.be/T8o-IbEKevo)
+    - Trusted Intermediary Flow
+    - The applicant side of enumerators
 * [April 29](https://youtu.be/-0A1KTU3G28)
     - Admin managed language translations 
 * [April 22](https://youtu.be/ZtPshNbw--Q)
