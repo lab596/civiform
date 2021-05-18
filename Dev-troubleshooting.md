@@ -63,3 +63,13 @@ Sometimes you have partial db information.  A fix is to fully clear the db with 
 
 ### S3 bucket does not exist error
 If you see an error when running `bin/run-dev` such as `[Guice/ErrorInjectingConstructor]: RuntimeException: S3 exception: The specified bucket does not exist (Service: S3, Status Code: 404)`, this is due to the localstack S3 bucket is not created successfully. If you have [AWS CLI](https://aws.amazon.com/cli/) installed, please make sure it is configured. You can verify or reconfigure by running `aws configure`. Enter `test` to any questions that have none as default.
+
+### If nothing else works...
+Try these steps to clear caches, docker, etc. - hopefully one will get you into a better state. They are roughly ordered by which have been most helpful in fixing past issues.
+
+1. Clean up docker containers: `docker-compose down --remove-orphans`
+1. Run `docker system prune`
+1. Clear the sbt cache (run from `universal-application-tool/` directory): `rm -rf universal-application-tool-0.0.1/target/ universal-application-tool-0.0.1/project/project universal-application-tool-0.0.1/project/target universal-application-tool-0.0.1/logs/`
+1. Remove all docker images - you can do this in Docker Desktop by going to "Images", then clicking the "Clean up" button in the top right
+1. Remove all docker volumes - run `docker volume ls` to see a list, and then `docker volume rm ${volume_name}` to remove them
+1. Remove home directory cache folders: `rm -rf ~/.ivy ~/.ivy2 ~/.sbt ~/.coursier`
