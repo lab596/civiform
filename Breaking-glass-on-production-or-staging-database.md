@@ -2,7 +2,7 @@ Breaking glass on the production or staging database is a way to save production
 
 To break glass, 
 
-1. Sign into the AWS management console and open up the cloud shell
+1. Sign into the AWS management console and open up cloudshell
 ![Windows task manager virtualization check](https://drive.google.com/uc?id=1I7pWoud4cm-oB7KBZGsuxtcMTv_dkWLe)
 
 2. Clone civiform: `git clone https://github.com/seattle-uat/civiform.git`
