@@ -5,8 +5,8 @@ To break glass,
 1. Sign into the AWS management console and open up cloudshell
 ![Windows task manager virtualization check](https://drive.google.com/uc?id=1I7pWoud4cm-oB7KBZGsuxtcMTv_dkWLe)
 
-2. Clone civiform: `git clone https://github.com/seattle-uat/civiform.git`
+2. In cloudshell, clone civiform: `git clone https://github.com/seattle-uat/civiform.git`
 
-3. Run `bin/breakglass-db-access prod` to break glass into prod. Or just `bin/breakglass-db-access` to break glass into staging.
+3. In cloudshell, run civiform's `bin/breakglass-db-access prod` script to break glass into prod. Or just `bin/breakglass-db-access` to break glass into staging.
 
 4. Make sure to exit out of the postgresql shell to terminate the ec2 instance and delete the emergency DB security group.
