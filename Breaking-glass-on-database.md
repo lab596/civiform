@@ -7,6 +7,7 @@ To break glass,
 
 2. In cloudshell, clone civiform: `git clone https://github.com/seattle-uat/civiform.git`
 
-3. In cloudshell, run civiform's `bin/breakglass-db-access prod` script to break glass into prod. Or just `bin/breakglass-db-access` to break glass into staging.
+3. In cloudshell, run civiform's `bin/breakglass-db-access prod` script to break glass into prod. Or just `bin/breakglass-db-access` to break glass into staging. The `breakglass-db-access` script puts you directly in psql shell connected to the production or staging environment. 
 
 4. Make sure to exit out of the postgresql shell to terminate the ec2 instance and delete the emergency DB security group, or you may need to manually clean things up afterwards.
+ 
