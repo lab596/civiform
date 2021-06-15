@@ -19,7 +19,7 @@
 * [Breaking glass on database](https://github.com/seattle-uat/civiform/wiki/Breaking-glass-on-database)
 
 #### Product roadmap
-* [Product roadmap and vision](https://github.com/seattle-uat/civiform/wiki/Long-term-product-vision-and-roadmap)
+* [Long-term product vision](https://github.com/seattle-uat/civiform/wiki/Long-term-product-vision)
 
 #### Other resources
 * [CiviForm Google Drive](https://github.com/seattle-uat/civiform/wiki/Google-Drive)
