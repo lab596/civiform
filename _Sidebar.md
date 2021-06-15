@@ -18,7 +18,7 @@
 * [Production](https://github.com/seattle-uat/civiform/wiki/Production)
 * [Breaking glass on database](https://github.com/seattle-uat/civiform/wiki/Breaking-glass-on-database)
 
-#### About the project
+#### Product roadmao
 * [Product roadmap and vision](https://github.com/seattle-uat/civiform/wiki/Long-term-product-vision-and-roadmap)
 
 #### Other resources
