@@ -20,6 +20,7 @@
 
 #### Product roadmap
 * [Long-term product vision](https://github.com/seattle-uat/civiform/wiki/Long-term-product-vision)
+* [Product roadmap for 2021-2022](https://github.com/seattle-uat/civiform/wiki/Product-roadmap)
 
 #### Other resources
 * [CiviForm Google Drive](https://github.com/seattle-uat/civiform/wiki/Google-Drive)
