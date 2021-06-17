@@ -10,4 +10,6 @@ To break glass,
 3. In cloudshell, run civiform's `bin/breakglass-db-access prod` script to break glass into prod. Or just `bin/breakglass-db-access` to break glass into staging. The `breakglass-db-access` script puts you directly in psql shell connected to the production or staging environment. 
 
 4. Make sure to exit out of the postgresql shell by running `\q` or pressing `ctrl + d` to terminate the ec2 instance and delete the emergency DB security group, or you may need to manually clean things up afterwards.
- 
+
+5. To manually clean up any instances, go to EC2 console and terminate any remaining instances and delete any keys.
+![](https://drive.google.com/file/d/1BW2Dg1uqfv8MNs4RUtOfA2HEUNeNjB-_/view?usp=sharing&resourcekey=0-ZBiTGLo0fJeki7PvDfhysg)
