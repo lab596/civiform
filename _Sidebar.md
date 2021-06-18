@@ -21,6 +21,7 @@
 #### Product management
 * [Long-term product vision](https://github.com/seattle-uat/civiform/wiki/Long-term-product-vision)
 * [Product roadmap for 2021-2022](https://github.com/seattle-uat/civiform/wiki/Product-roadmap)
+* [Testing resources](https://github.com/seattle-uat/civiform/wiki/Testing-resources)
 
 #### Other resources
 * [CiviForm Google Drive](https://github.com/seattle-uat/civiform/wiki/Google-Drive)
