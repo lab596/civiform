@@ -18,7 +18,7 @@
 * [Production](https://github.com/seattle-uat/civiform/wiki/Production)
 * [Breaking glass on database](https://github.com/seattle-uat/civiform/wiki/Breaking-glass-on-database)
 
-#### Product roadmap
+#### Product management
 * [Long-term product vision](https://github.com/seattle-uat/civiform/wiki/Long-term-product-vision)
 * [Product roadmap for 2021-2022](https://github.com/seattle-uat/civiform/wiki/Product-roadmap)
 
