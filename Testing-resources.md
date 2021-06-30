@@ -28,3 +28,5 @@ If this Sherlock test account isn't found, you'll need to create a new IDCS acco
 1. On the homepage, hit "Register" to make a new account.
 1. Create a new throwaway email address on [dispostable.com](https://dispostable.com). 
 1. Fill in the form so you can create an account with that email address. Remember the username and password, and update this Wiki page accordingly.
+
+[Check out this video to learn how to make a new account](https://drive.google.com/file/d/1gb03zhlX7i6pBKdK3rVkwzWjGTraKGfT/view).
