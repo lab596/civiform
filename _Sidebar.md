@@ -12,7 +12,7 @@
 * [Development standards](https://github.com/seattle-uat/civiform/wiki/Development-standards)
 * [Development stack](https://github.com/seattle-uat/civiform/wiki/Development-stack)
 * [Form submission with Play](https://github.com/seattle-uat/civiform/wiki/Form-Submission-with-Play)
-* [Adding a new supported language](https://github.com/seattle-uat/civiform/wiki/Adding-a-new-supported-language)
+* [Internationalization (i18n)](https://github.com/seattle-uat/civiform/wiki/Internationalization-(i18n))
 * [Adding a new question type](https://github.com/seattle-uat/civiform/wiki/Adding-a-new-question-type)
 * [Testing](https://github.com/seattle-uat/civiform/wiki/Testing)
 * [Troubleshooting](https://github.com/seattle-uat/civiform/wiki/Dev-troubleshooting)
