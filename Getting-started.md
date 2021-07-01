@@ -8,7 +8,7 @@ Start here! This step is a prerequisite for everything that follows, even if you
 
 1. [Install git](https://github.com/git-guides/install-git) on your machine.
 
-1. Download [Docker Desktop](https://www.docker.com/get-started).
+1. Download [Docker Desktop](https://www.docker.com/get-started). On Mac, run Docker Desktop and go to Preferences > Resources to increase max RAM for containers to at least 4GB, otherwise sbt compiles can get killed before completing and produce strange runtime behavior.
 
 1. Clone the CiviForm repo. This will create a copy of the codebase on your machine:
 
