@@ -1,6 +1,6 @@
 Our production infrastructure is managed declaratively by [cloudformation](https://github.com/seattle-uat/civiform/tree/main/infra). To deploy, `run bin/deploy-prod`. You will need the AWS CLI - `brew install awscli`.
 
-Production automatically updates after a prober run at 8 pm and 6 am, pacific time, every weekday.  You can view the most recent runs of this prober [here](https://github.com/seattle-uat/civiform/actions/workflows/cron.yaml).
+Production can also be deployed by kicking off the workflow for this prober [here](https://github.com/seattle-uat/civiform/actions/workflows/cron.yaml). We have turned off scheduled probe and deploys for now.
 
 ## Resources not managed by CloudFormation
 
