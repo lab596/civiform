@@ -111,7 +111,7 @@ To run the tests locally, use:
 
 To run them in debug mode with the open browser add the `PWDEBUG` environment variable:
 
-    PWDEBUG=1 /bin/run-browser-tests-local
+    PWDEBUG=1 bin/run-browser-tests-local
 
 #### Screenshots
 
