@@ -88,6 +88,12 @@ there are three steps:
        bin/run-browser-tests landing_page.test.ts
 
 
+## Creating fake data
+
+To create Questions and Programs that use them, you need to log in as a "Program and Civiform Admin" through http://localhost:9000/loginForm .
+
+You can return to that screen to switch to a Guest user and back again to an Admin as needed.
+
 ## What's next?
 
 To learn more about how to make code contributions, head to [Technical contribution guide](https://github.com/seattle-uat/civiform/wiki/Technical-contribution-guide).
