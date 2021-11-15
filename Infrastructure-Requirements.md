@@ -61,26 +61,26 @@ That said, CiviForm depends on many small services that are low-cost add-ons in 
 
 On-prem deployment:
 
-- Pros
+*Pros*
 - Total control of all machines
 - Total control of all sensitive data
 - Can use existing pre-approved software.
 
-- Cons
+*Cons*
 - Hardware capex &amp; opex becomes expensive at scale
 - Given the limited size and time-availability of civic IT departments, on-prem is much more work to scale up, and likely less reliable (more outages). Will require
 - Requires building bespoke systems that are much more laborious for new contributors/maintainers to work with. In contrast, major cloud providers have extensive training and certification offerings making it straightforward to train existing personnel and identify qualified job applicants.
 
 Cloud deployment:
 
-- Pros
+*Pros*
 - Instant scalability (just &quot;add&quot; more capacity)
 - Likely more reliable (fewer outages)
 - Opex cost is likely less than on-prem machine maintenance
 - More efficient use of IT staff&#39;s time
 - Dramatically less technical effort put towards infrastructure, meaning more time can go toward ROC&#39;s product goals
 
-- Cons
+*Cons*
 - Requires careful audit to ensure Cloud service is meeting government security &amp; privacy requirements. (Many Cloud services have special clusters designed for this already.)
 - May require multiple levels of gov't approval to deploy.
 
