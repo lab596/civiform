@@ -6,7 +6,7 @@ November 2021
 
 This document describes the infrastructure required to deploy CiviForm into a new jurisdiction.
 
-CiviForm is a classic web-based client-server architecture which stores applicant data in a database. It typically runs in a Docker container, a type of virtualized environment which contains most of the pieces described below.
+CiviForm is a classic web-based client-server architecture which stores applicant data in a database. The application server typically runs in a Docker container, a type of virtualized environment which contains most of the pieces described below.
 
 ## The Subsystems
 
