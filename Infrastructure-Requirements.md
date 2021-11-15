@@ -93,15 +93,10 @@ Similarly, a **cloud service** refers to a service within the provider (such as 
 From the IT department's point of view:
 
 - The CiviForm system is comprised of a set of resources (e.g. application servers, PostgreSQL database, file storage) will be running in a virtual private cloud (VPC).
-
 - A virtual private cloud ensures the different components of the CiviForm systems are only accessible by the entities that should have access. E.g. the database is only accessible from the application servers, the application servers are only accessible from the load balancer, etc
-
 - For CiviForm, we have designed the system's resources and deployment to be controlled in a set of text files – these are [Terraform](https://www.terraform.io/) configuration files. IT staff has the freedom to modify these files and change how cloud resources deploy, how much disk/ram/cpu to give each, etc.
-
 - Terraform then deploys the resources to a commercial cloud provider – whether it be AWS, GCP, or Azure.
-
 - CiviForm's Java application servers run in a tool called Docker, all cloud providers understand (natively) how to run a Docker container in groups, using container orchestration services.
-
 - AWS has a container service called ECS; Azure has a container service called ACI. These services run the server code in a Docker container, but are using the native cloud app-services systems under the hood.
 - Under development, a local Docker instance contains a private PostgreSQL database within the same container as the app servers. In production, multiple Docker containers are deployed to the cloud, which then access a shared SQL database (e.g. RDS on AWS, or AzureSQL on Azure).
 
