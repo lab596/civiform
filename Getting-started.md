@@ -21,8 +21,13 @@ Start here! This step is a prerequisite for everything that follows, even if you
 
 ### A note on IDEs
 
+#### Running SBT
+
 You may use whichever IDE you prefer, though _DO NOT_ use the IDE's built-in sbt (Scala Build Tool) shell if it has one. Instead, run `bin/sbt` to bring up an sbt shell inside the Docker container. The sbt shell allows you to compile, run tests, and run any other sbt commands you may need
 
+#### Configuring IntelliJ
+
+The easiest way to get IntelliJ to index the project correctly is to install the Scala plugin and open the project by specifying the [build.sbt](https://github.com/seattle-uat/civiform/blob/main/universal-application-tool-0.0.1/build.sbt) file in IntelliJ's open existing project dialog. If this isn't done correctly IntelliJ probably won't load library code correctly and will complain that it can't find symbols imported from libraries.
 
 ## Running a local server
 
