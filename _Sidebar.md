@@ -19,6 +19,7 @@
 * [Troubleshooting](https://github.com/seattle-uat/civiform/wiki/Dev-troubleshooting)
 * [Production](https://github.com/seattle-uat/civiform/wiki/Production)
 * [Breaking glass on database](https://github.com/seattle-uat/civiform/wiki/Breaking-glass-on-database)
+* [Updating caniuse-lite](https://github.com/seattle-uat/civiform/wiki/Updating-caniuse)
 
 #### Product management
 * [Long-term product vision](https://github.com/seattle-uat/civiform/wiki/Long-term-product-vision)
