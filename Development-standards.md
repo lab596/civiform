@@ -12,6 +12,12 @@ The client should be as simple as is practical to implement the desired user exp
 
 For example, enable/disable logic in forms can be specified server-side with HTML [data attributes](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes) then implemented with generic client-side JS that responds to DOM events relevant to the attribute-specified elements. [Here's a simple example](https://jsfiddle.net/c8g6y0ru/1/).
 
+## Scripts and development tasks
+
+Shell scripts should conform to the [Google Shell style guide](https://google.github.io/styleguide/shellguide.html).
+
+Development tasks that are meant to run a local development computer should run inside Docker and be runnable using a script in the `bin/` directory.
+
 ## Java code
 
 Java code should conform to the [Google Java style guide](https://google.github.io/styleguide/javaguide.html). The project makes use of a linter and auto-formatter for Java to help with this, just run `bin/fmt` and your code should be automatically formatted.
