@@ -39,7 +39,7 @@ The easiest way to get IntelliJ to index the project correctly is to install the
 
    To run the application using Azure instead of AWS, run: 
 
-       bin/run-dev –azure
+       bin/run-dev –\-azure
 
 This will start up a dev instance of the application that uses Azurite, the Azure emulator, instead of local stack, the AWS emulator. This script sets an environment variable, ```STORAGE_SERVICE_NAME``` telling the application to run using the Azure emulator instead of AWS. 
 
