@@ -35,9 +35,14 @@ Make a copy of [example.auto.tfvars](https://github.com/seattle-uat/civiform/blo
 $ tf validate
 ```
 
-7. Show the plan of what will be applied and confirm it is correct. Note here that if the code is not using a shared .tfstate the plan will not be shared among all people deploying code (
+7. Show the plan of what will be applied and confirm it is correct. 
+Note here that if the code is not using a shared .tfstate the plan will not be shared among all people deploying code and could lead to conflicts. To set up shared state in azure follow the instructions [here](https://docs.microsoft.com/en-us/azure/developer/terraform/store-state-in-azure-storage?tabs=azure-cli)
 ```
 $ tf plan
 ```
-
-8. 
+8. Deploy the code to terraform
+After confirming that the changes are good to go. 
+```
+$ tf apply
+```
+9. Check the URL created by terraform which should allow you to access civiform
