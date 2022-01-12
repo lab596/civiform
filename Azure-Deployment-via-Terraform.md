@@ -7,7 +7,7 @@ Terraform is 'infrastructure as code' and it is agnostic to cloud provider. The 
 ## Terraform Azure Overview
 Terraform's Azure provider is called [azurerm](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs). If you are curious for a more in depth tutorial the terraform website includes an [azure specific walkthrough](https://learn.hashicorp.com/tutorials/terraform/infrastructure-as-code?in=terraform/azure-get-started).
 
-## How to install
+## Step by Step
 1. Install terraform
 ```
 $ brew tap hashicorp/tap
@@ -46,3 +46,6 @@ After confirming that the changes are good to go.
 $ tf apply
 ```
 9. Check the URL created by terraform which should allow you to access civiform
+
+## What choices were made in the terraform config
+(TBD)
