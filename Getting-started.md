@@ -37,6 +37,12 @@ The easiest way to get IntelliJ to index the project correctly is to install the
 
        bin/run-dev
 
+   To run the application using Azure instead of AWS, run: 
+
+       bin/run-dev –azure
+
+This will start up a dev instance of the application that uses Azurite, the Azure emulator, instead of local stack, the AWS emulator. This script sets an environment variable, ```STORAGE_SERVICE_NAME``` telling the application to run using the Azure emulator instead of AWS. 
+
 2. Once you see "Server started" in your terminal (it will take some time for the server to start up),
    you can access the app in a browser at http://localhost:9000.
    Be patient on the initial page load since it will take some time for all the sources to compile.
