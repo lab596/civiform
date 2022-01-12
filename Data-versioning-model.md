@@ -16,7 +16,9 @@ Versioning is done at the system level with all modified data advancing to a new
 
 #### Lifecycle
 
-A Question or Program can conceptually be in one of three states: ACTIVE, DRAFT, DELETED.  As it changes states the representative data will get copied forward, and the *[stage](https://github.com/seattle-uat/civiform/blob/45631099ef4245f60a98d5ab8cb90178aab7cfb2/universal-application-tool-0.0.1/app/models/LifecycleStage.java#L12)* of the relevant data-copies are updated which included OBSOLETE also. (more on this later)
+A Question or Program can conceptually be in one of three states: ACTIVE, DRAFT, DELETED.  A Draft question may also have a previous active version or not for a new one.
+
+As a QP changes states the representative data will get copied forward, and the *[stage](https://github.com/seattle-uat/civiform/blob/45631099ef4245f60a98d5ab8cb90178aab7cfb2/universal-application-tool-0.0.1/app/models/LifecycleStage.java#L12)* of the relevant data-copies are updated which included OBSOLETE also. (more on this later)
 
 ### Data Model
 
