@@ -16,7 +16,7 @@ The `View` classes are generally organized by which role(s) they are viewable by
 
 ## What is a WebJar?
 
-WebJars are client side dependencies packaged into JAR (Java Archive) files. JAR files are just compressed Java files (along with associated metadata and resources) used for distributing software.
+[WebJars] (https://www.baeldung.com/maven-webjars) are client side dependencies packaged into JAR (Java Archive) files. JAR files are just compressed Java files (along with associated metadata and resources) used for distributing software.
 
 ## WebJars in Civiform
 
