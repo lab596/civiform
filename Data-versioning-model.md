@@ -4,11 +4,11 @@ User created data (Questions, Programs, Applications) are all versioned and this
 
 For ease of phrasing, QP will mean "Question/Program" in this page as many of the concepts are the same for each.
 
-## Questions and Program
+## Questions and Programs
 
 ### Conceptual Overview
 
-As a concept a QP is a specific named instance of a Question of Program such as a Home Address Question, or the Utility Discount Program that is seen and worked with in the user interfaces.
+As a concept a QP is a specific named instance of a Question or Program such as a Home Address Question, or the Utility Discount Program that is seen and worked with in the user interfaces.
 
 #### Versions
 
