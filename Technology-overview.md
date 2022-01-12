@@ -12,6 +12,36 @@ All view classes should extend [`BaseHtmlView`](https://github.com/seattle-uat/c
 
 The `View` classes are generally organized by which role(s) they are viewable by (e.g., [app/view/admin/](https://github.com/seattle-uat/civiform/tree/main/universal-application-tool-0.0.1/app/views/admin) for pages viewable by Admins, [app/views/applicant/](https://github.com/seattle-uat/civiform/tree/main/universal-application-tool-0.0.1/app/views/applicant) for pages viewable by Applicants). Each of these roles also has its own [`Layout` class](https://github.com/seattle-uat/civiform/blob/main/universal-application-tool-0.0.1/app/views/admin/AdminLayout.java) that extends `BaseHtmlLayout` for rendering page content in the context of that role.
 
+# How to add WebJar dependencies
+
+## What is a WebJar?
+
+WebJars are client side dependencies packaged into JAR (Java Archive) files. JAR files are just compressed Java files (along with associated metadata and resources) used for distributing software.
+
+## WebJars in Civiform
+
+We are currently using a WebJar to provide our Azure Blob Storage JavaScript SDK. Using WebJars is far preferable to using a CDN (some civic entities don’t allow CDNs).
+
+## How to add WebJars to Civiform
+More information about how assets work in the Play framework can be found here: https://www.playframework.com/documentation/2.8.x/AssetsOverview
+
+First, we need to make sure the required dependency has an associated WebJar.
+WebJars can be found in the Maven repository as part of the “org.webjars” group. The Azure blob storage WebJar was found here: ​​https://mvnrepository.com/artifact/org.webjars.npm/azure__storage-blob
+
+To add this WebJar to the code, we first have to add it to the build.sbt file. To add the Azure blob storage WebJar, we added this:
+```
+libraryDependencies ++= Seq(
+	“Org.webjars.npm” % “azure__storage-blob” % “10.5.0”,
+)
+```
+This follows the pattern of group % artifact % version. 
+
+Once the WebJar has been added to the build.sbt, it is automatically extracted into a ```lib``` folder relative to the ```public``` folder storing your assets. 
+If you are interested in the location of these files, you can build the project with the new dependencies, then go into public -> lib -> [artifact name] and see the dependencies for yourself. 
+
+In order to use the associated dependencies, you need to find the JavaScript file storing these dependencies. The example given in the attached play WebJars documentation is useful, but I found that it was slightly more complicated. For Azure Blob Storage, the dependency was found at ``` lib/azure__storage-blob/browser/azure-storage-blob.min.js```. I determined this by manually going through the WebJar. In order to add this to your script, you can call the [`ViewUtils`](https://github.com/seattle-uat/civiform/blob/main/universal-application-tool-0.0.1/app/views/ViewUtils.java) ```makeWebJarsTag``` function and pass in this file path. That function uses the assetsFinder to find and load the necessary dependencies into the script. 
+
+
 # AWS Infra for Seattle Instance
 
 -  Archimate [Files](https://drive.google.com/drive/folders/1dtYkqGzPgjmzLmB7Yu0uULH-vhrmSygd?usp=sharing)
