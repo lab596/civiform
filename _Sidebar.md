@@ -9,6 +9,7 @@
 * [Getting started](https://github.com/seattle-uat/civiform/wiki/Getting-started)
 * [Getting started with Windows](https://github.com/seattle-uat/civiform/wiki/Getting-started-with-Windows)
 * [Technology overview](https://github.com/seattle-uat/civiform/wiki/Technology-overview)
+* [System Design](https://github.com/seattle-uat/civiform/wiki/Ssytem-design)
 * [Backend data model](https://github.com/seattle-uat/civiform/wiki/Backend-data-model)
 * [Development standards](https://github.com/seattle-uat/civiform/wiki/Development-standards)
 * [Development stack](https://github.com/seattle-uat/civiform/wiki/Development-stack)
