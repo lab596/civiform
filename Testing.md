@@ -63,6 +63,15 @@ To run the tests:
    Leave this running while you are working for faster browser test runs:
 
        bin/run-browser-test-env
+   
+   This command runs the browser tests with local stack, the AWS emulator
+   To run browser tests with the Azure browser test environment, run:
+
+       bin/run-browser-test-env -–azure
+
+   This runs the tests using Azurite, the Azure emalator.
+
+ 
 
 1. Once you see "Server started" in the terminal from the above step, in a separate terminal run the
    Playwright tests in a docker container:
