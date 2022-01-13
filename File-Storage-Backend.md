@@ -21,3 +21,5 @@ Implementations of the `StorageUploadRequest` class hold all the information nec
 The controller and view classes that interact with the interfaces above might need to change the behavior of a method (for example, render a different template) depending on which storage provider is being used. To accomplish this, we make use of the [Strategy Pattern](https://en.wikipedia.org/wiki/Strategy_pattern). Each class where the strategy pattern is being used has its own corresponding strategy interface. Implementations are bound to the interface in the `CloudStorageModule` file. Below is an example of how the strategy pattern is used:
 
 ![Strategy pattern example](https://lucid.app/publicSegments/view/fa4e6623-7e59-46ad-bd57-520649ee3cf9/image.png)
+
+[Link to diagrams on LucidChart](https://lucid.app/lucidchart/7c543f7a-1e4f-4908-ad91-8193e4cc0f2b/edit?invitationId=inv_483bd661-baca-43a0-a760-33206fc128e9)
