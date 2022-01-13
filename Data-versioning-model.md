@@ -24,9 +24,9 @@ As a QP changes states the representative data will get copied forward, and the 
 
 ### Version tracking
 
-There are a few tables that manage the versions and associates them with PQs
+There are a few tables that manage the versions and associates them with QPs
 
-* versions: The source for version IDs
+* versions: The source for system version IDs
 * programs_versions: Associates Programs with a version ID
 * questions_versions: Associates Questions with a version ID
 
