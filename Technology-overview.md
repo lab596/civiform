@@ -19,7 +19,7 @@ The `View` classes are generally organized by which role(s) they are viewable by
 [WebJars](https://www.baeldung.com/maven-webjars) are client side dependencies packaged into JAR (Java Archive) files. JAR files are just compressed Java files (along with associated metadata and resources) used for distributing software.
 
 ## How to add WebJars to Civiform
-[More information about how assets work in the Play framework can be found here](https://www.playframework.com/documentation/2.8.x/AssetsOverview)
+[More information about how assets work in the Play framework](https://www.playframework.com/documentation/2.8.x/AssetsOverview)
 
 First, we need to make sure the required dependency has an associated WebJar.
 WebJars can be found in the Maven repository as part of the “org.webjars” group. We are currently using a WebJar to provide our [Azure Blob Storage JavaScript SDK](https://mvnrepository.com/artifact/org.webjars.npm/azure__storage-blob). Using WebJars is far preferable to using a CDN (some civic entities don’t allow CDNs).
