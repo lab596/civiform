@@ -22,7 +22,7 @@ The `View` classes are generally organized by which role(s) they are viewable by
 [More information about how assets work in the Play framework](https://www.playframework.com/documentation/2.8.x/AssetsOverview)
 
 First, we need to make sure the required dependency has an associated WebJar.
-WebJars can be found in the Maven repository as part of the “org.webjars” group. We are currently using a WebJar to provide our [Azure Blob Storage JavaScript SDK](https://mvnrepository.com/artifact/org.webjars.npm/azure__storage-blob). Using WebJars is far preferable to using a CDN (some civic entities don’t allow CDNs).
+WebJars can be found in the Maven repository as part of the “org.webjars” group. We are currently using a WebJar for the [Azure Blob Storage JavaScript SDK](https://mvnrepository.com/artifact/org.webjars.npm/azure__storage-blob). Using WebJars is far preferable to using a CDN, which can be a security risk. More importantly, some civic entities don’t allow CDNs in their codebase.
 
 To add this WebJar to the code, we first have to add it to the build.sbt file. To add the Azure blob storage WebJar, we added this:
 ```
