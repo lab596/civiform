@@ -42,3 +42,7 @@ In order to use the associated dependencies, you need to find the JavaScript fil
 
 -  Archimate [Files](https://drive.google.com/drive/folders/1dtYkqGzPgjmzLmB7Yu0uULH-vhrmSygd?usp=sharing)
 -  Archimate Output [Diagram](https://drive.google.com/file/d/1qWBlDo8g5ZPydpt9NbC8lqfT3BwfhELo/view?usp=sharing)
+
+# Azure Infra
+## Azure App Service
+For the Azure deployment of Civiform, we have opted to use [Azure App Service](https://azure.microsoft.com/en-us/services/app-service/#overview). We decided that App Service would be the best choice because it has a lot of out-of-the-box functionality for maintaining and scaling apps that makes it easier to use. Azure App Service handles a lot of the work of managing the production environment for developers behind the scenes and lets developers focus on building their application. An example of this is that Azure App Services has a built-in load balancer. The downside is that this approach offers less flexibility. It’s much less customizable than other services, but that doesn’t feel as important for this use case.
