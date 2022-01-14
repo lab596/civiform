@@ -58,7 +58,7 @@ As a QP changes, its new data is written as a new row in the respective tables a
 
 To start with we'll have an ACTIVE version.
 
-Bold represents new data changes, and for readability only the relevant parts of each table will be shown and each table will start at a different ID number.
+highlighted blocks around text represents new data changes, and for readability only the relevant parts of each table will be shown and each table will start at a different ID number.
 
 ### Add a Question
 
@@ -75,8 +75,8 @@ A DRAFT version is added because one does not exist.
 versions
 | ID | Stage |
 | - | - |
-| **1**  | **ACTIVE** | 
-| **2**  | **DRAFT** | 
+| `1`  | `ACTIVE` | 
+| `2`  | `DRAFT` | 
 
 The Question is associated with the DRAFT version
 versions_questions
@@ -91,7 +91,7 @@ Because the Question is associated with the DRAFT version the data is updated in
 questions
 | id | name | description |
 | - | - | - |
-| 20 | Home Address | **The applicants home address** |
+| 20 | Home Address | `The applicants home address` |
 
 ### Publish all
 
@@ -102,8 +102,8 @@ The ACTIVE version becomes OBSOLETE and the DRAFT version is changed to ACTIVE. 
 versions
 | ID | Stage |
 | - | - |
-| 1  | **OBSOLETE** | 
-| 2  | **ACTIVE** | 
+| 1  | `OBSOLETE` | 
+| 2  | `ACTIVE` | 
 
 
 No Program uses it though, so let's change that
@@ -115,7 +115,7 @@ A new Program is added for UDP (Utility Discount Program) that used the Home Add
 programs
 | ID | name | block_definition | 
 | - | - | - |
-| **40** | **UDP** | **QID 20** |
+| `40` | `UDP` | `QID 20` |
 
 
 A DRAFT version is added because one does not exist.
@@ -125,11 +125,11 @@ versions
 | - | - |
 | 1  | OBSOLETE | 
 | 2  | ACTIVE | 
-| **3** | **DRAFT** | 
+| `3` | `DRAFT` | 
 
 The program is associated with the DRAFT version
 
 versions_programs
 | programs_id | versions_id | 
 | - | - |
-| **40** | **3** |
+| `40` | `3` |
