@@ -56,14 +56,80 @@ As a QP changes, its new data is written as a new row in the respective tables a
 
 ## Life of a QP
 
-To start with all the version tables are empty. 
+To start with we'll have an ACTIVE version.
+
+Bold represents new data changes, and for readability only the relevant parts of each table will be shown and each table will start at a different ID number.
 
 ### Add a Question
 
-If we add a Question named "Home Address" the tables look like the following
+An admin adds a Question named "Home Address".
 
-Versions
+The Question is added:
 
+questions
+| id | name | description |
+| - | - | - |
+| 20 | Home Address | address |
+
+A DRAFT version is added because one does not exist.
+versions
 | ID | Stage |
 | - | - |
-| <span style="color:red">1</span>  | <span style="color:red">DRAFT</span> | 
+| **1**  | **ACTIVE** | 
+| **2**  | **DRAFT** | 
+
+The Question is associated with the DRAFT version
+versions_questions
+| questions_id | versions_id | 
+| - | - |
+| 20 | 2 |
+
+### The question is updated
+
+Because the Question is associated with the DRAFT version the data is updated in place, with no version changes.
+
+questions
+| id | name | description |
+| - | - | - |
+| 20 | Home Address | **The applicants home address** |
+
+### Publish all
+
+The Admin clicks the "publish all" button
+
+The ACTIVE version becomes OBSOLETE and the DRAFT version is changed to ACTIVE. The Home Address question is now considered live to end users. 
+
+versions
+| ID | Stage |
+| - | - |
+| 1  | **OBSOLETE** | 
+| 2  | **ACTIVE** | 
+
+
+No Program uses it though, so let's change that
+
+### Add a Program.
+
+A new Program is added for UDP (Utility Discount Program) that used the Home Address Question ID 20.  we'll use short hand for the block_definiton.
+
+programs
+| ID | name | block_definition | 
+| - | - | - |
+| **40** | **UDP** | **QID 20** |
+
+
+A DRAFT version is added because one does not exist.
+
+versions
+| ID | Stage |
+| - | - |
+| 1  | OBSOLETE | 
+| 2  | ACTIVE | 
+| **3** | **DRAFT** | 
+
+The program is associated with the DRAFT version
+
+versions_programs
+| programs_id | versions_id | 
+| - | - |
+| **40** | **3** |
