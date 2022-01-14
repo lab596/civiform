@@ -105,17 +105,17 @@ versions
 | 1  | `OBSOLETE` | 
 | 2  | `ACTIVE` | 
 
+### Update the ACTIVE QUESTION
 
-No Program uses it though, so let's change that
+The Address Question is updated
 
-### Add a Program.
+Because the Question is associated with the ACTVIE version the data is copied forward into a new row
 
-A new Program is added for UDP (Utility Discount Program) that used the Home Address Question ID 20.  we'll use short hand for the block_definiton.
-
-programs
-| ID | name | block_definition | 
+questions
+| id | name | description |
 | - | - | - |
-| `40` | `UDP` | `QID 20` |
+| 20 | Home Address | `The applicants home address` |
+| 20 | Home Address | `Where the applicants primarily resides` |
 
 
 A DRAFT version is added because one does not exist.
@@ -127,9 +127,42 @@ versions
 | 2  | ACTIVE | 
 | `3` | `DRAFT` | 
 
-The program is associated with the DRAFT version
+The Question is associated with the DRAFT version
+versions_questions
+| questions_id | versions_id | 
+| - | - |
+| 20 | 2 |
+| `21` | `3` |
+
+
+We've updated our question but no Program uses it, so let's change that
+
+### Add a Program.
+
+A new Program is added for UDP (Utility Discount Program) that uses the latest Home Address Question ID 21.  we'll use short hand for the block_definiton.
+
+programs
+| ID | name | block_definition | 
+| - | - | - |
+| `40` | `UDP` | `QID 21` |
+
+
+The program is associated with the existing DRAFT version
 
 versions_programs
 | programs_id | versions_id | 
 | - | - |
 | `40` | `3` |
+
+### Publish all
+
+The Admin clicks the "publish all" button
+
+The ACTIVE version becomes OBSOLETE and the DRAFT version is changed to ACTIVE. The updated Home Address question and the new UDP program are now considered live to end users. 
+
+versions
+| ID | Stage |
+| - | - |
+| 1  | OBSOLETE | 
+| 2  | OBSOLETE | 
+| 3 | `ACTIVE` | 
