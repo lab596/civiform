@@ -53,3 +53,17 @@ There should only be a DRAFT version if a QP has been added/modified but not pub
 #### QP versions tables
 
 As a QP changes, its new data is written as a new row in the respective tables and that QP id is associated with the current Draft version in the respective versions table.  In this manner a QPs changes don't change the current ACTIVE data and are specifically associated with a new system version.
+
+## Life of a QP
+
+To start with all the version tables are empty. 
+
+### Add a Question
+
+If we add a Question named "Home Address" the tables look like the following
+
+Versions
+
+| ID | Stage |
+| - | - |
+| <span style="color:red">1</span>  | <span style="color:red">DRAFT</span> | 
