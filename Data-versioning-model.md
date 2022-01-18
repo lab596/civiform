@@ -72,6 +72,7 @@ questions
 | 20 | Home Address | address |
 
 A DRAFT version is added because one does not exist.
+
 versions
 | ID | Stage |
 | - | - |
@@ -79,6 +80,7 @@ versions
 | `2`  | `DRAFT` | 
 
 The Question is associated with the DRAFT version
+
 versions_questions
 | questions_id | versions_id | 
 | - | - |
@@ -128,6 +130,7 @@ versions
 | `3` | `DRAFT` | 
 
 The Question is associated with the DRAFT version
+
 versions_questions
 | questions_id | versions_id | 
 | - | - |
