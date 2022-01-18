@@ -58,18 +58,18 @@ To run the tests:
 
        bin/build-browser-tests
 
-1. Bring up the local test environment. This step can be done in a separate terminal window while the
+1. Bring up the local test environment with the AWS emulator. This step can be done in a separate terminal window while the
    Docker image is still building.
+
    Leave this running while you are working for faster browser test runs:
 
        bin/run-browser-test-env
    
-   This command runs the browser tests with local stack, the AWS emulator
-   To run browser tests with the Azure browser test environment, run:
+   To run browser tests with the Azure browser test environment, using Azurite (the Azure emnulator) instead of the AWS emulator, run:
 
        bin/run-browser-test-env -–azure
 
-   This runs the tests using Azurite, the Azure emalator.
+   This runs the tests using Azurite, the Azure emulator.
 
  
 
