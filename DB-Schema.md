@@ -1,4 +1,4 @@
-The database schema is derived by combining all of the [evolution SQL files](https://github.com/seattle-uat/civiform/tree/main/universal-application-tool-0.0.1/conf/evolutions/default) in sequential order. It's current state as of #34 is:
+The database schema is derived by combining all of the [evolution SQL files](https://github.com/seattle-uat/civiform/tree/main/universal-application-tool-0.0.1/conf/evolutions/default) in sequential order. It's current state as of #34 follows.  This can be generated using `pg_dump -s postgres`
 
 ```
                                          Table "public.accounts"
