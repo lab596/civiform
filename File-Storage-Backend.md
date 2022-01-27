@@ -7,7 +7,7 @@ The DevFileUploadView (`http://localhost:9000/dev/fileUpload`) is used to test f
 ```
 127.0.0.1 azurite
 127.0.0.1 civiform
-127.0.0.1 postgres
+127.0.0.1 database
 ```
 This is because the application makes requests to Azurite using its container name, which can only be resolved when the request is made from within the Docker network. These container names to be mapped to the loopback IP address in order for the browser to resolve requests to `azurite` to upload and get uploaded images.
 
