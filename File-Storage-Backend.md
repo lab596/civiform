@@ -3,7 +3,7 @@
 Civiform currently supports file uploads using AWS S3. There is an effort in progress to add support for Azure Blob Storage. Support for other storage services like Google Cloud Storage is planned. This document will provide an overview of the classes and interfaces that are used to implement support for new storage providers. 
 
 ## Testing the Storage Backend
-The Dev Upload View (`http://localhost:9000/dev/fileUpload`) is used to test file upload functionality using the Azurite or Localstack emulators. This view is by default configured to only work for CI browser tests. To get the view to work in your browser, you will need to add the following lines to your local `/etc/hosts` file: 
+The DevFileUploadView (`http://localhost:9000/dev/fileUpload`) is used to test file upload functionality using the Azurite or Localstack emulators. This view is by default configured to only work for CI browser tests. To get the view to work in your browser, you will need to add the following lines to your local `/etc/hosts` file: 
 ```
 127.0.0.1 azurite
 127.0.0.1 civiform
