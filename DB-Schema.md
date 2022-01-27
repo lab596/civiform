@@ -1,4 +1,4 @@
-The database schema is derived by combining all of the [evolution SQL files](https://github.com/seattle-uat/civiform/tree/main/universal-application-tool-0.0.1/conf/evolutions/default) in sequential order. It's current state as of #34 follows.  This can be generated using `pg_dump -s postgres`
+The database schema is derived by combining all of the [evolution SQL files](https://github.com/seattle-uat/civiform/tree/main/universal-application-tool-0.0.1/conf/evolutions/default) in sequential order. It's current state as of #35 follows.  This can be generated using `pg_dump -s postgres`
 
 ```
                                          Table "public.accounts"
@@ -53,11 +53,12 @@ Foreign-key constraints:
     "fk_applicant" FOREIGN KEY (applicant_id) REFERENCES applicants(id)
     "fk_program" FOREIGN KEY (program_id) REFERENCES programs(id)
 
-                                    Table "public.files"
- Column |          Type          | Collation | Nullable |              Default
---------+------------------------+-----------+----------+-----------------------------------
- id     | bigint                 |           | not null | nextval('files_id_seq'::regclass)
- name   | character varying(255) |           |          |
+                                          Table "public.files"
+       Column       |          Type          | Collation | Nullable |              Default
+--------------------+------------------------+-----------+----------+-----------------------------------
+ id                 | bigint                 |           | not null | nextval('files_id_seq'::regclass)
+ name               | character varying(255) |           |          |
+ original_file_name | character varying      |           |          |
 Indexes:
     "files_pkey" PRIMARY KEY, btree (id)
 
