@@ -2,6 +2,17 @@
 
 Civiform currently supports file uploads using AWS S3. There is an effort in progress to add support for Azure Blob Storage. Support for other storage services like Google Cloud Storage is planned. This document will provide an overview of the classes and interfaces that are used to implement support for new storage providers. 
 
+## Testing the Storage Backend
+The Dev Upload View (`http://localhost:9000/dev/fileUpload`) is used to test file upload functionality using the Azurite or Localstack emulators. This view is by default configured to only work for CI browser tests. To get the view to work in your browser, you will need to add the following lines to your local `/etc/hosts` file: 
+```
+127.0.0.1 azurite
+127.0.0.1 civiform
+127.0.0.1 postgres
+```
+This is because the application makes requests to Azurite using its container name, which can only be resolved when the request is made from within the Docker network. These container names to be mapped to the loopback IP address in order for the browser to resolve requests to `azurite` to upload and get uploaded images.
+
+Note to Googlers: if you are using your Chrome profile for your Corp account, you'll run into CORS and UberProxy errors. Switch to a personal or incognito Chrome profile.
+
 
 ## `StorageClient` interface
 The `StorageClient` interface is used to decouple classes for interacting with specific storage providers from the rest of the codebase. New controllers and views should depend on the StorageClient interface rather than one of its implementations. In order to determine which `StorageClient` implementation to use at runtime, we use Guice for dependency injection. The `CloudStorageModule` Guice module reads in the `cloud.storage` property set in `application.conf`, and binds the corresponding implementation to the implementation. For more info on how this works, see the [Guice documentation on bindings](https://github.com/google/guice/wiki/Bindings). 
