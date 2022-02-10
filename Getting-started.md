@@ -33,6 +33,8 @@ The easiest way to get IntelliJ to index the project correctly is to install the
 
 ## Running a local server
 
+**Note:** the project makes heavy use of shell scripts for development tasks. Run `bin/help` to see a list of them.
+
 1. To run the application, navigate to the `civiform` directory you created when you cloned the repo and run the following:
 
        bin/run-dev
