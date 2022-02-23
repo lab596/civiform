@@ -55,6 +55,55 @@ The error message says expecting `"username@example.com"` to be contained in the
 
 ## Running locally
 
+### OpenJDK acting weird on M1 Mac
+If you're running Docker on an M1 Mac and getting a weird error like this:
+```
+civiform  | # A fatal error has been detected by the Java Runtime Environment:
+civiform  | #
+civiform  | #  SIGILL (0x4) at pc=0x000000401ddb6205, pid=22, tid=236
+civiform  | #
+civiform  | # JRE version: OpenJDK Runtime Environment AdoptOpenJDK (11.0.10+9) (build 11.0.10+9)
+civiform  | # Java VM: OpenJDK 64-Bit Server VM AdoptOpenJDK (11.0.10+9, mixed mode, tiered, compressed oops, g1 gc, linux-amd64)
+civiform  | # Problematic frame:
+civiform  | # J 3941 c1 sbt.Scope.hashCode()I (8 bytes) @ 0x000000401ddb6205 [0x000000401ddb61e0+0x0000000000000025]
+civiform  | #
+civiform  | # No core dump will be written. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+civiform  | #
+civiform  | # An error report file with more information is saved as:
+civiform  | # /tmp/hs_err_pid22.log
+civiform  | Compiled method (c1)   29645 4267       3       sbt.internal.util.Init::$anonfun$delegateForKey$2 (48 bytes)
+civiform  |  total in heap  [0x000000401de69410,0x000000401de69b10] = 1792
+civiform  |  relocation     [0x000000401de69588,0x000000401de695e0] = 88
+civiform  |  main code      [0x000000401de695e0,0x000000401de69980] = 928
+civiform  |  stub code      [0x000000401de69980,0x000000401de699d0] = 80
+civiform  |  oops           [0x000000401de699d0,0x000000401de699d8] = 8
+civiform  |  metadata       [0x000000401de699d8,0x000000401de699f0] = 24
+civiform  |  scopes data    [0x000000401de699f0,0x000000401de69a60] = 112
+civiform  |  scopes pcs     [0x000000401de69a60,0x000000401de69ae0] = 128
+civiform  |  dependencies   [0x000000401de69ae0,0x000000401de69af0] = 16
+civiform  |  nul chk table  [0x000000401de69af0,0x000000401de69b10] = 32
+civiform  | Compiled method (c2)   29656 4125       4       scala.util.hashing.MurmurHash3::productHash (70 bytes)
+civiform  |  total in heap  [0x000000401de1d110,0x000000401de1d9b8] = 2216
+civiform  |  relocation     [0x000000401de1d288,0x000000401de1d2f8] = 112
+civiform  |  main code      [0x000000401de1d300,0x000000401de1d680] = 896
+civiform  |  stub code      [0x000000401de1d680,0x000000401de1d6c8] = 72
+civiform  |  oops           [0x000000401de1d6c8,0x000000401de1d6d0] = 8
+civiform  |  metadata       [0x000000401de1d6d0,0x000000401de1d740] = 112
+civiform  |  scopes data    [0x000000401de1d740,0x000000401de1d7d8] = 152
+civiform  |  scopes pcs     [0x000000401de1d7d8,0x000000401de1d8e8] = 272
+civiform  |  dependencies   [0x000000401de1d8e8,0x000000401de1d900] = 24
+civiform  |  handler table  [0x000000401de1d900,0x000000401de1d9a8] = 168
+civiform  |  nul chk table  [0x000000401de1d9a8,0x000000401de1d9b8] = 16
+civiform  | Could not load hsdis-amd64.so; library not loadable; PrintAssembly is disabled
+civiform  | #
+civiform  | # If you would like to submit a bug report, please visit:
+civiform  | #   https://github.com/AdoptOpenJDK/openjdk-support/issues
+civiform  | #
+civiform  | qemu: uncaught target signal 6 (Aborted) - core dumped
+civiform  | /entrypoint.sh: line 4:    22 Aborted                 sbt "$@"
+```
+It's because the AdoptOpenJDK image is incompatible with ARM architecture. M1 Mac users will need to use the `USE_LOCAL_CIVIFORM=1` environment variable, and build the local docker image using `docker build --build-arg PLATFORM=arm64 -t civiform-dev .`
+
 ### Bean not found error
 If you see an error when running `bin/run-dev` like `[CompletionException: javax.persistence.EntityNotFoundException: Bean not found during lazy load or refresh. id[1] type[class models.Account]]`, you probably have a cookie set in the browser from the last time you loaded the site, but the associated account doesn't exist in the fresh local database. To fix, simply clear your browser cookie(s) for localhost (in Chrome, this can be accomplished by clicking the info/lock icon next to the URL, then selecting "cookies" - click "Remove" to remove all associated cookies for localhost).
 
