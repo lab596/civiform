@@ -113,6 +113,10 @@ To create Questions and Programs that use them, you need to log in as a "Program
 
 You can return to that screen to switch to a Guest user and back again to an Admin as needed.
 
+## Debug logging
+
+You can change the logging levels by editing [conf/logback.xml](https://github.com/seattle-uat/civiform/blob/b140db3afb1851fc2bbe8c1ae5cafae67ac6429f/universal-application-tool-0.0.1/conf/logback.xml). This can help get a deeper understanding of what the server is doing for development.
+
 ## What's next?
 
 To learn more about how to make code contributions, head to [Technical contribution guide](https://github.com/seattle-uat/civiform/wiki/Technical-contribution-guide).
