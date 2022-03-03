@@ -155,3 +155,5 @@ For nested repeated questions, you can use “$this.parent” to refer to a high
 3. Click **Edit** > **Manage questions**.
 4. Find the repeated screen you want to remove and click **Delete screen**. \
 The screen is removed from the program.
+
+_Last updated: June 2021_
