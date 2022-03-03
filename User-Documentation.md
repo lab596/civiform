@@ -1,4 +1,4 @@
-This content is about how to use CiviForm to complete day-to-day work. It is segmented by users of CiviForm including **CiviForm Administrators, Program Administrators**, and **Trusted Intermediaries**. 
+This content is about how to use CiviForm to complete day-to-day work.  
 
 #### Overview
 * [What is CiviForm?](https://github.com/seattle-uat/civiform/wiki/What-is-CiviForm%3F)
