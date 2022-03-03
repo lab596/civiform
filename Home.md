@@ -1,7 +1,7 @@
 ## Welcome to the CiviForm Technical & User Documentation!
 
 ### [Technical Documentation](https://github.com/seattle-uat/civiform/wiki/Technical-Documentation)🖥️ 
-For Software Engineers, Data Teams, and other teams involved in product development
+For software engineers, product managers, data teams, and other teams involved in technical product development
 ### [User Documentation](https://github.com/seattle-uat/civiform/wiki/User-Documentation)🙋 
 For users of CiviForm including CiviForm Admin, Program Admin, and Trusted Intermediaries
 
