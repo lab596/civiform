@@ -39,3 +39,13 @@
 * [What is CiviForm?](https://github.com/seattle-uat/civiform/wiki/What-is-CiviForm%3F)
 * [How CiviForm works](https://github.com/seattle-uat/civiform/wiki/How-CiviForm-works)
 * [CiviForm glossary](https://github.com/seattle-uat/civiform/wiki/CiviForm-glossary)
+
+#### CiviForm Admin
+* [Manage programs](https://github.com/seattle-uat/civiform/wiki/Manage-programs)
+* [Manage questions](https://github.com/seattle-uat/civiform/wiki/Manage-questions)
+* [Add or remove questions & screens in a program](https://github.com/seattle-uat/civiform/wiki/Add-or-remove-questions-&-screens-in-a-program)
+* [Using enumerator questions & screens in a program](https://github.com/seattle-uat/civiform/wiki/Using-enumerator-questions-&-screens-in-a-program)
+* [Manage translations for programs & questions](https://github.com/seattle-uat/civiform/wiki/Manage-translations-for-programs-&-questions)
+* [Manage versions for programs & questions](https://github.com/seattle-uat/civiform/wiki/Manage-versions-for-programs-&-questions)
+* [Show or hide questions based on inputs](https://github.com/seattle-uat/civiform/wiki/Show-or-hide-questions-based-on-inputs)
+* [Manage Trusted Intermediaries](https://github.com/seattle-uat/civiform/wiki/Manage-Trusted-Intermediaries)
