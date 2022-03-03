@@ -1,4 +1,4 @@
-This content is for those who are interested in the technical components of CiviForm. These people may include **software engineers, data teams, technical program managers**, and **CiviForm Admin**. 
+This content is for those who are interested in the technical components of CiviForm. 
 
 #### [Contributing](https://github.com/seattle-uat/civiform/wiki/Contributing)
 * [Technical contribution guide](https://github.com/seattle-uat/civiform/wiki/Technical-contribution-guide)
