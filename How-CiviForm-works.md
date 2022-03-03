@@ -31,3 +31,5 @@ The only people who can review Applicants’ submitted applications for a given 
 
 ### Trusted Intermediaries
 Staff of Trusted Intermediary Groups can create profiles for their clients to help them apply for programs. Applicant PII created this way is stored on our secure cloud servers. Trusted Intermediary Groups can only view the Applicant data their staff have entered. Applicant-entered PII is not visible to other Trusted Intermediary Groups.
+
+_Last updated: June 2021_
