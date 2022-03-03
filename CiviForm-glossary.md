@@ -13,3 +13,5 @@
 * **Screen**—A screen holds one or more questions. A program is made up of one or more screens. One screen is displayed at a time so screens can loosely be thought of as a single page within the form. Some screens can be repeated. Each program has one default screen.
 * **Trusted Intermediary Group**—Community-Based Organization (CBOs) who help _applicants_ apply for benefit programs.
 * **Trusted Intermediary**—Staff members of CBOs who interact with _applicants_.
+
+_Last updated: June 2021_
