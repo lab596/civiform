@@ -19,3 +19,5 @@ CiviForm is a universal application tool that lets individuals and families in n
      * Offers administrators the ability to build, launch, and scale new programs with zero code deployment
      * CiviForm Admins can make custom applications using a repository of reusable questions
      * Program Admins can export program-specific Applicant data to CSV format, allowing it to integrate with existing workflows
+
+_Last updated: June 2021_
