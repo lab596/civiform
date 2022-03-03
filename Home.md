@@ -1,4 +1,4 @@
-## Welcome to the CiviForm Documentation!
+## Welcome to the CiviForm Technical & User Documentation!
 
 Our docs contain both **technical** and **user documentation**. Please find pages for individual topics in the right nav ➡️
 
