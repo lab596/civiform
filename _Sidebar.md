@@ -1,5 +1,6 @@
 [Home](https://github.com/seattle-uat/civiform/wiki)
 
+## Technical Documentation
 #### [Contributing](https://github.com/seattle-uat/civiform/wiki/Contributing)
 * [Technical contribution guide](https://github.com/seattle-uat/civiform/wiki/Technical-contribution-guide)
 * [UX contribution guide (mockups)](https://github.com/seattle-uat/civiform/wiki/UX-contribution-guide)
@@ -32,3 +33,9 @@
 * [CiviForm Google Drive](https://github.com/seattle-uat/civiform/wiki/Google-Drive)
 * [Weekly demo days](https://github.com/seattle-uat/civiform/wiki/Weekly-Demo-Days)
 * [Question type requirements notes](https://github.com/seattle-uat/civiform/wiki/Question-type-requirements-notes)
+
+## User Documentation
+#### Overview
+* [What is CiviForm?](https://github.com/seattle-uat/civiform/wiki/What-is-CiviForm%3F)
+* [How CiviForm works](https://github.com/seattle-uat/civiform/wiki/How-CiviForm-works)
+* [CiviForm glossary](https://github.com/seattle-uat/civiform/wiki/CiviForm-glossary)
