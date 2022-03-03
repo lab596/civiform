@@ -126,3 +126,5 @@ Numbers must be integers only with no decimals allowed. Users can increase or de
    </td>
   </tr>
 </table>
+
+_Last updated: June 2021_
