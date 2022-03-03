@@ -1,6 +1,6 @@
 ## Welcome to the CiviForm Technical & User Documentation!
 
-Our docs contain both **technical** and **user documentation**. Please find pages for individual topics in the right nav ➡️
+Please find pages for individual topics in the right nav ➡️
 
 Here are some good places to start learning more about CiviForm:
 * Watch a [video demo](https://youtu.be/AIYZEd5WAcU?t=87) of a recent build from January 2022
