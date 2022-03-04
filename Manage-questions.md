@@ -3,14 +3,14 @@ Questions form the structure of a CiviForm program. When a CiviForm Admin create
 ## Create a question
 1. Sign in to CiviForm as a CiviForm Admin.
 1. Click **Questions** on the navigation bar.
-1. Click **Create new question** and select a question type.<br/>For more details on question types, go to [Question types](https://github.com/seattle-uat/documents/wiki/Manage-questions#question-types).
+1. Click **Create new question** and select a question type.<br/>For more details on question types, go to [Question types](https://github.com/seattle-uat/civiform/wiki/Manage-questions#question-types).
 1. Enter the information for the question.
 1. Click **Create**.<br/>The new question appears in the list of questions.
 
 **Tip**: You might want to develop a naming convention for your questions. For example, address-residence, address-work, etc.
 
 ## Edit a question
-You can edit both unpublished and published questions. To edit published questions, you need a new version. For more details on versioning, go to [Manage versions for programs & questions](https://github.com/seattle-uat/documents/wiki/Manage-versions-for-programs-&-questions).
+You can edit both unpublished and published questions. To edit published questions, you need a new version. For more details on versioning, go to [Manage versions for programs & questions](https://github.com/seattle-uat/civiform/wiki/Manage-versions-for-programs-&-questions).
 
 1. Sign in to CiviForm as a CiviForm Admin.
 1. Click **Questions** on the navigation bar and select a question.
@@ -26,7 +26,7 @@ If a question is no longer in use by any program, you can archive a question.
 1. Click **Archive**.
 
 ## Restore an archived question
-When you restore an archived question, you can use it in your programs. You can restore an archived question up until the next version is published. For more details on versioning, go to [Manage versions for programs & questions](https://github.com/seattle-uat/documents/wiki/Manage-versions-for-programs-&-questions).
+When you restore an archived question, you can use it in your programs. You can restore an archived question up until the next version is published. For more details on versioning, go to [Manage versions for programs & questions](https://github.com/seattle-uat/civiform/wiki/Manage-versions-for-programs-&-questions).
 
 1. Sign in to CiviForm as a CiviForm Admin.
 1. Click **Questions** on the navigation bar and select an archived question.
@@ -94,7 +94,7 @@ Enumerators also allow you to dynamically add multiple questions whenever needed
 <p>
 Enumerator questions must be the only question in an enumerator screen.</p>
 <p>
-For more details, go to <a href="https://github.com/seattle-uat/documents/wiki/Using-enumerator-questions-&-screens-in-a-program">Using enumerator questions & screens in a program</a>.</p>
+For more details, go to <a href="https://github.com/seattle-uat/civiform/wiki/Using-enumerator-questions-&-screens-in-a-program">Using enumerator questions & screens in a program</a>.</p>
    </td>
   </tr>
   <tr>
