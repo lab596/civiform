@@ -38,7 +38,7 @@ You can edit both unpublished and published programs. To edit published programs
 3. Click **Manage draft translations**.<br> <br>
 ![image](https://user-images.githubusercontent.com/98119305/156822400-08c25717-8fef-4928-b094-14dda35129e6.png)
 
-4.The default language is listed first and it contains the text from when the question was created. Subsequent languages are listed alphabetically.<br><br>
+4. The default language is listed first and it contains the text from when the question was created. Subsequent languages are listed alphabetically.<br><br>
 ![image](https://user-images.githubusercontent.com/98119305/156827015-424c1637-1b01-4645-b648-ad7e8b88c66f.png)
 
 5. To add a translation, select another language and enter the translated text for the Question text and Question help text.<br><br>
