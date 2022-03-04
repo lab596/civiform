@@ -4,7 +4,7 @@ English is the default language for CiviForm. If CiviForm doesn’t include tran
 
 **Note**: There’s no user interface for the CiviForm Admin to add or remove translation languages from programs or questions. The list of languages CiviForm can support is set up within the code.
 
-You can edit both unpublished and published programs. To edit published programs, you need to click **New Version**. For more details on versioning, go to [Manage versions for programs & questions](https://github.com/seattle-uat/documents/wiki/Manage-versions-for-programs-&-questions).
+You can edit both unpublished and published programs. To edit published programs, you need to click **New Version**. For more details on versioning, go to [Manage versions for programs & questions](https://github.com/seattle-uat/civiform/wiki/Manage-versions-for-programs-&-questions).
 
 ## Add or edit program translations
 
