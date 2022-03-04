@@ -50,6 +50,14 @@ You can customize your program to include multiple different question types. The
    </td>
   </tr>
   <tr>
+   <td>Currency
+   </td>
+   <td> <p> Currency questions are formatted with a decimal point (.) as a separator between the dollars and cents. </p> Useful for asking income and debt-related questions (e.g. wages, benefits received, loan amounts, etc).
+   </td>
+  </tr>
+  <tr>  
+</tr>
+  <tr>
    <td>Checkbox
    </td>
    <td><p>Useful when Applicants need to check multiple items to answer the question fully.</p>
@@ -97,6 +105,13 @@ For more details, go to <a href="https://github.com/seattle-uat/documents/wiki/U
 File Upload questions must be the only question in a screen.</p>
    </td>
   </tr>
+<tr>
+   <td>ID
+   </td>
+   <td><p>Useful for requesting identification or account numbers. For example, a resident's utility account number. <p> Only numeric numbers are allowed. The minimum and maximum length for this field can be defined in the question settings.
+   </td>
+  </tr>
+  <tr>
   <tr>
    <td>Name
    </td>
@@ -120,6 +135,23 @@ Numbers must be integers only with no decimals allowed. Users can increase or de
    </td>
   </tr>
   <tr>
+   <td>Static Text
+   </td>
+   <td><p>A free form field that includes the ability to add bullets, accordions and urls to a screen. For example, to create a welcome or warning screen within your program.</p>
+<p><strong>Formatting Tips</strong>: 
+<p>For a bulleted list - start a line with star (*) and space( ) </p>
+<p> For accordions - start a line with 3 hash signs (###) followed by a space ( )  and the accordion header, followed by a right angle bracket (>) with the text for the accordion.  [Note: You will need to publish the question to preview the accordion content]
+<p>Urls will render on the site </p>
+
+
+![image](https://user-images.githubusercontent.com/98119305/156840660-7f89f196-2fc9-4967-97d6-7c57f23b172a.png)
+
+Example of resident-facing experience:
+![image](https://user-images.githubusercontent.com/98119305/156841165-1998f88b-0730-44fc-84a1-14ce9b9e0187.png)
+
+   </td>
+  </tr>
+  <tr><tr>
    <td>Text
    </td>
    <td>A free form field that can store letters, numbers, characters, or symbols.
