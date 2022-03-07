@@ -25,11 +25,11 @@ This content is for those who are interested in the technical components of Civi
 * [Updating caniuse-lite](https://github.com/seattle-uat/civiform/wiki/Updating-caniuse)
 
 #### SRE Playbook
-* [Initial Deployment](https://xyzzy.gov)
-* [Upgrading to a New Release](https://xyzzy.gov)
-* [Teardown & Rebuild](https://xyzzy.gov)
-* [Monitoring](https://xyzzy.gov)
-* [Troubleshooting Common Issues](https://xyzzy.gov)
+* [Initial Deployment](https://github.com/seattle-uat/civiform/wiki/Initial-deployment)
+* [Upgrading to a New Release](https://github.com/seattle-uat/civiform/wiki/Upgrading-new-release)
+* [Teardown & Rebuild](https://github.com/seattle-uat/civiform/wiki/Teardown-rebuild)
+* [Monitoring](https://github.com/seattle-uat/civiform/wiki/Monitoring)
+* [Troubleshooting Production](https://github.com/seattle-uat/civiform/wiki/Troublesheeting-production)
 
 
 #### Product management
