@@ -14,5 +14,6 @@ TODO:  move the [Production](https://github.com/seattle-uat/civiform/wiki/Produc
 ## Setting up LoginRadius
 ## Setting up Azure Active Directory
 ## Running the Terraform Deployment Scripts
+### Filling in all the config variables
 ## Kicking the Tires
 
