@@ -24,6 +24,14 @@ This content is for those who are interested in the technical components of Civi
 * [Breaking glass on database](https://github.com/seattle-uat/civiform/wiki/Breaking-glass-on-database)
 * [Updating caniuse-lite](https://github.com/seattle-uat/civiform/wiki/Updating-caniuse)
 
+#### SRE Playbook
+* [Initial Deployment](https://xyzzy.gov)
+* [Upgrading to a New Release](https://xyzzy.gov)
+* [Teardown & Rebuild](https://xyzzy.gov)
+* [Monitoring](https://xyzzy.gov)
+* [Troubleshooting Common Issues](https://xyzzy.gov)
+
+
 #### Product management
 * [Long-term product vision](https://github.com/seattle-uat/civiform/wiki/Long-term-product-vision)
 * [Testing resources](https://github.com/seattle-uat/civiform/wiki/Testing-resources)
