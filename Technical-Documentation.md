@@ -20,7 +20,6 @@ This content is for those who are interested in the technical components of Civi
 * [Adding a new question type](https://github.com/seattle-uat/civiform/wiki/Adding-a-new-question-type)
 * [Testing](https://github.com/seattle-uat/civiform/wiki/Testing)
 * [Troubleshooting](https://github.com/seattle-uat/civiform/wiki/Dev-troubleshooting)
-* [Production](https://github.com/seattle-uat/civiform/wiki/Production)
 * [Updating caniuse-lite](https://github.com/seattle-uat/civiform/wiki/Updating-caniuse)
 
 #### SRE Playbook
