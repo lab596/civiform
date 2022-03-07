@@ -10,10 +10,14 @@ TODO:  move the [Production](https://github.com/seattle-uat/civiform/wiki/Produc
 
 # Deploying into Azure
 
-## Forking the xxx Repository
+## Forking the Deployment Repository
+
 ## Setting up LoginRadius
+
 ## Setting up Azure Active Directory
+
 ## Running the Terraform Deployment Scripts
 ### Filling in all the config variables
-## Kicking the Tires
 
+## Kicking the Tires
+### Are the config variables set up correctly?
