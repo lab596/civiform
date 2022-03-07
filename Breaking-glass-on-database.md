@@ -1,5 +1,8 @@
 Breaking glass on the production or staging database is a way to save production or staging outages if something extreme happens that cannot be patched with software patches. Staging is the wild-west, so we can just `curl -X POST http://staging.seattle.civiform.com/dev/seed/clear` if we need to truncate all of the tables in staging.
 
+
+# Getting to the Database on an AWS Instance
+
 To break glass, 
 
 1. Sign into the AWS management console and open up cloudshell
@@ -13,3 +16,9 @@ To break glass,
 
 5. To manually clean up any instances, go to EC2 console and terminate any remaining instances and delete any keys.
 ![AWS EC2 console page](https://drive.google.com/uc?id=1-ds_7olRTfrHRxSDsl1XjNNxoKawcbK9)
+
+
+# Getting to the Database on an Azure Instance
+
+TODO
+
