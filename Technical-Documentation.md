@@ -29,7 +29,7 @@ This content is for those who are interested in the technical components of Civi
 * [Upgrading to a New Release](https://github.com/seattle-uat/civiform/wiki/Upgrading-new-release)
 * [Teardown & Rebuild](https://github.com/seattle-uat/civiform/wiki/Teardown-rebuild)
 * [Monitoring](https://github.com/seattle-uat/civiform/wiki/Monitoring)
-* [Troubleshooting Production](https://github.com/seattle-uat/civiform/wiki/Troublesheeting-production)
+* [Troubleshooting Production](https://github.com/seattle-uat/civiform/wiki/Troubleshooting-production)
 
 
 #### Product management
