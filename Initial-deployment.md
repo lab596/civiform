@@ -20,4 +20,8 @@ TODO:  move the [Production](https://github.com/seattle-uat/civiform/wiki/Produc
 ### Filling in all the config variables
 
 ## Kicking the Tires
-### Are the config variables set up correctly?
+### Testing authentication
+### Testing form-construction
+### Testing form submission & file uploads
+### Testing program admin views
+### Testing outgoing email
