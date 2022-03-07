@@ -27,7 +27,7 @@ This content is for those who are interested in the technical components of Civi
 #### SRE Playbook
 * [Initial Deployment](https://github.com/seattle-uat/civiform/wiki/Initial-deployment)
 * [Upgrading to a New Release](https://github.com/seattle-uat/civiform/wiki/Upgrading-to-a-new-CiviForm-release)
-* [Teardown & Rebuild](https://github.com/seattle-uat/civiform/wiki/Teardown-rebuild)
+* [Teardown & Rebuild](https://github.com/seattle-uat/civiform/wiki/Teardown-and-rebuild)
 * [Monitoring](https://github.com/seattle-uat/civiform/wiki/Monitoring)
 * [Troubleshooting Production](https://github.com/seattle-uat/civiform/wiki/Troubleshooting-production)
 
