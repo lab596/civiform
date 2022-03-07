@@ -1,6 +1,7 @@
 [Home](https://github.com/seattle-uat/civiform/wiki)
 
 ## Technical Documentation
+
 #### [Contributing](https://github.com/seattle-uat/civiform/wiki/Contributing)
 * [Technical contribution guide](https://github.com/seattle-uat/civiform/wiki/Technical-contribution-guide)
 * [UX contribution guide (mockups)](https://github.com/seattle-uat/civiform/wiki/UX-contribution-guide)
@@ -21,9 +22,16 @@
 * [Adding a new question type](https://github.com/seattle-uat/civiform/wiki/Adding-a-new-question-type)
 * [Testing](https://github.com/seattle-uat/civiform/wiki/Testing)
 * [Troubleshooting](https://github.com/seattle-uat/civiform/wiki/Dev-troubleshooting)
-* [Production](https://github.com/seattle-uat/civiform/wiki/Production)
-* [Breaking glass on database](https://github.com/seattle-uat/civiform/wiki/Breaking-glass-on-database)
 * [Updating caniuse-lite](https://github.com/seattle-uat/civiform/wiki/Updating-caniuse)
+
+#### SRE Playbook
+* [Initial Deployment](https://github.com/seattle-uat/civiform/wiki/Initial-deployment)
+* [Upgrading to a New Release](https://github.com/seattle-uat/civiform/wiki/Upgrading-to-a-new-CiviForm-release)
+* [Teardown & Rebuild](https://github.com/seattle-uat/civiform/wiki/Teardown-and-rebuild)
+* [Monitoring](https://github.com/seattle-uat/civiform/wiki/Monitoring)
+* [Troubleshooting Production](https://github.com/seattle-uat/civiform/wiki/Troubleshooting-production)
+* [Breaking Glass on Database](https://github.com/seattle-uat/civiform/wiki/Breaking-glass-on-database)
+
 
 #### Product management
 * [Long-term product vision](https://github.com/seattle-uat/civiform/wiki/Long-term-product-vision)
@@ -33,6 +41,11 @@
 * [CiviForm Google Drive](https://github.com/seattle-uat/civiform/wiki/Google-Drive)
 * [Weekly demo days](https://github.com/seattle-uat/civiform/wiki/Weekly-Demo-Days)
 * [Question type requirements notes](https://github.com/seattle-uat/civiform/wiki/Question-type-requirements-notes)
+
+
+
+
+---------
 
 ## User Documentation
 #### Overview
