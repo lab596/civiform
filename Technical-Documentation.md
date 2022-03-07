@@ -21,7 +21,6 @@ This content is for those who are interested in the technical components of Civi
 * [Testing](https://github.com/seattle-uat/civiform/wiki/Testing)
 * [Troubleshooting](https://github.com/seattle-uat/civiform/wiki/Dev-troubleshooting)
 * [Production](https://github.com/seattle-uat/civiform/wiki/Production)
-* [Breaking glass on database](https://github.com/seattle-uat/civiform/wiki/Breaking-glass-on-database)
 * [Updating caniuse-lite](https://github.com/seattle-uat/civiform/wiki/Updating-caniuse)
 
 #### SRE Playbook
@@ -30,6 +29,7 @@ This content is for those who are interested in the technical components of Civi
 * [Teardown & Rebuild](https://github.com/seattle-uat/civiform/wiki/Teardown-and-rebuild)
 * [Monitoring](https://github.com/seattle-uat/civiform/wiki/Monitoring)
 * [Troubleshooting Production](https://github.com/seattle-uat/civiform/wiki/Troubleshooting-production)
+* [Breaking Glass on Database](https://github.com/seattle-uat/civiform/wiki/Breaking-glass-on-database)
 
 
 #### Product management
