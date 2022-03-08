@@ -32,7 +32,9 @@ provided by [Guava](https://github.com/google/guava) ([API docs](https://guava.d
 
 #### Prefer Optional instead of null
 
-null should only be used when necessary which should be rarely.  If a 3rd party library returns nulls they should be quickly wrapped using `Optional.ofNullable()`
+null should only be used when necessary. Examples include working directly with database objects and checking if a field is set.
+
+If a 3rd party library returns nulls they likely should be quickly wrapped using `Optional.ofNullable()`
 
 ### Async request handling
 
