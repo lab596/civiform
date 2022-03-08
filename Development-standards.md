@@ -1,6 +1,8 @@
 * [Client-server concerns](#client-server-concerns)
 * [Java code](#Java-code)
+* [Bash scripts](#Bash-scripts)
 * [Routing and controller methods](#routing-and-controller-methods)
+
 
 ## Client-server concerns
 
@@ -22,7 +24,15 @@ Development tasks that are meant to run a local development computer should run 
 
 Java code should conform to the [Google Java style guide](https://google.github.io/styleguide/javaguide.html). The project makes use of a linter and auto-formatter for Java to help with this, just run `bin/fmt` and your code should be automatically formatted.
 
-Prefer using immutable collection types provided by [Guava](https://github.com/google/guava) ([API docs](https://guava.dev/releases/snapshot/api/docs/)) over the Java standard library's mutable collections unless impractical. Include a comment justifying the use of a mutable collection if you use one.
+### Code best practices
+
+#### Prefer using immutable collection types
+
+provided by [Guava](https://github.com/google/guava) ([API docs](https://guava.dev/releases/snapshot/api/docs/)) over the Java standard library's mutable collections unless impractical. Include a comment justifying the use of a mutable collection if you use one.
+
+#### Prefer Optional instead of null
+
+null should only be used when necessary which should be rarely.  If a 3rd party library returns nulls they should be quickly wrapped using `Optional.ofNullable()`
 
 ### Async request handling
 
@@ -43,6 +53,10 @@ In lieu of a microservice architecture, this project necessitates special care i
 Code in **Play controllers** should be limited to brokering interaction between the server's business logic systems and HTTP. Code in controllers should never directly implement business logic concerns and should instead delegate to classes specific to those purposes. One way to help think about this when writing controller code: if you're writing an HTTP handler that responds with HTML, factor out business logic classes so that implementing another handler that performs the same logic but responds with JSON benefits from high code re-use.
 
 Code in **ebean models** should be limited to brokering interaction between the server's business logic and the database. Code in models should never directly implement business logic concerns.
+
+## Bash scripts
+
+Bash scripts should conform to the [Google Bash style guide](https://google.github.io/styleguide/shellguide.html).  The guide references a nice utility to help find issue and fix them at https://www.shellcheck.net/. 
 
 ## Routing and controller methods
 
