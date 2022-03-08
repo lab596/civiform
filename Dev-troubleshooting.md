@@ -113,6 +113,10 @@ Sometimes you have partial db information.  A fix is to fully clear the db with 
 ### S3 bucket does not exist error
 If you see an error when running `bin/run-dev` such as `[Guice/ErrorInjectingConstructor]: RuntimeException: S3 exception: The specified bucket does not exist (Service: S3, Status Code: 404)`, this is due to the localstack S3 bucket is not created successfully. If you have [AWS CLI](https://aws.amazon.com/cli/) installed, please make sure it is configured. You can verify or reconfigure by running `aws configure`. Enter `test` to any questions that have none as default.
 
+### Database isn't working as intended
+
+Try dropping it completely with `docker rm postgres`, and then it'll be recreated automatically when you run `bin/run-dev`
+
 ### If nothing else works...
 Try these steps to clear caches, docker, etc. - hopefully one will get you into a better state. They are roughly ordered by which have been most helpful in fixing past issues.
 
