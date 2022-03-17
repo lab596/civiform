@@ -2,16 +2,18 @@ The database schema is derived by combining all of the [evolution SQL files](htt
 
 ```
                                          Table "public.accounts"
-       Column        |        Type         | Collation | Nullable |               Default
+       Column        |        Type         | Collation | Nullable |               Default                
 ---------------------+---------------------+-----------+----------+--------------------------------------
  id                  | bigint              |           | not null | nextval('accounts_id_seq'::regclass)
- email_address       | character varying   |           |          |
- member_of_group_id  | bigint              |           |          |
- managed_by_group_id | bigint              |           |          |
- admin_of            | character varying[] |           |          |
+ email_address       | character varying   |           |          | 
+ member_of_group_id  | bigint              |           |          | 
+ managed_by_group_id | bigint              |           |          | 
+ admin_of            | character varying[] |           |          | 
  global_admin        | boolean             |           |          | false
+ authority_id        | character varying   |           |          | 
 Indexes:
     "accounts_pkey" PRIMARY KEY, btree (id)
+    "accounts_authority_id_key" UNIQUE CONSTRAINT, btree (authority_id)
     "accounts_email_address_key" UNIQUE CONSTRAINT, btree (email_address)
     "idx_admin_of" gin (admin_of)
 Foreign-key constraints:
@@ -19,6 +21,7 @@ Foreign-key constraints:
     "fk_member" FOREIGN KEY (member_of_group_id) REFERENCES ti_organizations(id) ON DELETE SET NULL
 Referenced by:
     TABLE "applicants" CONSTRAINT "applicants_account_id_fkey" FOREIGN KEY (account_id) REFERENCES accounts(id)
+
 
                                            Table "public.applicants"
       Column      |            Type             | Collation | Nullable |                Default
