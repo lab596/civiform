@@ -24,16 +24,14 @@ and v.lifecycle_stage = 'active'
 order by v.id desc
 ```
 
-
 ## Check Programs for Missing Questions
 
 This query flattens out the program block_definitions json. The `debug_notes` column will provide a message describing problems that were found.
 
-The query debug_notes currently checks if
+The query `debug_notes` currently checks if
 * questionDefinition points to a question that doesn't exist
 * questionDefinition enumerator points to a question that doesn't exist
 * hidePredicate points to a question that doesn't exist
-
 
 ```sql
 with program_definitions as
