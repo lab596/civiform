@@ -32,6 +32,8 @@
 * [Troubleshooting Production](https://github.com/seattle-uat/civiform/wiki/Troubleshooting-production)
 * [Breaking Glass on Database](https://github.com/seattle-uat/civiform/wiki/Breaking-glass-on-database)
 
+#### Prod Debugging Resources
+* [Look For Missing Questions](https://github.com/seattle-uat/civiform/wiki/SQL-Queries-to-Look-For-Missing-Questions)
 
 #### Product management
 * [Long-term product vision](https://github.com/seattle-uat/civiform/wiki/Long-term-product-vision)
