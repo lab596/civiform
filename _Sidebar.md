@@ -24,15 +24,13 @@
 * [Troubleshooting](https://github.com/seattle-uat/civiform/wiki/Dev-troubleshooting)
 * [Updating caniuse-lite](https://github.com/seattle-uat/civiform/wiki/Updating-caniuse)
 
-#### SRE Playbook
+#### SRE Playbook and prod debugging
 * [Initial Deployment](https://github.com/seattle-uat/civiform/wiki/Initial-deployment)
 * [Upgrading to a New Release](https://github.com/seattle-uat/civiform/wiki/Upgrading-to-a-new-CiviForm-release)
 * [Teardown & Rebuild](https://github.com/seattle-uat/civiform/wiki/Teardown-and-rebuild)
 * [Monitoring](https://github.com/seattle-uat/civiform/wiki/Monitoring)
 * [Troubleshooting Production](https://github.com/seattle-uat/civiform/wiki/Troubleshooting-production)
 * [Breaking Glass on Database](https://github.com/seattle-uat/civiform/wiki/Breaking-glass-on-database)
-
-#### Prod Debugging Resources
 * [Look For Missing Questions](https://github.com/seattle-uat/civiform/wiki/SQL-Queries-to-Look-For-Missing-Questions)
 
 #### Product management
@@ -43,7 +41,7 @@
 * [CiviForm Google Drive](https://github.com/seattle-uat/civiform/wiki/Google-Drive)
 * [Weekly demo days](https://github.com/seattle-uat/civiform/wiki/Weekly-Demo-Days)
 * [Question type requirements notes](https://github.com/seattle-uat/civiform/wiki/Question-type-requirements-notes)
-
+* [Oncall guide](https://github.com/seattle-uat/civiform/wiki/Guide-for-the-main-project-on-call-engineer)
 
 
 
