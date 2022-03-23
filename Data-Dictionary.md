@@ -22,7 +22,7 @@
 | when_created     | timestamp without time zone |          | Date applicant record was created
 
 <details>
-    <summary>Sample JSON of the object column</summary>
+    <summary>Sample JSON of the <code>object</code> column</summary>
 
 For more information view the [backend data model page](https://github.com/seattle-uat/civiform/wiki/Backend-data-model)
 
@@ -70,7 +70,7 @@ For more information view the [backend data model page](https://github.com/seatt
 | preferred_locale | character varying           |          | ??? Applicant selected default locale. Why here and applicants?
 
 <details>
-    <summary>Sample JSON of the object column</summary>
+    <summary>Sample JSON of the <code>object</code> column</summary>
 
 For more information view the [backend data model page](https://github.com/seattle-uat/civiform/wiki/Backend-data-model)
 
@@ -130,7 +130,7 @@ For more information view the [backend data model page](https://github.com/seatt
 | display_mode                 | character varying | not null | Determines whether the program is visible to the public or not (options are: HIDDEN_IN_INDEX and PUBLIC)
 
 <details>
-    <summary>Sample JSON of the block_definitions column</summary>
+    <summary>Sample JSON of the <code>block_definitions</code> column</summary>
 
 ```json
 [
@@ -218,9 +218,24 @@ For more information view the [backend data model page](https://github.com/seatt
 
 
 <details>
-    <summary>Sample JSON of the export_definitions column</summary>
+    <summary>Sample JSON of the <code>export_definitions</code> column</summary>
 
     Sample not yet available
+</details>
+
+
+<details>
+    <summary>Sample JSON of the <code>localized_name</code> and <code>localized_description</code> columns</summary>
+
+```json
+{
+  "isRequired": true,
+  "translations": {
+    "en_US": "English Text",
+    "es_US": "Spanish Text"
+  }
+}
+```
 </details>
 
 
@@ -238,16 +253,16 @@ For more information view the [backend data model page](https://github.com/seatt
 | legacy_question_options   | jsonb               |          | ???
 | enumerator_id             | bigint              |          | This is a questions id of an ENUMERATOR question_type. It signifies that this questions is part of the enumerator and repeats for each entry.
 | question_options          | jsonb               |          | The list of valid options for questions that have pre-defined answers (e.g. CHECKBOX, DROPDOWN)
-| question_text             | jsonb               |          | Text of the question presented to the applicant
-| question_help_text        | jsonb               |          | Help Text of the question presented to the applicant
-| enumerator_entity_type    | jsonb               |          | ???
+| question_text             | jsonb               |          | Text of the question presented to the applicant in their preferred language
+| question_help_text        | jsonb               |          | Help Text of the question presented to the applicant in their preferred language
+| enumerator_entity_type    | jsonb               |          | ??? Enumerator text presented to the applicant in their preferred language
 | question_tags             | character varying[] |          | ???
 
 For information on versioning questions and programs see the [data versioning model page](https://github.com/seattle-uat/civiform/wiki/Data-versioning-model).
 
 
 <details>
-    <summary>Sample JSON of the validation_predicates column</summary>
+    <summary>Sample JSON of the <code>validation_predicates </code>column</summary>
 
 #### Question Type: `ADDRESS`
 ```json
@@ -284,9 +299,37 @@ For information on versioning questions and programs see the [data versioning mo
 
 
 <details>
-    <summary>Sample JSON of the export_definitions column</summary>
+    <summary>Sample JSON of the <code>question_options</code> column</summary>
 
-    Sample not yet available
+```json
+[
+  {
+    "id": 0,
+    "displayOrder": 0,
+    "localizedOptionText": {
+      "isRequired": true,
+      "translations": {
+        "en_US": "English text",
+        "es_US": "Spanish text"
+      }
+    }
+  }
+]
+```
+</details>
+
+<details>
+    <summary>Sample JSON of the <code>question_text</code>, <code>question_help_text</code>, and <code>enumerator_entity_type</code> columns</summary>
+
+```json
+{
+  "isRequired": true,
+  "translations": {
+    "en_US": "English text",
+    "es_US": "Spanish text"
+  }
+}
+```
 </details>
 
 
