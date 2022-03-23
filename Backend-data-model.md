@@ -22,7 +22,7 @@ The contents of an answer is determined by the question type. All question types
 
 For simple question types that only have a single scalar, their answer is still nested in an object that holds the scalar. For example asking a question with the canonical name `"Favorite color"` and question type `Text` could have its answer stored like the following:
 
-```
+```json
 {
   "Favorite_color": {
     "text": "green"
