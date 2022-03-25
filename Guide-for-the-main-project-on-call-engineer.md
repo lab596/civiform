@@ -112,6 +112,6 @@ CiviForm relies on [renovate bot](https://github.com/renovatebot/renovate) to au
 detect new versions of dependencies and create pull requests to update them. It is the
 on-call engineer's responsibility to review and merge these pull requests as they come in.
 **Do not simply approve and merge every pull request renovate bot creates.** While in most
-cases passing CI checks indicates the change is acceptable, that not always the case and more diligence is required ([here's an example](https://github.com/seattle-uat/civiform/pull/2130#discussion_r834714183). Be
+cases passing CI checks indicates the change is acceptable, that not always the case and more diligence is required ([here's an example](https://github.com/seattle-uat/civiform/pull/2130#discussion_r834714183)). Be
 sure you understand what is being updated before approving. If need be, get in touch with
 the broader engineering team to help evaluate a given PR.
