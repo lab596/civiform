@@ -134,7 +134,8 @@ From within WSL:
 :---: | :---
 
 2. Install zip using `sudo apt install zip unzip`
-2. Install [sdkman](https://sdkman.io/install), and use it to install Java 11, sbt 1.3.13, and scala 2.13.1.
+2. Install [sdkman](https://sdkman.io/install), and use it to install `sdk install java 11.0.10-open`, 'sdk install sbt 1.3.13', and 'sdk install scala 2.13.1`.
+
 2. Install IntelliJ.
 2.  Open IntelliJ, download the Scala plugin, and restart IntelliJ.
 2.  Open IntelliJ and open the  **[`universal-application-tool-0.0.1/build.sbt`](https://github.com/seattle-uat/civiform/blob/main/universal-application-tool-0.0.1/build.sbt)**  file as a project.
