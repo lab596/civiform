@@ -91,7 +91,7 @@ The most common response will be to update the appropriate dependency to the
 latest patch version that includes a fix.
 
 ### Dependency updates
-Unlike code in google3, CiviForm relies on versioned dependencies managed by an
+CiviForm relies on versioned dependencies managed by an
 open source dependency management system. These dependencies include
 [the web framework itself](http://playframework.com) along with a variety of
 other libraries that provide functionality such as view rendering, database
@@ -108,9 +108,10 @@ Additionally, there are some dependencies managed as
 These dependencies must be checked at their individual project pages for
 updates.
 
-Once per shift, audit CiviForm's dependencies and check to see if any of them
-have a new version available. Update patch versions immediately by simply
-changing the version number and creating a pull request. For updating minor and
-major versions, create an issue and add it to the triage column of the
-[bug triage](https://github.com/seattle-uat/civiform/projects/19) GitHub issues
-project. Ignore RC version.
+CiviForm relies on [renovate bot](https://github.com/renovatebot/renovate) to automatically
+detect new versions of dependencies and create pull requests to update them. It is the
+on-call engineer's responsibility to review and merge these pull requests as they come in.
+**Do not simply approve and merge every pull request renovate bot creates.** While in most
+cases passing CI checks indicates the change is acceptable, that not always the case and more diligence is required ([here's an example](https://github.com/seattle-uat/civiform/pull/2130#discussion_r834714183). Be
+sure you understand what is being updated before approving. If need be, get in touch with
+the broader engineering team to help evaluate a given PR.
