@@ -53,7 +53,7 @@ pbcopy < test.cert
 
 ### Provider classes
 [Provider classes](https://github.com/google/guice/wiki/ProviderBindings) implement Guice's provider interface for supplying values. 
-The auth provider classes are found in app/auth. There is the [LoginRadiusSamlProvider](https://github.com/seattle-uat/civiform/blob/main/universal-application-tool-0.0.1/app/auth/saml/LoginRadiusSamlProvider.java), whcih is used to create and provide the Saml2Client which can then be bound to the ApplicantAuthClient.  
+The auth provider classes are found in app/auth. There is the [LoginRadiusSamlProvider](https://github.com/seattle-uat/civiform/blob/main/universal-application-tool-0.0.1/app/auth/saml/LoginRadiusSamlProvider.java), whcih is used to create and provide the Saml2Client which can then be bound to the ApplicantAuthClient. The [IdcsOidcProvider](https://github.com/seattle-uat/civiform/blob/main/universal-application-tool-0.0.1/app/auth/oidc/IdcsOidcProvider.java) provides the OIDC client for IDCS. The [AdOidcProvider](https://github.com/seattle-uat/civiform/blob/main/universal-application-tool-0.0.1/app/auth/oidc/AdOidcProvider.java) is used to provide the OIDC client for Azure AD, the admin IDP. 
 
 
 ## Profile adapters
