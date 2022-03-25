@@ -46,6 +46,14 @@ pbcopy < test.cert
 - For local testing/development, the Service Provider Details section should have the following values.
 > <img width="700" alt="image" src="https://user-images.githubusercontent.com/19631367/155667445-223de285-906f-4624-bbd4-ea88612fcc14.png">
 
+## Authentication code structure
+
+### AdminAuthClient and ApplicantAuthClient
+[AdminAuthClient](https://github.com/seattle-uat/civiform/blob/main/universal-application-tool-0.0.1/app/auth/AdminAuthClient.java) and [ApplicantAuthClient](https://github.com/seattle-uat/civiform/blob/main/universal-application-tool-0.0.1/app/auth/ApplicantAuthClient.java) are the two annotation interfaces, the former for admin auth and the latter for applicant. They both implement the [IndirectClient interface](http://www.pac4j.org/apidocs/pac4j/3.1.0/org/pac4j/core/client/IndirectClient.html). This is a Pac4j abstract class. (Saml2Client)[https://www.pac4j.org/apidocs/pac4j/3.0.1/org/pac4j/saml/client/SAML2Client.html] and (OidcClient)[https://www.pac4j.org/apidocs/pac4j/3.7.0/org/pac4j/oidc/client/OidcClient.html] extend this parent class, so the ApplicantAuthClient and AdminAuthClient can be either, based on the environment variables CIVIFORM_APPLICANT_IDP and CIVIFORM_ADMIN_IDP. The AdminAuthClient and ApplicantAuthClient are bound in (SecurityModule)[https://github.com/seattle-uat/civiform/blob/main/universal-application-tool-0.0.1/app/modules/SecurityModule.java] to Provider classes. Currently, we are only checking the environment variables for binding admin authentication, because ADFS/ AD (similar Azure auth providers) are the only supported admin IDPs. To add more admin IDPs, future devs can follow the example of the bindApplicantIdpProvider method. That binds to either the LoginRadiusSamlProvider class or the IdcsOidcProvider class based on the CIVIFORM_APPLICANT_IDP environment variable.
+
+### Provider classes
+  
+
 
 ## Profile adapters
 
