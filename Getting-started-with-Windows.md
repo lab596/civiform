@@ -133,6 +133,7 @@ From within WSL:
 :bangbang: | Do not clone into `/mnt/c` 
 :---: | :---
 
+2. Install zip using sudo apt install zip unzip
 2. Install [sdkman](https://sdkman.io/install), and use it to install Java 11, sbt 1.3.13, and scala 2.13.1.
 2. Install IntelliJ.
 2.  Open IntelliJ, download the Scala plugin, and restart IntelliJ.
