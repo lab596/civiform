@@ -69,7 +69,7 @@ To run the tests:
 
        bin/run-browser-test-env -–azure
 
-   This runs the tests using Azurite, the Azure emulator.
+   This runs the tests using Azurite, the Azure emulator. Because the Azure deployment of Civiform requires SES, the AWS email sending service, we also have to start Localstack, the AWS emulator, when running the Azure browser tests. 
 
  
 
