@@ -31,8 +31,8 @@ As a concept a QP is a specific named instance of a Question or Program such as 
 
 There are a few tables that manage the versions and associates them with specific revisions of QPs
 
-* versions: The source for system version IDs
-* programs_versions: Associates Programs with a version ID
+* [versions](https://github.com/seattle-uat/civiform/blob/main/universal-application-tool-0.0.1/app/models/Version.java): The source for system version IDs
+* [versions_programs](https://github.com/seattle-uat/civiform/blob/18d718633c176f249392405b7e730e2a93ef1140/universal-application-tool-0.0.1/app/models/Program.java#L84): Associates Programs with a version ID
 * questions_versions: Associates Questions with a version ID
 
 QPs have a many-to-many relationship with versions, as a specific QP revision may be in many system versions.  As such it is most correct to say a QP is "associated" with a version(s) rather than it "having" a version.
@@ -49,9 +49,9 @@ As QPs are edited and the system published, the DRAFT version (and all associate
 
 ### QPs
 
-QPs have similar modeling in their respective tables.
+QPs have similar modeling in their respective tables: [Question](https://github.com/seattle-uat/civiform/blob/main/universal-application-tool-0.0.1/app/models/Question.java) and [Program](https://github.com/seattle-uat/civiform/blob/main/universal-application-tool-0.0.1/app/models/Program.java).
 
-A key detail of QPs is that a conceptual QP is uniquely identified by its name: name (for Questions) and adminName (for Programs).
+A key detail of QPs is that a conceptual QP is uniquely identified by its name: [question.name](https://github.com/seattle-uat/civiform/blob/18d718633c176f249392405b7e730e2a93ef1140/universal-application-tool-0.0.1/app/models/Question.java#L57) and [program.name](https://github.com/seattle-uat/civiform/blob/18d718633c176f249392405b7e730e2a93ef1140/universal-application-tool-0.0.1/app/models/Program.java#L50).
 
 As a QP is edited and published it will have many rows/revisions in its respective table, but all with the same name.
 
