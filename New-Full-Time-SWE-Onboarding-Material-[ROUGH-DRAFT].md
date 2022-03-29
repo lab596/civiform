@@ -15,8 +15,8 @@
 * ebean 
 
 ## Recommended Wiki Starters
-* Link to how to build the dev env
-* Link to good first issues
+* [Getting Started Guide](https://github.com/seattle-uat/civiform/wiki/Getting-started)
+* [Good First Issues](https://github.com/seattle-uat/civiform/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22)
 
 ## Accounts
 Ensure your team lead grants you access to the following resources.
