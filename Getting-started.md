@@ -41,6 +41,7 @@ First, install the following extensions:
 - [Scala Syntax (official)](https://marketplace.visualstudio.com/items?itemName=scala-lang.scala)
 
 Other useful extensions:
+- [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
 - [GitLens — Git supercharged](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
 - [GitHub Pull Requests and Issues](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github)
 
