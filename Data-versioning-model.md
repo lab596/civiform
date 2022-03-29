@@ -33,7 +33,7 @@ There are a few tables that manage the versions and associates them with specifi
 
 * [versions](https://github.com/seattle-uat/civiform/blob/main/universal-application-tool-0.0.1/app/models/Version.java): The source for system version IDs
 * [versions_programs](https://github.com/seattle-uat/civiform/blob/18d718633c176f249392405b7e730e2a93ef1140/universal-application-tool-0.0.1/app/models/Program.java#L84): Associates Programs with a version ID
-* questions_versions: Associates Questions with a version ID
+* [versions_questions](https://github.com/seattle-uat/civiform/blob/18d718633c176f249392405b7e730e2a93ef1140/universal-application-tool-0.0.1/app/models/Question.java#L100): Associates Questions with a version ID
 
 QPs have a many-to-many relationship with versions, as a specific QP revision may be in many system versions.  As such it is most correct to say a QP is "associated" with a version(s) rather than it "having" a version.
 
