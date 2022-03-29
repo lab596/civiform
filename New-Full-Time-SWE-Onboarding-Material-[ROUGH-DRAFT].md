@@ -5,8 +5,6 @@
 * azure staging
 * beta project for prio
 
-test
-
 ## Recommended Tutorials
 * git
 * docker
