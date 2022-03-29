@@ -124,7 +124,7 @@ versions_questions
 | - | - |
 | 20 | 2 |
 
-### The question is updated
+## The question is updated
 
 Because the Question is associated with the DRAFT version the data is updated in place, with no version changes.
 
