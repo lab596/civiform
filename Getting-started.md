@@ -80,6 +80,10 @@ This will start up a dev instance of the application that uses Azurite, the Azur
 
 The `bin/run-dev` script uses `docker-compose` (see [`docker-compose.yaml`](https://github.com/seattle-uat/civiform/blob/main/docker-compose.yml)). It enables Java and Javascript hot-reloading: when you modify most files, the server will recompile and restart. This is pretty time-consuming on first page load, but after that, it's not so bad.
 
+### Seeding the development database
+
+Creating questions and programs in CiviForm is a bit time consuming to do manually with the UI, so in dev mode there is a controller action that generates several for you. You can access this feature at `localhost:<port number>/dev/seed`.
+
 ### Help! It's not working!
 
 We know setting up a development environment can have some snags in the road. If something isn't working, check out our [Troubleshooting](https://github.com/seattle-uat/civiform/wiki/Dev-troubleshooting) guide or reach out on [Slack](https://join.slack.com/t/civiform/shared_invite/zt-niap7ys1-RAICICUpDJfjpizjyjBr7Q).
