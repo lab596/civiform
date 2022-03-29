@@ -11,7 +11,7 @@
 * github
 * play framework (java version)
 * java guice framework
-* terraform framework
+* [terraform framework tutorial](https://learn.hashicorp.com/tutorials/terraform/infrastructure-as-code)
 * ebean 
 
 ## Recommended Wiki Starters
