@@ -1,9 +1,9 @@
 # Onboarding items for new full time SWE contributors
 
 ## Links
-* seattle staging
-* azure staging
-* beta project for prio
+* Seattle Staging: [https://staging.seattle.civiform.com](https://staging.seattle.civiform.com/loginForm)
+* Azure Staging: [https://staging-azure.civiform.dev](https://staging-azure.civiform.dev/)
+* [Beta Project](https://github.com/orgs/seattle-uat/projects/1) (for Issue Tracking)
 
 ## Recommended Tutorials
 * git
