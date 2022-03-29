@@ -102,7 +102,7 @@ highlighted blocks around text represents new data changes, and for readability 
 
 An admin adds a Question named "Home Address".
 
-The Question is added:
+The Question is added as the first revision:
 
 questions
 | id | name | description |
@@ -117,14 +117,14 @@ versions
 | `1`  | `ACTIVE` | 
 | `2`  | `DRAFT` | 
 
-The Question is associated with the DRAFT version
+The Question revision is associated with the DRAFT version
 
 versions_questions
 | questions_id | versions_id | 
 | - | - |
 | 20 | 2 |
 
-### The question is updated
+### Update the question
 
 Because the Question is associated with the DRAFT version the data is updated in place, with no version changes.
 
@@ -133,7 +133,7 @@ questions
 | - | - | - |
 | 20 | Home Address | `The applicants home address` |
 
-## Publish all
+### Publish all
 
 The Admin clicks the "publish all" button
 
@@ -149,7 +149,7 @@ versions
 
 The Address Question is updated
 
-Because the Question is associated with the ACTVIE version the data is copied forward into a new row
+Because the Question is associated with the ACTVIE version the data is copied forward into a new row revision
 
 questions
 | id | name | description |
@@ -167,7 +167,7 @@ versions
 | 2  | ACTIVE | 
 | `3` | `DRAFT` | 
 
-The Question is associated with the DRAFT version
+The new Question revision is associated with the DRAFT version
 
 versions_questions
 | questions_id | versions_id | 
@@ -175,10 +175,10 @@ versions_questions
 | 20 | 2 |
 | `21` | `3` |
 
+### Add a Program.
 
 We've updated our question but no Program uses it, so let's change that
 
-### Add a Program.
 
 A new Program is added for UDP (Utility Discount Program) that uses the latest Home Address Question ID 21.  we'll use short hand for the block_definiton.
 
@@ -207,3 +207,98 @@ versions
 | 1  | OBSOLETE | 
 | 2  | OBSOLETE | 
 | 3 | `ACTIVE` | 
+
+Question revision 21 and Program revision 40 are now associated with the ACTIVE version.
+
+### Add another question
+
+Let's add another question and use it in the program, we'll skip ahead to the end result after publishing all the update.
+
+versions
+| ID | Stage |
+| - | - |
+| 1  | OBSOLETE | 
+| 2  | OBSOLETE |
+| 3  | `OBSOLETE` |
+| 4 | `ACTIVE` | 
+
+questions
+| id | name | description |
+| - | - | - |
+| 20 | Home Address | The applicants home address |
+| 21 | Home Address | Where the applicants primarily resides |
+| `22` | `Income` | `How much is your monthly income` |
+
+
+versions_questions
+| questions_id | versions_id | 
+| - | - |
+| 20 | 2 |
+| 21 | `4` |
+| `22` | `4` |
+
+Note: Home Address didn't change so the existing revision is associated with the new ACTIVE version.
+
+programs
+| ID | name | block_definition | 
+| - | - | - |
+| 40 | UDP | QID 21 |
+| `41` | `UDP` | `QID 21, QID 22` |
+
+
+versions_programs
+| programs_id | versions_id | 
+| - | - |
+| 40 | 3 |
+| `41` | `4` |
+
+
+### Update a question referenced, by a Program
+
+We have 2 ACTIVE question and 1 program.  If we update the Question, the program is automatically updated
+
+Add the new DRAFT revision
+
+questions
+| id | name | description |
+| - | - | - |
+| 20 | Home Address | The applicants home address |
+| 21 | Home Address | Where the applicants primarily resides |
+| 22 | Income | How much is your monthly income |
+| `23` | `Income` | `How much is your monthly income in whole dollars` |
+
+versions
+| ID | Stage |
+| - | - |
+| 1  | OBSOLETE | 
+| 2  | OBSOLETE |
+| 3  | OBSOLETE |
+| 4 | ACTIVE | 
+| `5` | `DRAFT` |
+
+versions_questions
+| questions_id | versions_id | 
+| - | - |
+| 20 | 2 |
+| 21 | 4 |
+| 22 | 4 |
+| `23` | `5` |
+
+
+The program that referred to revision 22 needs to refer to revision 23 now.
+
+programs
+| ID | name | block_definition | 
+| - | - | - |
+| 40 | UDP | QID 21 |
+| 41 | UDP | QID 21, QID 22 |
+| `42` | `UDP` | `QID 21, QID 23` |
+
+versions_programs
+| programs_id | versions_id | 
+| - | - |
+| 40 | 3 |
+| 41 | 4 |
+| `42` | `5` |
+
+Now we have a new DRAFT Question revision and DRAFT Program revision.  As before when we publish all, both DRAFTS involved with the Question update will become ACTIVE.
