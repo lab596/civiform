@@ -2,65 +2,103 @@ Work in Progress
 
 User created data (Questions, Programs, Applications) are all versioned and this doc discusses the versioning mechanism and the data life cycle that drives it.
 
-For ease of phrasing, QP will mean "Question/Program" in this page as many of the concepts are the same for each.
+# Glossary
 
-# Questions and Programs
+| Term | Definition |
+| ---  | --- |
+| QP | Short hand for "Question or Program". Many concepts here apply to both. |
+| Revision | A specific iteration/edit of a QP |
+| Publish | The act of making all DRAFT QPs ACTIVE |
 
-## Conceptual Overview
 
-As a concept a QP is a specific named instance of a Question or Program such as a Home Address Question, or the Utility Discount Program that is seen and worked with in the user interfaces.  A QP can change over time.
+# Conceptual Overview
 
-### Versions
+As applicants interact with CiviForm, they are seeing the system's Questions and Programs at a specific version of the entire system.  Admins also experience CiviForm this way but with the ability to edit the QPs and affect the version CiviForm is at.
 
-Versioning is done at the system level with all modified data advancing to a new version system-wide together.  It is most correct, and less confusing, to talk about a QP as being *associated* with a version(s); rather than having a version themselves.
+## System versioning
 
-### Lifecycle
+Versioning is done monolithically across all QPs. Each time the Publish action is done, the system state is captured as a specific Version number.  The system version can be rolled back to a previous one, which then affects all QPs.
 
-A Question or Program can conceptually be in one of three states: ACTIVE, DRAFT, DELETED.  A Draft question may also have a previous active version or not for a new one.
+There is 1 single ACTIVE version and at most 1 DRAFT version at any given time. (more on these terms below)
 
-As a QP changes states the representative data will get copied forward, and the *[stage](https://github.com/seattle-uat/civiform/blob/45631099ef4245f60a98d5ab8cb90178aab7cfb2/universal-application-tool-0.0.1/app/models/LifecycleStage.java#L12)* of the relevant data-copies are updated which included OBSOLETE also. (more on this later)
+## Questions and Programs
 
-Resident users will see the ACTIVE version of a QP, while admins will instead see any DRAFT versions that exist for a QP.
+As a concept a QP is a specific named instance of a Question or Program such as a "Home Address" Question, or "Utility Discount Program" program that is seen and worked with in the user interfaces.  QPs can be updated as a new revision and published in a new system version.
 
-## Data Model
+# Data modeling
 
-### QP modeling
+## Versions
 
-As a QP is first created or modified-after-publish a new row in the respective table is created and associated with the system DRAFT version; that version is created if it doesn't exist.  Subsequent additional modifications to the DRAFT associated row overwrites the row data; it doesn't create new rows.
-
-Once Publish All happens the current DRAFT rows are "locked in" as the ACTIVE version and their definitions are immutable. (Their state may change though, per the below version tracking system).  In this way any ACTIVE QP is available in the database historically.
-
-The effective Key for a QP is the `name` field in its table.  All updates to a QP will have the same name in the new rows which represent its change history.
-
-### Version tracking
-
-There are a few tables that manage the versions and associates them with QPs
+There are a few tables that manage the versions and associates them with specific revisions of QPs
 
 * versions: The source for system version IDs
 * programs_versions: Associates Programs with a version ID
 * questions_versions: Associates Questions with a version ID
 
-QPs have a many-to-many relationship with versions.
+QPs have a many-to-many relationship with versions, as a specific QP revision may be in many system versions.  As such it is most correct to say a QP is "associated" with a version(s) rather than it "having" a version.
 
-#### Versions table
+Versions have a [lifecycle_stage](https://github.com/seattle-uat/civiform/blob/45631099ef4245f60a98d5ab8cb90178aab7cfb2/universal-application-tool-0.0.1/app/models/LifecycleStage.java#L12) of:
 
-Versions is the master list of all system wide versions.
+* ACTIVE (what applicants currently see)
+* DRAFT (unpublished changes made by admins).
+* OBSOLETE
 
-The key points are that there is always 1 ACTIVE version in the system and at most 1 DRAFT version for the entire system.
+There can only ever be 1 ACTIVE version and at most 1 DRAFT version.
 
-There should only be a DRAFT version if a QP has been added/modified but not published to ACTIVE.  When a user "publishes" all drafts the DRAFT version ID state is simply updated to be the ACTIVE one; and the ACTIVE one is set to OBSOLETE.
+As QPs are edited and the system published, the DRAFT version (and all associated QPs) will become ACTIVE and a new DRAFT version will be created. In this way the system versions are immutable once published.
 
-#### QP versions tables
+## QPs
 
-As a QP changes, its new data is written as a new row in the respective tables and that QP id is associated with the current Draft version in the respective versions table.  In this manner a QPs changes don't change the current ACTIVE data and are specifically associated with a new system version.
+QPs have similar modeling in their respective tables.
 
-## Life of a QP
+A key detail of QPs is that a conceptual QP is uniquely identified by its name: name (for Questions) and adminName (for Programs).
+
+As a QP is edited and published it will have many rows/revisions in its respective table, but all with the same name.
+
+Through the lifecycle of the system the individual revisions will become associated with specific system versions.
+
+
+# Lifecycle
+
+We'll now tie everything together by talking about the lifecycle of the above and how that manifests in the data.
+
+Each time the system is published the following steps happen
+
+* Any ACTIVE QP not also associated with the DRAFT version is associated with it.
+* The ACTIVE version's stage is set to OBSOLETE
+* The DRAFT versions's stage is set to ACTIVE
+
+Now all previously ACTIVE QPs are ACTIVE still along with the pending DRAFT changes for the edited QPS.
+
+NOTE: Before the Publish, QPs with a DRAFT had 1 revision (A) associated with ACTIVE and another (B) with DRAFT. After the Publish, A is now part of the "historical record", and B is the current revision.  For all other ACTIVE QPs, they are associated with the previous ACTIVE revision and the new one.  An ACTIVE QP that never changes will end up being associated will all versions past its creation.
+
+## QP
+
+When a QP is first edited after being published, the current ACTIVE revision is copied forward into a new row in the respective table, and that row is associated with the current system DRAFT version through the version_question/versions_program table. If a DRAFT version currently doesn't exist it is created. If a previous revision doesn't, the QP is seeded as the first revision.
+
+Subsequent additional modifications to a DRAFT associated QP overwrites the revisions row data; it doesn't create new rows.
+
+Many Questions and Programs can be edited in this way, all of them associated with the same DRAFT version, and then ACTIVE when published.
+
+## QP Interdependency
+
+So far things have been simple.... ;)
+
+The power of CiviForm is re-use, which means Programs are built from the same set of Questions, and Questions can refer to others for things like enumerators. So when a Question is edited and a new DRAFT associated revision is created, those dependency references must also be updated to the new revision of the Question to have any user visible effect.
+
+This is done in a fairly straight forward manner.
+
+When a Question is edited and a new DRAFT revision is created, ALL QPs that refer to the ACTIVE revision are found, and themselves edited to refer to the new Question revision.  Identical to the above lifecycle flow: if a DRAFT already exists, it is updated. If not it is created.
+
+Note: If 1 question is referenced by ALL other QPs, then editing it will result in all ACTIVE QPs having a DRAFT revision.
+
+# Life of a QP
 
 To start with we'll have an ACTIVE version.
 
 highlighted blocks around text represents new data changes, and for readability only the relevant parts of each table will be shown and each table will start at a different ID number.
 
-### Add a Question
+## Add a Question
 
 An admin adds a Question named "Home Address".
 
@@ -86,7 +124,7 @@ versions_questions
 | - | - |
 | 20 | 2 |
 
-### The question is updated
+## The question is updated
 
 Because the Question is associated with the DRAFT version the data is updated in place, with no version changes.
 
@@ -95,7 +133,7 @@ questions
 | - | - | - |
 | 20 | Home Address | `The applicants home address` |
 
-### Publish all
+## Publish all
 
 The Admin clicks the "publish all" button
 
@@ -107,7 +145,7 @@ versions
 | 1  | `OBSOLETE` | 
 | 2  | `ACTIVE` | 
 
-### Update the ACTIVE QUESTION
+## Update the ACTIVE QUESTION
 
 The Address Question is updated
 
@@ -140,7 +178,7 @@ versions_questions
 
 We've updated our question but no Program uses it, so let's change that
 
-### Add a Program.
+## Add a Program.
 
 A new Program is added for UDP (Utility Discount Program) that uses the latest Home Address Question ID 21.  we'll use short hand for the block_definiton.
 
@@ -157,7 +195,7 @@ versions_programs
 | - | - |
 | `40` | `3` |
 
-### Publish all
+## Publish all
 
 The Admin clicks the "publish all" button
 
