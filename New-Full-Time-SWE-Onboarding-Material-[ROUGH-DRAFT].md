@@ -12,7 +12,7 @@
 * [play framework (java version)](https://www.playframework.com/documentation/2.8.x/JavaHome)
 * [java guice framework](https://github.com/google/guice/wiki/GettingStarted)
 * [terraform framework tutorial](https://learn.hashicorp.com/tutorials/terraform/infrastructure-as-code)
-* ebean 
+* [ebean](https://ebean.io/)
 
 ## Recommended Wiki Starters
 * [Getting Started Guide](https://github.com/seattle-uat/civiform/wiki/Getting-started)
