@@ -115,3 +115,7 @@ on-call engineer's responsibility to review and merge these pull requests as the
 cases passing CI checks indicates the change is acceptable, that not always the case and more diligence is required ([here's an example](https://github.com/seattle-uat/civiform/pull/2130#discussion_r834714183)). Be
 sure you understand what is being updated before approving. If need be, get in touch with
 the broader engineering team to help evaluate a given PR.
+
+**Do not merge terraform-related dependency updates without first manually exercising the code,
+we do not have automated tests for terraform/deployment configuration.** Feel free to close related
+PRs and file issues for performing the upgrade.
