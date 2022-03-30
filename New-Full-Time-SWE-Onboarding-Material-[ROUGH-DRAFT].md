@@ -6,7 +6,7 @@
 * [Beta Project](https://github.com/orgs/seattle-uat/projects/1) (for Issue Tracking)
 
 ## Recommended Tutorials
-* git
+* [git](https://docs.github.com/en/get-started/using-git/about-git)
 * docker
 * github
 * [play framework (java version)](https://www.playframework.com/documentation/2.8.x/JavaHome)
