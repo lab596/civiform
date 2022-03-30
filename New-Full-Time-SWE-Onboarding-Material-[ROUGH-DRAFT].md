@@ -8,7 +8,7 @@
 ## Recommended Tutorials
 * [git](https://docs.github.com/en/get-started/using-git/about-git)
 * [docker](https://docs.docker.com/get-started/)
-* github
+* [github](https://lab.github.com/githubtraining/introduction-to-github)
 * [play framework (java version)](https://www.playframework.com/documentation/2.8.x/JavaHome)
 * [java guice framework](https://github.com/google/guice/wiki/GettingStarted)
 * [terraform framework tutorial](https://learn.hashicorp.com/tutorials/terraform/infrastructure-as-code)
