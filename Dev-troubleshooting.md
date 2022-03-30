@@ -128,5 +128,5 @@ Try these steps to clear caches, docker, etc. - hopefully one will get you into 
 1. Remove home directory cache folders: `rm -rf ~/.ivy ~/.ivy2 ~/.sbt ~/.coursier`
 
 
-#### If all else really fails
+### If all else really fails
 If after trying everything, you are entering an infinite compile loop... try deleting your Civiform repo and re-cloning. This is a very last resort if the above steps (clearing cache, bin/sbt-clean, everything else) don't help you escape the infinite SBT loop!  
