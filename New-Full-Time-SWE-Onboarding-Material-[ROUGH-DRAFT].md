@@ -9,7 +9,7 @@
 * git
 * docker
 * github
-* play framework (java version)
+* [play framework (java version)](https://www.playframework.com/documentation/2.8.x/JavaHome)
 * java guice framework
 * [terraform framework tutorial](https://learn.hashicorp.com/tutorials/terraform/infrastructure-as-code)
 * ebean 
