@@ -43,6 +43,7 @@
 * [Weekly demo days](https://github.com/seattle-uat/civiform/wiki/Weekly-Demo-Days)
 * [Question type requirements notes](https://github.com/seattle-uat/civiform/wiki/Question-type-requirements-notes)
 * [Oncall guide](https://github.com/seattle-uat/civiform/wiki/Guide-for-the-main-project-on-call-engineer)
+* [Oncall journal](https://github.com/seattle-uat/civiform/wiki/On-call-log)
 * [Civic entity staffing overview](https://github.com/seattle-uat/civiform/wiki/CiviForm-civic-entity-staffing)
 
 
