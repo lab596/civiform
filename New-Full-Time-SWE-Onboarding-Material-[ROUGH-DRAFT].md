@@ -7,7 +7,7 @@
 
 ## Recommended Tutorials
 * [git](https://docs.github.com/en/get-started/using-git/about-git)
-* docker
+* [docker](https://docs.docker.com/get-started/)
 * github
 * [play framework (java version)](https://www.playframework.com/documentation/2.8.x/JavaHome)
 * [java guice framework](https://github.com/google/guice/wiki/GettingStarted)
