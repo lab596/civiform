@@ -10,9 +10,18 @@ This content is for those who are interested in the technical components of Civi
 * [Getting started with Windows](https://github.com/seattle-uat/civiform/wiki/Getting-started-with-Windows)
 * [Technology overview](https://github.com/seattle-uat/civiform/wiki/Technology-overview)
 * [Dependencies](https://github.com/seattle-uat/civiform/wiki/Dependencies)
+* [Guide for the main project on call engineer](https://github.com/seattle-uat/civiform/wiki/Guide-for-the-main-project-on-call-engineer)
+* [Data Dictionary](https://github.com/seattle-uat/civiform/wiki/Data-Dictionary)
+* [Data Versioning model](https://github.com/seattle-uat/civiform/wiki/Data-versioning-model)
+* [Dev Troubleshooting](https://github.com/seattle-uat/civiform/wiki/Dev-troubleshooting)
+* [Editing a previously deployed Evolution](https://github.com/seattle-uat/civiform/wiki/Editing-a-previously-deployed-Evolution)
+* [Frontend Development](https://github.com/seattle-uat/civiform/wiki/Frontend-Development)
+* [Java Debugging](https://github.com/seattle-uat/civiform/wiki/Java-Debugging)
 * [System Design](https://github.com/seattle-uat/civiform/wiki/System-design)
+* [Backend data model](https://github.com/seattle-uat/civiform/wiki/Backend-data-model)
 * [DB Schema](https://github.com/seattle-uat/civiform/wiki/DB-Schema)
 * [File storage backend](https://github.com/seattle-uat/civiform/wiki/File-Storage-Backend)
+* [Authentication Providers](https://github.com/seattle-uat/civiform/wiki/Authentication-Providers)
 * [Development standards](https://github.com/seattle-uat/civiform/wiki/Development-standards)
 * [Development stack](https://github.com/seattle-uat/civiform/wiki/Development-stack)
 * [Form submission with Play](https://github.com/seattle-uat/civiform/wiki/Form-Submission-with-Play)
@@ -21,17 +30,21 @@ This content is for those who are interested in the technical components of Civi
 * [Testing](https://github.com/seattle-uat/civiform/wiki/Testing)
 * [Troubleshooting](https://github.com/seattle-uat/civiform/wiki/Dev-troubleshooting)
 * [Updating caniuse-lite](https://github.com/seattle-uat/civiform/wiki/Updating-caniuse)
+* [Production](https://github.com/seattle-uat/civiform/wiki/Production)
 
-#### SRE Playbook
+#### SRE Playbook and prod debugging
 * [Initial Deployment](https://github.com/seattle-uat/civiform/wiki/Initial-deployment)
+* [Azure Deployment via Terraform](https://github.com/seattle-uat/civiform/wiki/Azure-Deployment-via-Terraform)
 * [Upgrading to a New Release](https://github.com/seattle-uat/civiform/wiki/Upgrading-to-a-new-CiviForm-release)
 * [Teardown & Rebuild](https://github.com/seattle-uat/civiform/wiki/Teardown-and-rebuild)
 * [Monitoring](https://github.com/seattle-uat/civiform/wiki/Monitoring)
 * [Troubleshooting Production](https://github.com/seattle-uat/civiform/wiki/Troubleshooting-production)
 * [Breaking Glass on Database](https://github.com/seattle-uat/civiform/wiki/Breaking-glass-on-database)
-
+* [Look For Missing Questions](https://github.com/seattle-uat/civiform/wiki/SQL-Queries-to-Look-For-Missing-Questions)
 
 #### Product management
+* [Background research](https://github.com/seattle-uat/civiform/wiki/Background-research)
+* [Infrastrucutre Requirements](https://github.com/seattle-uat/civiform/wiki/Infrastructure-Requirements)
 * [Long-term product vision](https://github.com/seattle-uat/civiform/wiki/Long-term-product-vision)
 * [Testing resources](https://github.com/seattle-uat/civiform/wiki/Testing-resources)
 
@@ -39,3 +52,6 @@ This content is for those who are interested in the technical components of Civi
 * [CiviForm Google Drive](https://github.com/seattle-uat/civiform/wiki/Google-Drive)
 * [Weekly demo days](https://github.com/seattle-uat/civiform/wiki/Weekly-Demo-Days)
 * [Question type requirements notes](https://github.com/seattle-uat/civiform/wiki/Question-type-requirements-notes)
+* [Oncall guide](https://github.com/seattle-uat/civiform/wiki/Guide-for-the-main-project-on-call-engineer)
+* [Oncall journal](https://github.com/seattle-uat/civiform/wiki/On-call-log)
+* [Civic entity staffing overview](https://github.com/seattle-uat/civiform/wiki/CiviForm-civic-entity-staffing)
