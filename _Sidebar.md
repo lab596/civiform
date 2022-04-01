@@ -33,7 +33,6 @@
 * [Troubleshooting](https://github.com/seattle-uat/civiform/wiki/Dev-troubleshooting)
 * [Updating caniuse-lite](https://github.com/seattle-uat/civiform/wiki/Updating-caniuse)
 * [Production](https://github.com/seattle-uat/civiform/wiki/Production)
-* []
 
 #### SRE Playbook and prod debugging
 * [Initial Deployment](https://github.com/seattle-uat/civiform/wiki/Initial-deployment)
