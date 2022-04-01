@@ -12,6 +12,13 @@
 * [Getting started with Windows](https://github.com/seattle-uat/civiform/wiki/Getting-started-with-Windows)
 * [Technology overview](https://github.com/seattle-uat/civiform/wiki/Technology-overview)
 * [Dependencies](https://github.com/seattle-uat/civiform/wiki/Dependencies)
+* [Guide for the main project on call engineer](https://github.com/seattle-uat/civiform/wiki/Guide-for-the-main-project-on-call-engineer)
+* [Data Dictionary](https://github.com/seattle-uat/civiform/wiki/Data-Dictionary)
+* [Data Versioning model](https://github.com/seattle-uat/civiform/wiki/Data-versioning-model)
+* [Dev Troubleshooting](https://github.com/seattle-uat/civiform/wiki/Dev-troubleshooting)
+* [Editing a previously deployed Evolution](https://github.com/seattle-uat/civiform/wiki/Editing-a-previously-deployed-Evolution)
+* [Frontend Development](https://github.com/seattle-uat/civiform/wiki/Frontend-Development)
+* [Java Debugging](https://github.com/seattle-uat/civiform/wiki/Java-Debugging)
 * [System Design](https://github.com/seattle-uat/civiform/wiki/System-design)
 * [Backend data model](https://github.com/seattle-uat/civiform/wiki/Backend-data-model)
 * [DB Schema](https://github.com/seattle-uat/civiform/wiki/DB-Schema)
@@ -37,6 +44,8 @@
 * [Look For Missing Questions](https://github.com/seattle-uat/civiform/wiki/SQL-Queries-to-Look-For-Missing-Questions)
 
 #### Product management
+* [Background research](https://github.com/seattle-uat/civiform/wiki/Background-research)
+* [Infrastrucutre Requirements](https://github.com/seattle-uat/civiform/wiki/Infrastructure-Requirements)
 * [Long-term product vision](https://github.com/seattle-uat/civiform/wiki/Long-term-product-vision)
 * [Testing resources](https://github.com/seattle-uat/civiform/wiki/Testing-resources)
 
