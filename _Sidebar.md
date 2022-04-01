@@ -13,6 +13,7 @@
 * [Technology overview](https://github.com/seattle-uat/civiform/wiki/Technology-overview)
 * [Dependencies](https://github.com/seattle-uat/civiform/wiki/Dependencies)
 * [System Design](https://github.com/seattle-uat/civiform/wiki/System-design)
+* [Backend data model](https://github.com/seattle-uat/civiform/wiki/Backend-data-model)
 * [DB Schema](https://github.com/seattle-uat/civiform/wiki/DB-Schema)
 * [File storage backend](https://github.com/seattle-uat/civiform/wiki/File-Storage-Backend)
 * [Authentication Providers](https://github.com/seattle-uat/civiform/wiki/Authentication-Providers)
@@ -27,6 +28,7 @@
 
 #### SRE Playbook and prod debugging
 * [Initial Deployment](https://github.com/seattle-uat/civiform/wiki/Initial-deployment)
+* [Azure Deployment via Terraform](https://github.com/seattle-uat/civiform/wiki/Azure-Deployment-via-Terraform)
 * [Upgrading to a New Release](https://github.com/seattle-uat/civiform/wiki/Upgrading-to-a-new-CiviForm-release)
 * [Teardown & Rebuild](https://github.com/seattle-uat/civiform/wiki/Teardown-and-rebuild)
 * [Monitoring](https://github.com/seattle-uat/civiform/wiki/Monitoring)
