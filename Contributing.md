@@ -9,8 +9,8 @@ We highly recommend joining our [Slack workgroup](https://join.slack.com/t/civif
 ## Where do I start?
 
 To get up to speed, see the following guides depending on what kind of contributions you hope to make:
-* [Technical contribution guide](https://docs.civiform.us/developers/developer-guide/technical-contribution-guide)
-* [UX contribution guide](https://docs.civiform.us/governance-and-management/governance/ui-contribution-guide-html-css)
-* [UI contribution guide](https://docs.civiform.us/governance-and-management/governance/ux-contribution-guide-mockups)
+* [Technical contribution guide](https://github.com/seattle-uat/civiform/wiki/Technical-contribution-guide)
+* [UX contribution guide](https://github.com/seattle-uat/civiform/wiki/UX-contribution-guide)
+* [UI contribution guide](https://github.com/seattle-uat/civiform/wiki/UI-contribution-guide)
 
 And always feel free to reach out [on Slack](https://join.slack.com/t/civiform/shared_invite/zt-niap7ys1-RAICICUpDJfjpizjyjBr7Q). We're happy to help and happy to have your help!
