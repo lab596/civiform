@@ -1,5 +1,13 @@
 ## Welcome to the CiviForm Technical & User Documentation!
 
+
+**NOTE!!! ALL DOCS ARE NOW AT** https://docs.civiform.us/ 
+
+
+***
+
+
+
 ### [Technical Documentation](https://github.com/seattle-uat/civiform/wiki/Technical-Documentation)🖥️ 
 For software engineers, product managers, data teams, and other teams involved in technical product development
 ### [User Documentation](https://github.com/seattle-uat/civiform/wiki/User-Documentation)🙋 
