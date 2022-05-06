@@ -1,2 +1,1 @@
-* [Backend data model](https://github.com/seattle-uat/civiform/wiki/Backend-data-model)
-* [Data versioning model](https://github.com/seattle-uat/civiform/wiki/Data-versioning-model)
+# CiviForm’s documentation has moved to [docs.civiform.us](https://docs.civiform.us/)

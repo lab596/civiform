@@ -1,1 +1,1 @@
-If you want to start over with CiviForm, this page describes how to completely tear down your instance and rebuild it from scratch.
+# CiviForm’s documentation has moved to [docs.civiform.us](https://docs.civiform.us/)
