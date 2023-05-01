@@ -196,6 +196,7 @@ GET     /logout                      @org.pac4j.play.LogoutController.logout(req
 # Seed the database with test content to develop against, and clear the database
 GET     /dev/seed                        controllers.dev.DatabaseSeedController.index(request: Request)
 POST    /dev/seed/canonicalQuestions     controllers.dev.DatabaseSeedController.seedCanonicalQuestions()
+GET     /dev/components                  controllers.dev.ExampleComponentsController.index()
 GET     /dev/icons                       controllers.dev.IconsController.index()
 POST    /dev/seed                        controllers.dev.DatabaseSeedController.seed()
 POST    /dev/seed/clear                  controllers.dev.DatabaseSeedController.clear()
