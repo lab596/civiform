@@ -134,6 +134,8 @@ GET     /assets/*file               controllers.Assets.versioned(file)
 GET     /applicants/:applicantId/edit                                       controllers.applicant.ApplicantInformationController.setLangFromBrowser(request: Request, applicantId: Long)
 POST    /applicants/:applicantId                                            controllers.applicant.ApplicantInformationController.setLangFromSwitcher(request: Request, applicantId: Long)
 
+GET     /admin/programs/:programId/preview                                   controllers.admin.AdminProgramPreviewController.preview(request: Request, programId: Long)
+
 # Program methods for applicants
 GET     /applicants/:applicantId/programs                                                      controllers.applicant.ApplicantProgramsController.index(request: Request, applicantId: Long)
 GET     /applicants/:applicantId/programs/:programId                                           controllers.applicant.ApplicantProgramsController.view(request: Request, applicantId: Long, programId: Long)

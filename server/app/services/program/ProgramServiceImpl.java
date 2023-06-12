@@ -125,6 +125,11 @@ public final class ProgramServiceImpl implements ProgramService {
   }
 
   @Override
+  public boolean isDraftProgram(long programId) {
+    return versionRepository.isDraftProgram(programId);
+  }
+
+  @Override
   public CompletionStage<ProgramDefinition> getActiveProgramDefinitionAsync(String programSlug) {
     return programRepository
         .getForSlug(programSlug)

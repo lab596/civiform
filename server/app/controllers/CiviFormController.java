@@ -27,6 +27,15 @@ public class CiviFormController extends Controller {
     return profileUtils.currentUserProfile(request).orElseThrow().checkAuthorization(applicantId);
   }
 
+  protected CompletableFuture<Void> checkProgramAuthorization(
+      ProfileUtils profileUtils, Http.Request request, boolean isDraftProgram) {
+    if (isDraftProgram
+        && !profileUtils.currentUserProfile(request).orElseThrow().isCiviFormAdmin()) {
+      throw new SecurityException();
+    }
+    return CompletableFuture.completedFuture(null);
+  }
+
   /**
    * Checks that the profile in {@code request} is an admin for {@code programName}.
    *

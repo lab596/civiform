@@ -93,6 +93,10 @@ public class ApplicantProgramReviewController extends CiviFormController {
     return applicantStage
         .thenComposeAsync(v -> checkApplicantAuthorization(profileUtils, request, applicantId))
         .thenComposeAsync(
+            programDef ->
+                checkProgramAuthorization(
+                    profileUtils, request, programService.isDraftProgram(programId)))
+        .thenComposeAsync(
             v -> applicantService.getReadOnlyApplicantProgramService(applicantId, programId),
             httpExecutionContext.current())
         .thenApplyAsync(
@@ -165,6 +169,12 @@ public class ApplicantProgramReviewController extends CiviFormController {
 
   @Secure
   public CompletionStage<Result> submit(Request request, long applicantId, long programId) {
+    if (profileUtils.currentUserProfile(request).orElseThrow().isCiviFormAdmin()) {
+      System.out.println("not submitting");
+      Call reviewPage = controllers.admin.routes.AdminProgramController.index();
+      return CompletableFuture.completedStage(
+          redirect(reviewPage).flashing("warning", "not submitting"));
+    }
     return checkApplicantAuthorization(profileUtils, request, applicantId)
         .thenComposeAsync(
             v -> submitInternal(request, applicantId, programId), httpExecutionContext.current())

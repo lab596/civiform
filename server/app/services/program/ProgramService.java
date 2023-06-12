@@ -62,6 +62,8 @@ public interface ProgramService {
   CompletionStage<ImmutableList<ProgramDefinition>> syncQuestionsToProgramDefinitions(
       ImmutableList<ProgramDefinition> programDefinitions);
 
+  public boolean isDraftProgram(long programId);
+
   /**
    * Get the definition of a given program asynchronously.
    *
