@@ -30,9 +30,6 @@ public abstract class ApplicantPersonalInfo {
 
   public String getDisplayString(Messages messages) {
     switch (getType()) {
-      case GUEST:
-        return messages.at(MessageKey.GUEST.getKeyName());
-
       case LOGGED_IN:
       case TI_PARTIALLY_CREATED:
         Representation representation = getType() == LOGGED_IN ? loggedIn() : tiPartiallyCreated();
@@ -42,11 +39,11 @@ public abstract class ApplicantPersonalInfo {
         } else if (representation.email().isPresent()) {
           return representation.email().get();
         }
-
+        // Fall through
+      case GUEST:
         // Fall through
       default:
-        throw new RuntimeException(
-            "ApplicantPersonalInfo has no name or email and is not a guest.");
+        return messages.at(MessageKey.GUEST.getKeyName());
     }
   }
 
