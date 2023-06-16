@@ -15,8 +15,6 @@ import views.JsBundle;
 import views.components.Accordion;
 import views.components.ButtonStyles;
 import views.components.Icons;
-import views.style.BaseStyles;
-import views.style.ReferenceClasses;
 
 /** Renders a page of all style HTML components used in CiviForm */
 public final class ExampleComponentsView extends BaseHtmlView {
