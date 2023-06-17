@@ -1,61 +1,38 @@
-package views.dev;
+package views.dev.exampleComponents;
 
 import static com.google.common.base.Preconditions.checkNotNull;
-import static j2html.TagCreator.div;
+import static j2html.TagCreator.*;
 
 import com.google.inject.Inject;
 import j2html.tags.specialized.ButtonTag;
 import j2html.tags.specialized.DivTag;
-import java.util.ArrayList;
 import play.twirl.api.Content;
 import views.BaseHtmlLayout;
 import views.BaseHtmlView;
 import views.HtmlBundle;
 import views.JsBundle;
-import views.components.Accordion;
 import views.components.ButtonStyles;
 import views.components.Icons;
 
-/** Renders a page of all style HTML components used in CiviForm */
-public final class ExampleComponentsView extends BaseHtmlView {
+/** Renders a page with examples of all buttons used in CiviForm */
+public final class ButtonView extends BaseHtmlView {
   private final BaseHtmlLayout layout;
 
   @Inject
-  public ExampleComponentsView(BaseHtmlLayout layout) {
+  public ButtonView(BaseHtmlLayout layout) {
     this.layout = checkNotNull(layout);
   }
-    // FieldWithLabel
-    // ButtonStyles - DONE
-    // Accordion - DONE
-    // Icons - link to http://localhost:9000/dev/icons
-    // LinkElement
-    // Modal
-    // PathTag?
-    // ProgramCardFactory
-    // SelectWithLabel
-    // SvgTag
-    // TextFormatter ?
-    // ToastMessage
-    // Forms
-    // Some things in ViewUtils.java
-    // ApplicantLayout
-    // AdminLayout
-    // Also how work in styles files like BaseStyles
 
   public Content render() {
 
-    ArrayList<String> accordionContent = new ArrayList<String>();
-    accordionContent.add("Accordion Item 1");
-    accordionContent.add("Accordion Item 2");
-    accordionContent.add("Accordion Item 3");
-
     DivTag buttons = buildButtons();
-
 
     DivTag content =
         div()
-            .with(buildAccordion("Accordion Element Title", accordionContent))
-            .with(buttons);
+            .with(
+                h1("Buttons").withClasses("mx-6", "my-8"),
+                hr().withClasses("border", "border-seattle-blue", "border-double"),
+                buttons);
 
     // CreateQuestionButton.renderCreateQuestionButton(
     // "www.google.com", /* isPrimaryButton= */ false, false);
@@ -67,12 +44,6 @@ public final class ExampleComponentsView extends BaseHtmlView {
             .addMainContent(content)
             .setJsBundle(JsBundle.ADMIN);
     return layout.render(bundle);
-  }
-
-  private static DivTag buildAccordion(String title, ArrayList<String> accordionContent) {
-    Accordion accordion = new Accordion().setTitle(title);
-    accordionContent.forEach(item -> accordion.addContent(div(item)));
-    return accordion.getContainer();
   }
 
   private static DivTag buildButtons() {
@@ -97,15 +68,16 @@ public final class ExampleComponentsView extends BaseHtmlView {
         makeSvgTextButton("CLEAR WITH ICON FOR DROPDOWN", Icons.DELETE)
             .withClasses(ButtonStyles.CLEAR_WITH_ICON_FOR_DROPDOWN);
     return div()
-        .with(solidWhiteBtn)
-        .with(solidBlueBtn)
-        .with(solidBlueWithIconBtn)
-        .with(solidBlueTextSmBtn)
-        .with(solidBlueTextXlBtn)
-        .with(outlinedTransparentBtn)
-        .with(outlinedWhiteWithIconBtn)
-        .with(clearWithIconBtn)
-        .with(clearWithIconForDropdownBtn);
+        .withClasses("space-y-5", "m-12")
+        .with(
+            solidWhiteBtn,
+            solidBlueBtn,
+            solidBlueWithIconBtn,
+            solidBlueTextSmBtn,
+            solidBlueTextXlBtn,
+            outlinedTransparentBtn,
+            outlinedWhiteWithIconBtn,
+            clearWithIconBtn,
+            clearWithIconForDropdownBtn);
   }
-
 }
