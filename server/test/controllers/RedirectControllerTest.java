@@ -1,11 +1,12 @@
 package controllers;
 
+import static controllers.CallbackController.REDIRECT_TO_SESSION_KEY;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.when;
 import static play.api.test.CSRFTokenHelper.addCSRFToken;
 import static play.mvc.Http.Status.OK;
 import static play.test.Helpers.contentAsString;
-import static play.test.Helpers.fakeRequest;
+import static support.CfTestHelpers.requestBuilderWithSettings;
 
 import auth.ProfileUtils;
 import com.google.common.collect.ImmutableList;
@@ -92,7 +93,8 @@ public class RedirectControllerTest extends WithMockedProfiles {
 
     Result result =
         instanceOf(RedirectController.class)
-            .programBySlug(addCSRFToken(fakeRequest()).build(), programDefinition.slug())
+            .programBySlug(
+                addCSRFToken(requestBuilderWithSettings()).build(), programDefinition.slug())
             .toCompletableFuture()
             .join();
 
@@ -104,6 +106,51 @@ public class RedirectControllerTest extends WithMockedProfiles {
   }
 
   @Test
+  public void programBySlug_clearsOutRedirectSessionKey_existingProgram() {
+    ProgramDefinition programDefinition =
+        ProgramBuilder.newActiveProgram("test program", "desc").buildDefinition();
+    VersionRepository versionRepository = instanceOf(VersionRepository.class);
+    Applicant applicant = createApplicantWithMockedProfile();
+    applicant.getApplicantData().setPreferredLocale(Locale.ENGLISH);
+    applicant.save();
+    resourceCreator().insertDraftProgram(programDefinition.adminName());
+    versionRepository.publishNewSynchronizedVersion();
+
+    Result result =
+        instanceOf(RedirectController.class)
+            .programBySlug(
+                addCSRFToken(
+                        requestBuilderWithSettings()
+                            .session(REDIRECT_TO_SESSION_KEY, "redirect-url"))
+                    .build(),
+                programDefinition.slug())
+            .toCompletableFuture()
+            .join();
+
+    assertThat(result.session().get(REDIRECT_TO_SESSION_KEY)).isNotPresent();
+  }
+
+  @Test
+  public void programBySlug_clearsOutRedirectSessionKey_nonExistingProgram() {
+    Applicant applicant = createApplicantWithMockedProfile();
+    applicant.getApplicantData().setPreferredLocale(Locale.ENGLISH);
+    applicant.save();
+
+    Result result =
+        instanceOf(RedirectController.class)
+            .programBySlug(
+                addCSRFToken(
+                        requestBuilderWithSettings()
+                            .session(REDIRECT_TO_SESSION_KEY, "redirect-url"))
+                    .build(),
+                "non-existing-program-slug")
+            .toCompletableFuture()
+            .join();
+
+    assertThat(result.session().get(REDIRECT_TO_SESSION_KEY)).isNotPresent();
+  }
+
+  @Test
   public void programBySlug_testLanguageSelectorShown() {
     ProgramDefinition programDefinition =
         ProgramBuilder.newActiveProgram("test program", "desc").buildDefinition();
@@ -111,7 +158,8 @@ public class RedirectControllerTest extends WithMockedProfiles {
     RedirectController controller = instanceOf(RedirectController.class);
     Result result =
         controller
-            .programBySlug(addCSRFToken(fakeRequest()).build(), programDefinition.slug())
+            .programBySlug(
+                addCSRFToken(requestBuilderWithSettings()).build(), programDefinition.slug())
             .toCompletableFuture()
             .join();
 
@@ -140,10 +188,12 @@ public class RedirectControllerTest extends WithMockedProfiles {
             instanceOf(ApplicantUpsellCreateAccountView.class),
             instanceOf(ApplicantCommonIntakeUpsellCreateAccountView.class),
             instanceOf(MessagesApi.class),
+            instanceOf(VersionRepository.class),
             languageUtils);
     Result result =
         controller
-            .programBySlug(addCSRFToken(fakeRequest()).build(), programDefinition.slug())
+            .programBySlug(
+                addCSRFToken(requestBuilderWithSettings()).build(), programDefinition.slug())
             .toCompletableFuture()
             .join();
     assertThat(result.redirectLocation())
@@ -171,10 +221,12 @@ public class RedirectControllerTest extends WithMockedProfiles {
             instanceOf(ApplicantUpsellCreateAccountView.class),
             instanceOf(ApplicantCommonIntakeUpsellCreateAccountView.class),
             instanceOf(MessagesApi.class),
+            instanceOf(VersionRepository.class),
             languageUtils);
     Result result =
         controller
-            .programBySlug(addCSRFToken(fakeRequest()).build(), programDefinition.slug())
+            .programBySlug(
+                addCSRFToken(requestBuilderWithSettings()).build(), programDefinition.slug())
             .toCompletableFuture()
             .join();
     assertThat(result.redirectLocation())
@@ -196,7 +248,7 @@ public class RedirectControllerTest extends WithMockedProfiles {
     Result result =
         instanceOf(RedirectController.class)
             .considerRegister(
-                addCSRFToken(fakeRequest()).build(),
+                addCSRFToken(requestBuilderWithSettings()).build(),
                 applicant.id,
                 programDefinition.id(),
                 application.id,
@@ -252,7 +304,7 @@ public class RedirectControllerTest extends WithMockedProfiles {
     Result result =
         instanceOf(RedirectController.class)
             .considerRegister(
-                addCSRFToken(fakeRequest()).build(),
+                addCSRFToken(requestBuilderWithSettings()).build(),
                 applicant.id,
                 commonIntakeForm.id(),
                 application.id,
@@ -310,7 +362,7 @@ public class RedirectControllerTest extends WithMockedProfiles {
     Result result =
         instanceOf(RedirectController.class)
             .considerRegister(
-                addCSRFToken(fakeRequest()).build(),
+                addCSRFToken(requestBuilderWithSettings()).build(),
                 applicant.id,
                 commonIntakeForm.id(),
                 application.id,

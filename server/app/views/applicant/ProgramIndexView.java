@@ -1,8 +1,6 @@
 package views.applicant;
 
 import static com.google.common.base.Preconditions.checkNotNull;
-import static featureflags.FeatureFlag.INTAKE_FORM_ENABLED;
-import static featureflags.FeatureFlag.NONGATED_ELIGIBILITY_ENABLED;
 import static j2html.TagCreator.a;
 import static j2html.TagCreator.div;
 import static j2html.TagCreator.each;
@@ -26,7 +24,6 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
 import com.typesafe.config.Config;
 import controllers.routes;
-import featureflags.FeatureFlags;
 import j2html.TagCreator;
 import j2html.tags.ContainerTag;
 import j2html.tags.DomContent;
@@ -54,6 +51,7 @@ import services.applicant.ApplicantPersonalInfo;
 import services.applicant.ApplicantService;
 import services.program.ProgramDefinition;
 import services.program.StatusDefinitions;
+import services.settings.SettingsManifest;
 import views.BaseHtmlView;
 import views.HtmlBundle;
 import views.TranslationUtils;
@@ -73,10 +71,11 @@ import views.style.StyleUtils;
 public final class ProgramIndexView extends BaseHtmlView {
 
   private final ApplicantLayout layout;
-  private final FeatureFlags featureFlags;
+  private final SettingsManifest settingsManifest;
   private final ProfileUtils profileUtils;
   private final String authProviderName;
   private final String civicEntityShortName;
+  private final String applicantPortalName;
   private final ZoneId zoneId;
 
   @Inject
@@ -84,14 +83,15 @@ public final class ProgramIndexView extends BaseHtmlView {
       ApplicantLayout layout,
       ZoneId zoneId,
       Config config,
-      FeatureFlags featureFlags,
+      SettingsManifest settingsManifest,
       ProfileUtils profileUtils,
       @BindingAnnotations.ApplicantAuthProviderName String authProviderName) {
     this.layout = checkNotNull(layout);
-    this.featureFlags = checkNotNull(featureFlags);
+    this.settingsManifest = checkNotNull(settingsManifest);
     this.profileUtils = checkNotNull(profileUtils);
     this.civicEntityShortName =
         checkNotNull(config).getString("whitelabel_civic_entity_short_name");
+    this.applicantPortalName = checkNotNull(config).getString("applicant_portal_name");
     this.authProviderName = checkNotNull(authProviderName);
     this.zoneId = checkNotNull(zoneId);
   }
@@ -232,7 +232,7 @@ public final class ProgramIndexView extends BaseHtmlView {
                 Math.max(relevantPrograms.unapplied().size(), relevantPrograms.submitted().size()),
                 relevantPrograms.inProgress().size()));
 
-    if (featureFlags.getFlagEnabled(request, INTAKE_FORM_ENABLED)
+    if (settingsManifest.getIntakeFormEnabled(request)
         && relevantPrograms.commonIntakeForm().isPresent()) {
       content.with(
           findServicesSection(
@@ -486,7 +486,8 @@ public final class ProgramIndexView extends BaseHtmlView {
         createLoginPromptModal(
                 messages,
                 actionUrl,
-                MessageKey.INITIAL_LOGIN_MODAL_PROMPT,
+                messages.at(
+                    MessageKey.INITIAL_LOGIN_MODAL_PROMPT.getKeyName(), applicantPortalName),
                 MessageKey.BUTTON_CONTINUE_TO_APPLICATION)
             .setRepeatOpenBehavior(
                 RepeatOpenBehavior.showOnlyOnce(PROGRAMS_INDEX_LOGIN_PROMPT, actionUrl))
@@ -531,7 +532,7 @@ public final class ProgramIndexView extends BaseHtmlView {
       return false;
     }
 
-    return !featureFlags.getFlagEnabled(request, NONGATED_ELIGIBILITY_ENABLED)
+    return !settingsManifest.getNongatedEligibilityEnabled(request)
         || cardData.program().eligibilityIsGating()
         || cardData.isProgramMaybeEligible().get();
   }

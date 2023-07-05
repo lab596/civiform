@@ -1,7 +1,6 @@
 package views.applicant;
 
 import static com.google.common.base.Preconditions.checkNotNull;
-import static featureflags.FeatureFlag.SHOW_CIVIFORM_IMAGE_TAG_ON_LANDING_PAGE;
 import static j2html.TagCreator.a;
 import static j2html.TagCreator.b;
 import static j2html.TagCreator.br;
@@ -21,7 +20,6 @@ import auth.ProfileUtils;
 import auth.Role;
 import com.typesafe.config.Config;
 import controllers.routes;
-import featureflags.FeatureFlags;
 import io.jsonwebtoken.lang.Strings;
 import j2html.TagCreator;
 import j2html.tags.ContainerTag;
@@ -32,6 +30,8 @@ import j2html.tags.specialized.ImgTag;
 import j2html.tags.specialized.InputTag;
 import j2html.tags.specialized.NavTag;
 import j2html.tags.specialized.SelectTag;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.Locale;
 import java.util.Optional;
 import javax.inject.Inject;
@@ -43,6 +43,7 @@ import play.twirl.api.Content;
 import services.DeploymentType;
 import services.MessageKey;
 import services.applicant.ApplicantPersonalInfo;
+import services.settings.SettingsManifest;
 import views.BaseHtmlLayout;
 import views.HtmlBundle;
 import views.LanguageSelector;
@@ -88,10 +89,10 @@ public class ApplicantLayout extends BaseHtmlLayout {
       Config configuration,
       ProfileUtils profileUtils,
       LanguageSelector languageSelector,
-      FeatureFlags featureFlags,
+      SettingsManifest settingsManifest,
       DeploymentType deploymentType,
       DebugContent debugContent) {
-    super(viewUtils, configuration, featureFlags, deploymentType);
+    super(viewUtils, configuration, settingsManifest, deploymentType);
     this.layout = layout;
     this.profileUtils = checkNotNull(profileUtils);
     this.languageSelector = checkNotNull(languageSelector);
@@ -165,8 +166,7 @@ public class ApplicantLayout extends BaseHtmlLayout {
             .with(
                 div()
                     .condWith(
-                        featureFlags.getFlagEnabled(
-                            request, SHOW_CIVIFORM_IMAGE_TAG_ON_LANDING_PAGE),
+                        getSettingsManifest().getShowCiviformImageTagOnLandingPage(request),
                         debugContent.civiformVersionDiv()),
                 div()
                     .with(
@@ -209,11 +209,12 @@ public class ApplicantLayout extends BaseHtmlLayout {
                     "flex-shrink-0",
                     "grow",
                     StyleUtils.responsiveMedium("grow-0")))
-        .with(maybeRenderTiButton(profile, applicantPersonalInfo.getDisplayString(messages)))
+        .with(
+            maybeRenderTiButton(profile, applicantPersonalInfo.getDisplayString(messages), request))
         .with(
             div(
                     getLanguageForm(request, profile, messages),
-                    authDisplaySection(applicantPersonalInfo, messages))
+                    authDisplaySection(applicantPersonalInfo, profile, messages))
                 .withClasses(
                     "flex",
                     "flex-row",
@@ -293,7 +294,7 @@ public class ApplicantLayout extends BaseHtmlLayout {
   }
 
   private DivTag maybeRenderTiButton(
-      Optional<CiviFormProfile> profile, String applicantDisplayString) {
+      Optional<CiviFormProfile> profile, String applicantDisplayString, Http.Request request) {
     DivTag div =
         div()
             .withClasses("flex", "flex-col", "justify-center", "items-center", "grow-0", "md:grow");
@@ -315,7 +316,8 @@ public class ApplicantLayout extends BaseHtmlLayout {
                       "opacity-75",
                       StyleUtils.hover("opacity-100"),
                       ButtonStyles.SOLID_BLUE_TEXT_XL))
-          .with(
+          .condWith(
+              !onTiDashboardPage(request),
               div("(applying as: " + applicantDisplayString + ")")
                   .withClasses("text-sm", "text-black", "text-center"));
     }
@@ -328,10 +330,14 @@ public class ApplicantLayout extends BaseHtmlLayout {
    * <p>If the user is a guest, we show a "Log in" and a "Create an account" button. If they are
    * logged in, we show a "Logout" button.
    */
-  private DivTag authDisplaySection(ApplicantPersonalInfo personalInfo, Messages messages) {
+  private DivTag authDisplaySection(
+      ApplicantPersonalInfo personalInfo, Optional<CiviFormProfile> profile, Messages messages) {
     DivTag outsideDiv = div().withClasses("flex", "flex-col", "justify-center", "pr-4");
 
-    if (personalInfo.getType() == GUEST) {
+    boolean isTi = profile.map(CiviFormProfile::isTrustedIntermediary).orElse(false);
+    boolean isGuest = personalInfo.getType() == GUEST && !isTi;
+
+    if (isGuest) {
       String loggedInAsMessage = messages.at(MessageKey.GUEST_INDICATOR.getKeyName());
       String endSessionMessage = messages.at(MessageKey.END_SESSION.getKeyName());
       // Ending a guest session is equivalent to "logging out" the guest.
@@ -462,5 +468,29 @@ public class ApplicantLayout extends BaseHtmlLayout {
     double denominator = forSummary ? totalBlockCount : totalBlockCount + 1;
 
     return (int) (numerator / denominator * 100.0);
+  }
+
+  /**
+   * Returns true if the request object points to a URI that is the Trusted Intermediary Dashboard.
+   * When a TI is impersonating an applicant to apply for them, this method will return false.
+   */
+  private static boolean onTiDashboardPage(Http.Request request) {
+    String currentPath = null;
+    String tiDashboardPath = null;
+    try {
+      URI currentPathUri = new URI(request.uri());
+      currentPath = currentPathUri.getPath();
+
+      URI tiDashboardUri =
+          new URI(
+              controllers.ti.routes.TrustedIntermediaryController.dashboard(
+                      Optional.empty(), Optional.empty(), Optional.empty())
+                  .url());
+      tiDashboardPath = tiDashboardUri.getPath();
+    } catch (URISyntaxException e) {
+      logger.error("Could not get the path for uri {}", request.uri());
+    }
+
+    return currentPath != null && currentPath.equals(tiDashboardPath);
   }
 }
