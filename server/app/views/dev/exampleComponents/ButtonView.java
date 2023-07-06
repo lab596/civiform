@@ -1,7 +1,7 @@
 package views.dev.exampleComponents;
 
 import static com.google.common.base.Preconditions.checkNotNull;
-import static j2html.TagCreator.*;
+import static j2html.TagCreator.div;
 
 import com.google.inject.Inject;
 import j2html.tags.specialized.ButtonTag;
@@ -27,12 +27,7 @@ public final class ButtonView extends BaseHtmlView {
 
     DivTag buttons = buildButtons();
 
-    DivTag content =
-        div()
-            .with(
-                h1("Buttons").withClasses("mx-6", "my-8"),
-                hr().withClasses("border", "border-seattle-blue", "border-double"),
-                buttons);
+    DivTag content = div().with(ExampleComponentsView.buildHeader("Buttons"), buttons);
 
     // CreateQuestionButton.renderCreateQuestionButton(
     // "www.google.com", /* isPrimaryButton= */ false, false);

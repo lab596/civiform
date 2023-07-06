@@ -1,7 +1,8 @@
 package views.dev.exampleComponents;
 
 import static com.google.common.base.Preconditions.checkNotNull;
-import static j2html.TagCreator.*;
+import static j2html.TagCreator.div;
+import static j2html.TagCreator.p;
 
 import com.google.inject.Inject;
 import j2html.tags.specialized.ButtonTag;
@@ -34,8 +35,7 @@ public final class ModalView extends BaseHtmlView {
   DivTag contentDiv =
       div()
           .with(
-              h1("Modals").withClasses("mx-6", "my-8"),
-              hr().withClasses("border", "border-seattle-blue", "border-double"),
+              ExampleComponentsView.buildHeader("Modals"),
               div()
                   .withClasses("m-12")
                   .with(

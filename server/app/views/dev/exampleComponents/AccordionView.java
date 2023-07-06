@@ -1,7 +1,7 @@
 package views.dev.exampleComponents;
 
 import static com.google.common.base.Preconditions.checkNotNull;
-import static j2html.TagCreator.*;
+import static j2html.TagCreator.div;
 
 import com.google.inject.Inject;
 import j2html.tags.specialized.DivTag;
@@ -33,8 +33,7 @@ public class AccordionView extends BaseHtmlView {
     DivTag content =
         div()
             .with(
-                h1("Accordion").withClasses("mx-6", "my-8"),
-                hr().withClasses("border", "border-seattle-blue", "border-double"),
+                ExampleComponentsView.buildHeader("Accordion"),
                 div()
                     .withClass("m-12")
                     .with(buildAccordion("Accordion Element Title", accordionContent)));
