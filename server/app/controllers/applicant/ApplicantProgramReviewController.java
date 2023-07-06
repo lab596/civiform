@@ -130,7 +130,7 @@ public class ApplicantProgramReviewController extends CiviFormController {
                 Modal loginPromptModal =
                     createLoginPromptModal(
                             messages,
-                            /*postLoginRedirectTo=*/ controllers.applicant.routes.RedirectController
+                            /*postLoginRedirectTo=*/ controllers.applicant.routes.DeepLinkController
                                 .programBySlug(
                                     request.flash().get("redirected-from-program-slug").get())
                                 .url(),
@@ -173,18 +173,8 @@ public class ApplicantProgramReviewController extends CiviFormController {
   @Secure
   public CompletionStage<Result> submit(Request request, long applicantId, long programId) {
     if (profileUtils.currentUserProfile(request).orElseThrow().isCiviFormAdmin()) {
-      return versionRepository
-          .isDraftProgramAsync(programId)
-          .thenApplyAsync(
-              (isDraftProgram) -> {
-                Call reviewPage =
-                    controllers.admin.routes.AdminProgramBlocksController.readOnlyIndex(programId);
-                if (isDraftProgram) {
-                  reviewPage =
-                      controllers.admin.routes.AdminProgramBlocksController.index(programId);
-                }
-                return redirect(reviewPage);
-              });
+      return CompletableFuture.completedFuture(
+          redirect(controllers.admin.routes.AdminProgramPreviewController.back(programId).url()));
     }
 
     return checkApplicantAuthorization(request, applicantId)
@@ -252,7 +242,7 @@ public class ApplicantProgramReviewController extends CiviFormController {
               Application application = submitAppFuture.join();
               Long applicationId = application.id;
               Call endOfProgramSubmission =
-                  routes.RedirectController.considerRegister(
+                  routes.UpsellController.considerRegister(
                       applicantId,
                       programId,
                       applicationId,
