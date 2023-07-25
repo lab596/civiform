@@ -10,6 +10,8 @@ import java.time.format.DateTimeParseException;
 import java.util.Locale;
 import java.util.Optional;
 import javax.inject.Inject;
+
+import forms.UpdateApplicantNameEmailForm;
 import models.Account;
 import models.Applicant;
 import models.TrustedIntermediaryGroup;
@@ -46,8 +48,8 @@ public final class TrustedIntermediaryService {
   }
 
   public Form<AddApplicantToTrustedIntermediaryGroupForm> addNewClient(
-      Form<AddApplicantToTrustedIntermediaryGroupForm> form,
-      TrustedIntermediaryGroup trustedIntermediaryGroup) {
+    Form<AddApplicantToTrustedIntermediaryGroupForm> form,
+    TrustedIntermediaryGroup trustedIntermediaryGroup) {
     form = validateEmailAddress(form);
     form = validateFirstName(form);
     form = validateLastName(form);
@@ -57,18 +59,18 @@ public final class TrustedIntermediaryService {
     }
     try {
       userRepository.createNewApplicantForTrustedIntermediaryGroup(
-          form.get(), trustedIntermediaryGroup);
+        form.get(), trustedIntermediaryGroup);
     } catch (EmailAddressExistsException e) {
       return form.withError(
-          FORM_FIELD_NAME_EMAIL_ADDRESS,
-          "Email address already in use. Cannot create applicant if an account already"
-              + " exists.");
+        FORM_FIELD_NAME_EMAIL_ADDRESS,
+        "Email address already in use. Cannot create applicant if an account already"
+          + " exists.");
     }
     return form;
   }
 
   private Form<AddApplicantToTrustedIntermediaryGroupForm> validateEmailAddress(
-      Form<AddApplicantToTrustedIntermediaryGroupForm> form) {
+    Form<AddApplicantToTrustedIntermediaryGroupForm> form) {
     if (Strings.isNullOrEmpty(form.value().get().getEmailAddress())) {
       return form.withError(FORM_FIELD_NAME_EMAIL_ADDRESS, "Email Address required");
     }
@@ -76,7 +78,7 @@ public final class TrustedIntermediaryService {
   }
 
   private Form<AddApplicantToTrustedIntermediaryGroupForm> validateFirstName(
-      Form<AddApplicantToTrustedIntermediaryGroupForm> form) {
+    Form<AddApplicantToTrustedIntermediaryGroupForm> form) {
     if (Strings.isNullOrEmpty(form.value().get().getFirstName())) {
       return form.withError(FORM_FIELD_NAME_FIRST_NAME, "First name required");
     }
@@ -84,7 +86,7 @@ public final class TrustedIntermediaryService {
   }
 
   private Form<AddApplicantToTrustedIntermediaryGroupForm> validateLastName(
-      Form<AddApplicantToTrustedIntermediaryGroupForm> form) {
+    Form<AddApplicantToTrustedIntermediaryGroupForm> form) {
     if (Strings.isNullOrEmpty(form.value().get().getLastName())) {
       return form.withError(FORM_FIELD_NAME_LAST_NAME, "Last name required");
     }
@@ -92,7 +94,7 @@ public final class TrustedIntermediaryService {
   }
 
   private Form<AddApplicantToTrustedIntermediaryGroupForm> validateDateOfBirthForAddApplicant(
-      Form<AddApplicantToTrustedIntermediaryGroupForm> form) {
+    Form<AddApplicantToTrustedIntermediaryGroupForm> form) {
     Optional<String> errorMessage = validateDateOfBirth(form.value().get().getDob());
     if (errorMessage.isPresent()) {
       return form.withError(FORM_FIELD_NAME_DOB, errorMessage.get());
@@ -120,17 +122,17 @@ public final class TrustedIntermediaryService {
    * Gets all the TrustedIntermediaryAccount managed by the given TI Group with/without filtering
    *
    * @param searchParameters - This object contains a nameQuery and/or a dateQuery String. If both
-   *     are empty- an unfiltered list of accounts is returned. If nameQuery is present- a match
-   *     between the Account holder's name and the nameQuery is performed. If dateQuery is present -
-   *     a match between the Account holder's Date of Birth and the dateQuery is performed - the
-   *     matched results are collected and sent as an Immutable List.
-   * @param tiGroup - this is TrustedIntermediaryGroup for which the list of associated account is
-   *     requested. This is needed to fetch all the accounts from the user repository.
+   *                         are empty- an unfiltered list of accounts is returned. If nameQuery is present- a match
+   *                         between the Account holder's name and the nameQuery is performed. If dateQuery is present -
+   *                         a match between the Account holder's Date of Birth and the dateQuery is performed - the
+   *                         matched results are collected and sent as an Immutable List.
+   * @param tiGroup          - this is TrustedIntermediaryGroup for which the list of associated account is
+   *                         requested. This is needed to fetch all the accounts from the user repository.
    * @return a result object containing the ListOfAccounts which may be filtered by the Search
-   *     Parameter and an optional errorMessage which is generated if the filtering has failed.
+   * Parameter and an optional errorMessage which is generated if the filtering has failed.
    */
   public TrustedIntermediarySearchResult getManagedAccounts(
-      SearchParameters searchParameters, TrustedIntermediaryGroup tiGroup) {
+    SearchParameters searchParameters, TrustedIntermediaryGroup tiGroup) {
     ImmutableList<Account> allAccounts = tiGroup.getManagedAccounts();
     if (searchParameters.nameQuery().isEmpty() && searchParameters.dateQuery().isEmpty()) {
       return TrustedIntermediarySearchResult.success(allAccounts);
@@ -140,36 +142,36 @@ public final class TrustedIntermediaryService {
       searchedResult = searchAccounts(searchParameters, allAccounts);
     } catch (DateTimeParseException e) {
       return TrustedIntermediarySearchResult.fail(
-          allAccounts, "Please enter date in MM/dd/yyyy format");
+        allAccounts, "Please enter date in MM/dd/yyyy format");
     }
     return TrustedIntermediarySearchResult.success(searchedResult);
   }
 
   private ImmutableList<Account> searchAccounts(
-      SearchParameters searchParameters, ImmutableList<Account> allAccounts) {
+    SearchParameters searchParameters, ImmutableList<Account> allAccounts) {
     return allAccounts.stream()
-        .filter(
-            account ->
-                ((account.newestApplicant().get().getApplicantData().getDateOfBirth().isPresent()
-                        && searchParameters.dateQuery().isPresent()
-                        && !searchParameters.dateQuery().get().isEmpty()
-                        && account
-                            .newestApplicant()
-                            .get()
-                            .getApplicantData()
-                            .getDateOfBirth()
-                            .get()
-                            .equals(
-                                dateConverter.parseIso8601DateToLocalDate(
-                                    searchParameters.dateQuery().get())))
-                    || (searchParameters.nameQuery().isPresent()
-                        && !searchParameters.nameQuery().get().isEmpty()
-                        && account
-                            .getApplicantName()
-                            .toLowerCase(Locale.ROOT)
-                            .contains(
-                                searchParameters.nameQuery().get().toLowerCase(Locale.ROOT)))))
-        .collect(ImmutableList.toImmutableList());
+      .filter(
+        account ->
+          ((account.newestApplicant().get().getApplicantData().getDateOfBirth().isPresent()
+            && searchParameters.dateQuery().isPresent()
+            && !searchParameters.dateQuery().get().isEmpty()
+            && account
+            .newestApplicant()
+            .get()
+            .getApplicantData()
+            .getDateOfBirth()
+            .get()
+            .equals(
+              dateConverter.parseIso8601DateToLocalDate(
+                searchParameters.dateQuery().get())))
+            || (searchParameters.nameQuery().isPresent()
+            && !searchParameters.nameQuery().get().isEmpty()
+            && account
+            .getApplicantName()
+            .toLowerCase(Locale.ROOT)
+            .contains(
+              searchParameters.nameQuery().get().toLowerCase(Locale.ROOT)))))
+      .collect(ImmutableList.toImmutableList());
   }
 
   /**
@@ -177,19 +179,19 @@ public final class TrustedIntermediaryService {
    * User Repository.
    *
    * @param trustedIntermediaryGroup - the TIGroup who manages the account whose Dob needs to be
-   *     updated.
-   * @param accountId - the account Id of the applicant whose Dob should be updated
-   * @param form - this contains the dob field which would be parsed into local date and updated for
-   *     the applicant
+   *                                 updated.
+   * @param accountId                - the account Id of the applicant whose Dob should be updated
+   * @param form                     - this contains the dob field which would be parsed into local date and updated for
+   *                                 the applicant
    * @return form - the form object is always returned. If the form contains error, the controller
-   *     will handle the flash messages If the account is not found for the given AccountId, a
-   *     runtime exception is raised.
+   * will handle the flash messages If the account is not found for the given AccountId, a
+   * runtime exception is raised.
    */
   public Form<UpdateApplicantDobForm> updateApplicantDateOfBirth(
-      TrustedIntermediaryGroup trustedIntermediaryGroup,
-      Long accountId,
-      Form<UpdateApplicantDobForm> form)
-      throws ApplicantNotFoundException {
+    TrustedIntermediaryGroup trustedIntermediaryGroup,
+    Long accountId,
+    Form<UpdateApplicantDobForm> form)
+    throws ApplicantNotFoundException {
 
     form = validateDateOfBirthForUpdateDob(form);
 
@@ -197,9 +199,9 @@ public final class TrustedIntermediaryService {
       return form;
     }
     Optional<Account> optionalAccount =
-        trustedIntermediaryGroup.getManagedAccounts().stream()
-            .filter(account -> account.id.equals(accountId))
-            .findAny();
+      trustedIntermediaryGroup.getManagedAccounts().stream()
+        .filter(account -> account.id.equals(accountId))
+        .findAny();
 
     if (optionalAccount.isEmpty() || optionalAccount.get().newestApplicant().isEmpty()) {
       throw new ApplicantNotFoundException(accountId);
@@ -211,11 +213,36 @@ public final class TrustedIntermediaryService {
   }
 
   private Form<UpdateApplicantDobForm> validateDateOfBirthForUpdateDob(
-      Form<UpdateApplicantDobForm> form) {
+    Form<UpdateApplicantDobForm> form) {
     Optional<String> errorMessage = validateDateOfBirth(form.value().get().getDob());
     if (errorMessage.isPresent()) {
       return form.withError(FORM_FIELD_NAME_DOB, errorMessage.get());
     }
+    return form;
+  }
+
+  public Form<UpdateApplicantNameEmailForm> updateApplicantNameEmail(
+    TrustedIntermediaryGroup trustedIntermediaryGroup,
+    Long accountId,
+    Form<UpdateApplicantNameEmailForm> form)
+    throws ApplicantNotFoundException {
+
+    form = validateDateOfBirthForUpdateDob(form);
+
+    if (form.hasErrors()) {
+      return form;
+    }
+    Optional<Account> optionalAccount =
+      trustedIntermediaryGroup.getManagedAccounts().stream()
+        .filter(account -> account.id.equals(accountId))
+        .findAny();
+
+    if (optionalAccount.isEmpty() || optionalAccount.get().newestApplicant().isEmpty()) {
+      throw new ApplicantNotFoundException(accountId);
+    }
+    Applicant applicant = optionalAccount.get().newestApplicant().get();
+    applicant.getApplicantData().setDateOfBirth(form.get().getDob());
+    userRepository.updateApplicant(applicant).toCompletableFuture().join();
     return form;
   }
 }

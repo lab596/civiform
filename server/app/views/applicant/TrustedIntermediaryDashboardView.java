@@ -242,10 +242,12 @@ public class TrustedIntermediaryDashboardView extends BaseHtmlView {
             "border-b",
             "border-gray-300",
             StyleUtils.even("bg-gray-100"))
-        .with(renderInfoCell(applicant))
+        .with(renderInfoCell(applicant, request))
         .with(renderApplicantInfoCell(applicant))
+        .with(renderNoteCell(applicant, request))
         .with(renderActionsCell(applicant))
-        .with(renderDateOfBirthCell(applicant, request));
+        .with(renderDateOfBirthCell(applicant, request))
+        .with(renderOptionsCell(applicant, request));
   }
 
   private TdTag renderDateOfBirthCell(Account account, Http.Request request) {
@@ -311,8 +313,36 @@ public class TrustedIntermediaryDashboardView extends BaseHtmlView {
       emailField = "(no email address)";
     }
     return td().with(div(ti.getApplicantName()).withClasses("font-semibold"))
-        .with(div(emailField).withClasses("text-xs", ReferenceClasses.BT_EMAIL))
-        .withClasses(BaseStyles.TABLE_CELL_STYLES);
+      .with(div(emailField).withClasses("text-xs", ReferenceClasses.BT_EMAIL))
+      .withClasses(BaseStyles.TABLE_CELL_STYLES);
+  }
+
+  private TdTag renderInfoCell(Account ti, Http.Request request) {
+    String emailField = ti.getEmailAddress();
+    if (Strings.isNullOrEmpty(emailField)) {
+      emailField = "(no email address)";
+    }
+    return td().with(
+        form()
+          .withClass("flex")
+          .withMethod("POST")
+//          .withAction(
+//            routes.TrustedIntermediaryController.updateDateOfBirth(account.id).url())
+          .with(
+            div(
+              input()
+                .withId("name-update")
+                .withName("name")
+                .withType("text")
+                .withClass("font-semibold")
+                .withValue(ti.getApplicantName()),
+              input()
+                .withId("email-address-update")
+                .withName("email")
+                .withType("email")
+                .withValue(emailField)),
+            makeCsrfTokenInputTag(request),
+            submitButton("Update Info").withClasses("text-xs", "ml-3")));
   }
 
   private TdTag renderStatusCell(Account ti) {
