@@ -1,5 +1,3 @@
-# Server configuration variables
-
 Many aspects of CiviForm are controlled by *configuration variables*. Examples include the domain name of the CiviForm server, the software version to deploy, settings for authentication, and locations of resources such as logos.
 
 This document describes how these variables are managed in various locations in the system.
