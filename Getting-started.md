@@ -251,7 +251,7 @@ bin/fmt -d HEAD^
 
 To learn more about how to make code contributions, head to [Technical contribution guide.](technical-contribution-guide.md)
 
-To learn about the CiviForm tech stack and standards, head to [Technology overview ](technology-overview.md)and [Development standards.](development-standards.md)
+To learn about the CiviForm tech stack and standards, head to [Technology overview ](https://github.com/civiform/civiform/wiki/Technology-overview)and [Development standards.](https://github.com/civiform/civiform/wiki/Development-standards)
 
 
 # Getting started with Windows
