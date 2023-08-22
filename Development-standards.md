@@ -1,10 +1,5 @@
 # Development standards
 
-* [Client-server concerns](development-standards.md#client-server-concerns)
-* [Java code](development-standards.md#java-code)
-* [Bash scripts](development-standards.md#bash-scripts)
-* [Routing and controller methods](development-standards.md#routing-and-controller-methods)
-
 ## Client-server concerns
 
 The client (i.e. browser-side code) should be as simple as is practical to implement the desired user experience.
