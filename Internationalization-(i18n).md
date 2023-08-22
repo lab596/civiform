@@ -11,7 +11,7 @@ There are two different cases where we require internationalization of strings -
 
 This refers to localizing hardcoded strings in the application itself, such as button text, page titles, and validation messages. These strings are known at compile time.
 
-Application strings are used throughout CiviForm source code, and are configured following the [Play framework's i18n documentation](https://www.playframework.com/documentation/2.8.x/JavaI18N). 
+Application strings are used throughout CiviForm source code, and are configured following the [Play framework's i18n documentation](https://www.playframework.com/documentation/2.8.x/JavaI18N).
 
 Note that the admin views only contain text in CiviForm's default language, whereas applicant views must be localized. Whenever you add hardcoded text to a view, you need to add translations for the text in the `messages` file:
 
@@ -26,18 +26,18 @@ Whether you need to wait for translations to be merged by Transifex before launc
 
 If you do need to wait for Transifex to merge translations, you have two options:
 
-1.  Leave your PR outstanding until they are available. Merge your changes to `messages` in a new PR and wait for Transifex to merge translations. You'll eventually have to get your code synced to main, potentially with merge conflicts, before you can merge. 
-2. Add a [FeatureFlag](feature-flags.md) around the code that adds your new text, and have it disabled until the translations are available.  In this way your future code changes are conditioned on the feature flag.  You can then choose to enable it in `application.dev-browser-tests.conf`, and check in any image diffs.
+1.  Leave your PR outstanding until they are available. Merge your changes to `messages` in a new PR and wait for Transifex to merge translations. You'll eventually have to get your code synced to main, potentially with merge conflicts, before you can merge.
+2.  Add a [FeatureFlag](Feature-Flags) around the code that adds your new text, and have it disabled until the translations are available. In this way your future code changes are conditioned on the feature flag. You can then choose to enable it in `application.dev-browser-tests.conf`, and check in any image diffs.
 
 **NOTE: The apostrophe (') is used as an escape character in messages files.** If you want to have an apostrophe in a message, you need to escape it with another apostrophe. Example: to produce `can't`, write `can''t` in the messages files. More information on apostrophes can be found in [Play's i18n documentation](https://www.playframework.com/documentation/2.8.x/JavaI18N#Notes-on-apostrophes)
 
 ## Internationalization for Programs & Questions (admin-configured)
 
 This refers to the CiviForm Admin using the admin UI to localize strings they have provided, such as question text or program information. These strings are not known at compile time, but are instead added through the UI and stored in the CiviForm database.
- 
+
 The CiviForm Admin must provide translations for program forms themselves. This is accomplished through the "Manage Translations" UI when editing programs or questions.
 
-![Admin translations](<../../.gitbook/assets/admin-translations.png>)
+![Admin translations](../../.gitbook/assets/admin-translations.png)
 
 ## Adding a new supported language
 
@@ -56,13 +56,13 @@ When someone merges a change to `messages` that introduces new strings, those st
 
 When translations are available, anyone in a Translator role or higher can submit translations. Upon submission, immediately mark the translation as "Reviewed" in Transifex. We do not currently have a process for reviewing translations, but may do so in the future. Transifex will not open a Pull Request until the translation is marked as reviewed.
 
-![Review translation](<../../.gitbook/assets/review-translation.png>)
+![Review translation](../../.gitbook/assets/review-translation.png)
 
 If Transifex is not opening Pull Requests for some reason when it should, you can debug this by
 initiating a manual sync:
 
-![Integration settings](<../../.gitbook/assets/integration-settings.png>)
+![Integration settings](../../.gitbook/assets/integration-settings.png)
 
-![Manual sync button](<../../.gitbook/assets/manual-sync-button.png>)
+![Manual sync button](../../.gitbook/assets/manual-sync-button.png)
 
-![Manual sync pane](<../../.gitbook/assets/sync-pane.png>)
+![Manual sync pane](../../.gitbook/assets/sync-pane.png)
