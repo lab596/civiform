@@ -37,7 +37,8 @@ This refers to the CiviForm Admin using the admin UI to localize strings they ha
 
 The CiviForm Admin must provide translations for program forms themselves. This is accomplished through the "Manage Translations" UI when editing programs or questions.
 
-![Admin translations](../../.gitbook/assets/admin-translations.png)
+### Admin translations
+![Admin translations](https://github.com/civiform/civiform/assets/195162/d88d60f6-ee67-4491-9007-7300976f5e84)
 
 ## Adding a new supported language
 
@@ -56,13 +57,17 @@ When someone merges a change to `messages` that introduces new strings, those st
 
 When translations are available, anyone in a Translator role or higher can submit translations. Upon submission, immediately mark the translation as "Reviewed" in Transifex. We do not currently have a process for reviewing translations, but may do so in the future. Transifex will not open a Pull Request until the translation is marked as reviewed.
 
-![Review translation](../../.gitbook/assets/review-translation.png)
+### Review translation
+![Review translation](https://github.com/civiform/civiform/assets/195162/5087cf2b-6d0c-4fea-8957-0777706594d4)
 
 If Transifex is not opening Pull Requests for some reason when it should, you can debug this by
 initiating a manual sync:
 
-![Integration settings](../../.gitbook/assets/integration-settings.png)
+### Integration settings
+![Integration settings](https://github.com/civiform/civiform/assets/195162/83ddf4f3-7e8e-43a8-814b-638cb34629e6)
 
-![Manual sync button](../../.gitbook/assets/manual-sync-button.png)
+### Manual sync button
+![Manual sync button](https://github.com/civiform/civiform/assets/195162/7c453d6a-9427-4c33-a2d1-c99e9278f9d9)
 
-![Manual sync pane](../../.gitbook/assets/sync-pane.png)
+### Manual sync pane
+![Manual sync pane](https://github.com/civiform/civiform/assets/195162/a3b80db4-0de6-401d-a751-24b536540ade)
