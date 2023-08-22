@@ -1,6 +1,6 @@
 # Getting started
 
-This guide helps you get started running and interacting with a local development server and tests. If you are a Full Time SWE onboarding, first check out the links/tutorials/account-settup detailed in [New Full Time SWE Onboarding Material](new-full-time-swe-onboarding-materials.md).
+This guide helps you get started running and interacting with a local development server and tests. If you are a Full Time SWE onboarding, first check out the links/tutorials/account-settup detailed in [New Full Time SWE Onboarding Material](https://github.com/civiform/civiform/wiki/New-Full-Time-SWE-Onboarding-Material).
 
 ## Setting up your environment
 
