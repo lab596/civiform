@@ -373,8 +373,6 @@ For information on versioning `questions` and `programs` see the [data versionin
 
 # SQL Cookbook
 
-# Useful database queries
-
 These can be executed locally through `bin/dev-psql`
 
 ## Question revision lifecycle stages
