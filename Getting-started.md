@@ -4,6 +4,8 @@ This guide helps you get started running and interacting with a local developmen
 
 ## Setting up your environment
 
+Note: these instructions assume a unix environment, scroll down for Windows.
+
 Start here! This step is a prerequisite for everything that follows, even if you only want to interact with a local server without pushing changes. If you're working in Windows, check out [Getting started with Windows](getting-started-with-windows.md).
 
 1. [Join GitHub](https://github.com/join).
