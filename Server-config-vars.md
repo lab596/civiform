@@ -2,7 +2,15 @@
 
 Many aspects of CiviForm are controlled by *configuration variables*. Examples include the domain name of the CiviForm server, the software version to deploy, settings for authentication, and locations of resources such as logos.
 
-This document describes how these varaiables are managed in various locations in the system.
+This document describes how these variables are managed in various locations in the system.
+
+## Overview
+
+Server variables are declared in [`env-var-docs.json`](https://github.com/civiform/civiform/blob/main/server/conf/env-var-docs.json). Configuration in that file determines their type and how they are set and consumed in the server.
+
+Most variables are read from the environment when the server starts. However, variables with the `ADMIN_WRITABLE` mode are set by the CiviForm Admin role and stored in the database. The values for those variables are loaded from the database on [every request and cached on the Play Framework's Request object](https://github.com/civiform/civiform/blob/check-that-filters-inject-services-using-providers/server/app/filters/SettingsFilter.java#L48).
+
+For more info on variable configuration and the env-var-docs.json file see the [README](https://github.com/civiform/civiform/blob/check-that-filters-inject-services-using-providers/env-var-docs/parser-package/README.md).
 
 ## application.conf
 
@@ -26,7 +34,7 @@ The file format is [HOCON](https://www.playframework.com/documentation/2.8.x/Con
 
 ## Accessing config variables
 
-Enviroment variable overrides for config variables should be registered in [`env-var-docs.json`](https://github.com/civiform/civiform/blob/main/server/conf/env-var-docs.json). The registered name (in [screaming snake case](https://en.wiktionary.org/wiki/screaming_snake_case)) should be the environment variable used in the `conf` file. When new variables are added, we programatically update the generated [SettingsManifest](https://github.com/civiform/civiform/blob/main/server/app/services/settings/SettingsManifest.java) class that provides accessor methods. Developers should consume all config variables through this class. Some existing code may interact directly with the `com.typesafe.config.Config` class, but the `SettingsManifest` should be used for new code.
+Environment variable overrides for config variables should be registered in [`env-var-docs.json`](https://github.com/civiform/civiform/blob/main/server/conf/env-var-docs.json). The registered name (in [screaming snake case](https://en.wiktionary.org/wiki/screaming_snake_case)) should be the environment variable used in the `conf` file. When new variables are added, we programmatically update the generated [SettingsManifest](https://github.com/civiform/civiform/blob/main/server/app/services/settings/SettingsManifest.java) class that provides accessor methods. Developers should consume all config variables through this class. Some existing code may interact directly with the `com.typesafe.config.Config` class, but the `SettingsManifest` should be used for new code.
 
 The variables in `env-var-docs.json` are also used to generate Markdown documentation and to populate the administrator Settings panel in the CiviForm UI.
 
