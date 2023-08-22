@@ -28,7 +28,7 @@
 
 ### Recommended Starting Points
 
-* [Getting Started Guide](getting-started.md)
+* [Getting Started Guide](https://github.com/civiform/civiform/wiki/Getting-started)
 * [Good First Issues](https://github.com/civiform/civiform/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22)
 
 ### Accounts
