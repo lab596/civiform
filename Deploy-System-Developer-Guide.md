@@ -1,7 +1,7 @@
 # Deploy system developer guide
 
 This page contains information for deploy system developers, which go beyond the initial one-off setup.
-You should have worked through the [Prerequisites & dev setup](Deploy-System-Prerequisites-and-Developer-Setup.md) already
+You should have worked through the [Prerequisites & dev setup](Deploy-System-Prerequisites-and-Developer-Setup) already
 and know the difference between the repositories (`civiform-deploy`, `cloud-deploy-infra` and `civiform`) from the overview section.
 
 The "Setup" section will take you through setup which you may have to revisit for each new change.
@@ -11,7 +11,7 @@ what information is provided when you need it.
 
 ## Setup
 
-See the [Setup Repositories](Deploy-System-Prerequisites-and-Developer-Setup.md#setup-repositories) section in [Prerequisites and developer setup](Deploy-System-Prerequisites-and-Developer-Setup.md) for instructions on setting up your respositories for the first time.
+See the [Setup Repositories](Deploy-System-Prerequisites-and-Developer-Setup#setup-repositories) section in [Prerequisites and developer setup](Deploy-System-Prerequisites-and-Developer-Setup) for instructions on setting up your respositories for the first time.
 
 ## Most Common developer flows
 
@@ -149,7 +149,7 @@ Make your changes
 Double check that the setup script sees the changes
 
 - Navigate to the `civiform-deploy` repository
-- Ensure that your `checkout.sh` copies your changes from the correct git branch in `cloud-deploy-infra` (see [Prerequisites](Deploy-System-Prerequisites-and-Developer-Setup.md#setup-repositories))
+- Ensure that your `checkout.sh` copies your changes from the correct git branch in `cloud-deploy-infra` (see [Prerequisites](Deploy-System-Prerequisites-and-Developer-Setup#setup-repositories))
 
 #### Run the deployment script
 
