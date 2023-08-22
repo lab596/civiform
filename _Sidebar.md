@@ -4,9 +4,7 @@
   - [[Azure-Deployment-via-Terraform]]
   - [[Backend-data-model]]
   - [[CiviForm-glossary]]
-  - [[Data-Dictionary]]
   - [[Data-versioning-model]]
-  - [[Database]]
   - [[Dependencies]]
   - [[Dev-troubleshooting]]
   - [[Development-standards]]
@@ -34,6 +32,9 @@
   - [[Testing]]
   - [[Troubleshooting]]
   - [[Updating-Can-I-Use-Lite]]
+- Database
+  - [[Database]]
+  - [[Data Dictionary|Data-Dictionary]]
 - Deploy System
   - [[Developer Guide|Deploy-System-Developer-Guide]]
   - [[Prerequisites and Developer Setup|Deploy-System-Prerequisites-and-Developer-Setup]]
