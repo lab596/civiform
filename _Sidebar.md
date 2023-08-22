@@ -35,8 +35,8 @@
   - [[Troubleshooting]]
   - [[Updating-Can-I-Use-Lite]]
 - Deploy System
-  - [[Deploy-System-Developer-Guide]]
-  - [[Deploy-System-Prerequisites-and-Developer-Setup]]
-  - [[Deploy-System-Technical-Overview]]
-  - [[Deploy-System-Troubleshooting]]
-  - [[Deploying-with-Dev-Azure]]
+  - [[Developer Guide|Deploy-System-Developer-Guide]]
+  - [[Prerequisites and Developer Setup|Deploy-System-Prerequisites-and-Developer-Setup]]
+  - [[Technical Overview|Deploy-System-Technical-Overview]]
+  - [[Troubleshooting|Deploy-System-Troubleshooting]]
+  - [[Deploying with Dev Azure|Deploying-with-Dev-Azure]]
