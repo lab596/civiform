@@ -19,7 +19,8 @@ It's possible to trigger a manual run from the main branch or another working br
 <details>
   <summary>Screenshots</summary>
   
-  ![Trigger manual deploy](../../.gitbook/assets/trigger-staging-deploy.png)
+  ![Trigger manual deploy](https://github.com/civiform/civiform/assets/195162/2f07f6d9-30be-4fb4-b7ea-d416cf9f84c2)
+
 </details>
 
 ### To trigger a manual deploy from a branch other than main:
@@ -34,9 +35,12 @@ It's possible to trigger a manual run from the main branch or another working br
 <details>
   <summary>Screenshots</summary>
   
-  ![Trust policy](../../.gitbook/assets/trust-policy.png)
-  ![Edit trust policy](../../.gitbook/assets/edit-trust-policy-staging.png)
-  ![Select deploy branch](../../.gitbook/assets/trigger-branch-deploy.png)
+  ![Trust policy](https://github.com/civiform/civiform/assets/195162/fa61f329-170a-46d4-bef7-c6bc0644e7d1)
+
+  ![Edit trust policy](https://github.com/civiform/civiform/assets/195162/4c17f26c-c921-4b88-a3b4-ebe4f294b4c5)
+
+  ![Select deploy branch](https://github.com/civiform/civiform/assets/195162/7c742254-67b3-4d91-9e55-a67b897f08ab)
+
 </details>
 
 ## How to check AWS logs (staging)
@@ -48,9 +52,10 @@ For all others, ask an Exygy employee to [create a user](https://us-east-1.conso
 <details>
   <summary>Screenshots</summary>
   
-  ![Add user](../../.gitbook/assets/create-user-aws-1.png)
-  ![Add user to user group](../../.gitbook/assets/create-user-aws-2.png)
-  ![Create user](../../.gitbook/assets/create-user-aws-3.png)
+  ![Add user](https://github.com/civiform/civiform/assets/195162/85c71442-ebcf-4aca-9bbf-af96cbaf5819)
+  ![Add user to user group](https://github.com/civiform/civiform/assets/195162/a498d10d-00fc-4461-a8b2-17815145f1c1)
+  ![Create user](https://github.com/civiform/civiform/assets/195162/dac264f3-c98e-40d6-b9b5-786d645fa3fa)
+
 </details>
 
 After securing a user account, follow this [link](https://us-east-1.console.aws.amazon.com/ecs/v2/clusters/exygy-civiform/services/exygy-civiform-service/logs?region=us-east-1) or manually navigate with the steps below.
