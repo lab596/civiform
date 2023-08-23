@@ -1,5 +1,18 @@
 # Schema
 
+```mermaid
+erDiagram
+    ACCOUNTS }|--o{ APPLICANTS : ""
+    ACCOUNTS ||--o{ TI_ORGANIZATIONS : ""
+    ACCOUNTS
+    APPLICANTS ||--|{ APPLICATIONS : ""
+    PROGRAMS ||--o{ APPLICATIONS : ""
+    VERSIONS_PROGRAMS ||--|{ VERSIONS : ""
+    VERSIONS_PROGRAMS ||--|{ PROGRAMS : ""
+    VERSIONS_QUESTIONS ||--|{ VERSIONS : ""
+    VERSIONS_QUESTIONS ||--|{ QUESTIONS : ""
+```
+
 ## public.accounts
 
 | Column                 | Type                 | Nullable | Description                         |
