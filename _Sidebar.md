@@ -30,12 +30,10 @@
   - [[Testing]]
   - [[Troubleshooting]]
   - [[Updating-Can-I-Use-Lite]]
+  - [[Database]]
 - System Design
   - [[Backend Data Model|System-Design-Backend-Data-Model]]
   - [[Data Versioning Model|Data-Versioning-Model]]
-- Database
-  - [[Database]]
-  - [[Data Dictionary|Data-Dictionary]]
 - Deploy System
   - [[Developer Guide|Deploy-System-Developer-Guide]]
   - [[Prerequisites and Developer Setup|Deploy-System-Prerequisites-and-Developer-Setup]]
