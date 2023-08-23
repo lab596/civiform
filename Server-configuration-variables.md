@@ -6,7 +6,7 @@ This document describes how these variables are managed in various locations in 
 
 Server variables are declared in [`env-var-docs.json`](https://github.com/civiform/civiform/blob/main/server/conf/env-var-docs.json). Configuration in that file determines their type and how they are set and consumed in the server. The generated [SettingsManifest](https://github.com/civiform/civiform/blob/main/server/app/services/settings/SettingsManifest.java) provides access configuration variable values at runtime in the server.
 
-Most variables are read from the environment when the server starts. However, variables with the `ADMIN_WRITABLE` mode are set by the CiviForm Admin role and stored in the database. The values for those variables are loaded from the database on [every request and cached on the Play Framework's Request object](https://github.com/civiform/civiform/blob/check-that-filters-inject-services-using-providers/server/app/filters/SettingsFilter.java#L48).
+Most variables are read from the environment when the server starts. However, variables with the `ADMIN_WRITABLE` mode are set by the CiviForm Admin role and stored in the database. The values for those variables are loaded from the database on [every request and cached on the Play Framework's Request object](https://github.com/civiform/civiform/blob/aca35dc91478733a85f95ed526235fa34300838c/server/app/filters/SettingsFilter.java#L48).
 
 For more info on variable configuration and the env-var-docs.json file see the [README](https://github.com/civiform/civiform/blob/main/env-var-docs/parser-package/README.md).
 
