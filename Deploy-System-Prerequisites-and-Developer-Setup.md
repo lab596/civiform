@@ -28,7 +28,7 @@ Note: These steps are AWS specific as there are not any current production deplo
 <details>
   <summary>Screenshots</summary>
 
-![Add AWS account from AWS Organizations page](../../../.gitbook/assets/add-account.png)
+![Add AWS account from AWS Organizations page](https://github.com/civiform/civiform/assets/195162/670be88c-4c80-4577-a5ef-8fa62872d0fa)
 
 </details>
 
@@ -36,7 +36,7 @@ Note: These steps are AWS specific as there are not any current production deplo
 <details>
   <summary>Screenshots</summary>
 
-![Add AWS account details](../../../.gitbook/assets/aws-add-dev-account-details.png)
+![Add AWS account details](https://github.com/civiform/civiform/assets/195162/8276d1de-4740-4f1e-9e35-20c43adb98ce)
 
 </details>
 
@@ -46,7 +46,7 @@ Note: These steps are AWS specific as there are not any current production deplo
 <details>
   <summary>Screenshots</summary>
 
-![Newly created AWS account in Organizational structure list](../../../.gitbook/assets/aws-new-dev-account-in-list.png)
+![Newly created AWS account in Organizational structure list](https://github.com/civiform/civiform/assets/195162/648c8b14-b079-459f-a86f-1900508f5bc5)
 
 </details>
 
@@ -54,8 +54,8 @@ Note: These steps are AWS specific as there are not any current production deplo
 <details>
   <summary>Screenshots</summary>
 
-![Move newly created AWS account - part 1](../../../.gitbook/assets/aws-move-dev-account-1.png)
-![Move newly created AWS account - part 2](../../../.gitbook/assets/aws-move-dev-account-2.png)
+![Move newly created AWS account - part 1](https://github.com/civiform/civiform/assets/195162/4117cfce-47bb-437f-b002-5993e40a5350)
+![Move newly created AWS account - part 2](https://github.com/civiform/civiform/assets/195162/ed949360-cf94-446b-90a3-287ea32b6deb)
 
 </details>
 
@@ -65,7 +65,7 @@ Note: These steps are AWS specific as there are not any current production deplo
 <details>
   <summary>Screenshots</summary>
 
-![Switch role dropdown](../../../.gitbook/assets/aws-switch-role-1.png)
+![Switch role dropdown](https://github.com/civiform/civiform/assets/195162/cb346e8e-a726-4043-8c76-2146a8fd353d)
 
 </details>
 
@@ -73,7 +73,7 @@ Note: These steps are AWS specific as there are not any current production deplo
 <details>
   <summary>Screenshots</summary>
 
-![Switch role screen](../../../.gitbook/assets/aws-switch-role-2.png)
+![Switch role screen](https://github.com/civiform/civiform/assets/195162/ae882e75-814d-47d4-8ebc-7de2239e6561)
 
 </details>
 
@@ -81,7 +81,8 @@ Note: These steps are AWS specific as there are not any current production deplo
 <details>
   <summary>Screenshots</summary>
 
-![Switch role details](../../../.gitbook/assets/aws-switch-role-3.png)
+![Switch role details](https://github.com/civiform/civiform/assets/195162/94431872-0c13-4c14-9f53-218c4cb69114)
+
 
 </details>
 
@@ -89,7 +90,7 @@ Note: These steps are AWS specific as there are not any current production deplo
 <details>
   <summary>Screenshots</summary>
 
-![Check new dev account number](../../../.gitbook/assets/aws-confirm-switched-roles.png)
+![Check new dev account number](https://github.com/civiform/civiform/assets/195162/cf758873-4444-49a4-a95e-21c0c7cf8464)
 
 </details>
 
@@ -97,8 +98,7 @@ Note: You only have to log in to your dev account one time. After that, it will 
 
 <details>
   <summary>Screenshots</summary>
-  
-  ![Role history in dropdown](../../../.gitbook/assets/aws-role-history.png)
+  ![Role history in dropdown](https://github.com/civiform/civiform/assets/195162/fe2fd688-d0af-49f6-85f0-474e7eb246b7)
 </details>
 
 ### Configure new AWS Account
@@ -109,22 +109,24 @@ Note: You only have to log in to your dev account one time. After that, it will 
 <details>
   <summary>Screenshots</summary>
 
-![Create Alias button](../../../.gitbook/assets/aws-create-account-alias.png)
+![Create Alias button](https://github.com/civiform/civiform/assets/195162/c7cb4f72-b1d6-4683-8f54-ba478ac0d70c)
 
 </details>
 
-3. Under "Preferred alias" input the name for your newly created dev account (eg. `jdoe-dev`) and click "Save changes". You will use this alias later when running `aws-nuke` to clear resources. AWS aliases must contain only lowercase letters, digits <details>
+3. Under "Preferred alias" input the name for your newly created dev account (eg. `jdoe-dev`) and click "Save changes". You will use this alias later when running `aws-nuke` to clear resources. AWS aliases must contain only lowercase letters, digits and hyphens and must be globally unique (if you get an error that the alias already exists, try another string). 
+
+<details>
   <summary>Screenshots</summary>
   and hyphens and must be globally unique (if you get an error that the alias already exists, try another string). 
 </details
-![Create Alias screen](../../../
-.gitbook/assets/aws-enter-preferred-alias.png)
+![Create Alias screen](https://github.com/civiform/civiform/assets/195162/6f4b37f7-5a47-4195-a64c-38798b45873c)
+
 
 4. Navigate to the [Request certificate page](https://us-east-1.console.aws.amazon.com/acm/home?region=us-east-1#/certificates/request). Keep the default "Request a public certificate" option selected and click the "Next" button.
 <details>
   <summary>Screenshots</summary>
 
-![Request public certificate page](../../../.gitbook/assets/aws-request-public-cert.png)
+![Request public certificate page](https://github.com/civiform/civiform/assets/195162/31776803-2119-4904-91ce-4dec88d30816)
 
 </details>
 
@@ -132,7 +134,7 @@ Note: You only have to log in to your dev account one time. After that, it will 
 <details>
   <summary>Screenshots</summary>
 
-![Enter certificate details page](../../../.gitbook/assets/aws-enter-cert-details-page.png)
+![Enter certificate details page](https://github.com/civiform/civiform/assets/195162/e112b7c7-f4e9-4efe-9401-81141aab556e)
 
 </details>
 
@@ -140,7 +142,7 @@ Note: You only have to log in to your dev account one time. After that, it will 
 <details>
   <summary>Screenshots</summary>
 
-![View certificate banner](../../../.gitbook/assets/aws-view-cert-banner.png)
+![View certificate banner](https://github.com/civiform/civiform/assets/195162/afae9820-bf0e-43c6-9d67-84272a835cb9)
 
 </details>
 
@@ -148,7 +150,7 @@ Note: You only have to log in to your dev account one time. After that, it will 
 <details>
   <summary>Screenshots</summary>
 
-![Certificate details page](../../../.gitbook/assets/aws-copy-cname-values.png)
+![Certificate details page](https://github.com/civiform/civiform/assets/195162/b55aaffa-c0db-4cf0-8c40-524bf8505a5b)
 
 </details>
 
@@ -156,9 +158,11 @@ Note: You only have to log in to your dev account one time. After that, it will 
 <details>
   <summary>Screenshots</summary>
 
-![Manage civiform.dev dns records](../../../.gitbook/assets/dns-manage-custom-records.png)
+![Manage civiform.dev dns records](https://github.com/civiform/civiform/assets/195162/b9849689-b42c-4065-adae-474ab5e94fd2)
 
-</details>9. Scroll to the bottom of this 
+</details>
+
+9. Scroll to the bottom of this 
 list and click "Create new record" (note: the UI is a little buggy you might have to click this twice to get an empty row to appear).
 <details>
   <summary>Screenshots</summary>
