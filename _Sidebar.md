@@ -2,7 +2,6 @@
   - [[New-Full-Time-SWE-Onboarding-Material]]
   - [[Development-standards]]
   - [[Getting-started]]
-  - [[Getting-started-with-Windows]]
   - [[Technical-contribution-guide]]
   - [[Technology-overview]]
   - [[Adding a new question type|Adding-a-new-question-type]]
