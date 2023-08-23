@@ -2,7 +2,7 @@
   - [[Getting Started|Getting-started]]
   - [[New Full Time SWE Onboarding Material|New-Full-Time-SWE-Onboarding-Material]]
   - [[Development Standards|Development-standards]]
-  - [[technical Contribution Guide|Technical-contribution-guide]]
+  - [[Technical Contribution Guide|Technical-contribution-guide]]
   - [[Technology Overview|Technology-overview]]
   - [[Adding a new question type|Adding-a-new-question-type]]
   - [[Authentication Providers|Authentication-Providers]]
