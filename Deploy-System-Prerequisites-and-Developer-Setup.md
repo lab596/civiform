@@ -211,20 +211,18 @@ list and click "Create new record" (note: the UI is a little buggy you might hav
 <details>
   <summary>Screenshots</summary>
 
-![Copy ARN value](../../../.gitbook/assets/aws-copy-arn.png)
+![Copy ARN value](https://github.com/civiform/civiform/assets/195162/d50f5e94-e4cb-4c8f-8c72-cfa10b9b9fa2)
 
 </details>
 
 3. Get the value for `aws_access_key_id` and `aws_secret_access_key` - Switch back to the AWS root account by clicking "Switch Back" from the dropdown menu in the upper right hand corner. - Click on your user in the [Users page](https://us-east-1.console.aws.amazon.com/iamv2/home?region=us-east-1#/users). - Go to the "Security credentials" tab on your user details page. - Scroll down to the "Access keys" section and click "Create access key" - Select "Command Line Interface (CLI)" from the options of "Access key best practices & alternatives", check the "I understand..." checkbox and click "Next" - Add a description tag if you want to (not required) and click "Create access key" - Copy the "Access key" and the "Secret access key" into your `aws-cli` config file as the values for `aws_access_key_id` and `aws_secret_access_key` respectively.
 <details>
   <summary>Screenshots</summary>
-
-![Security credentials screen](../../../.gitbook/assets/aws-security-credentials-screen.png)
-![Create access key button](../../../.gitbook/assets/aws-create-access-key.png)
-![Select CLI from Access key best practices & alternatives](../../../.gitbook/assets/aws-access-keys-select-cli.png)
-![Set optional description tag](../../../.gitbook/assets/aws-access-keys-set-description-tag.png)
-![Copy access keys](../../../.gitbook/assets/aws-access-keys.png)
-
+![Security credentials screen](https://github.com/civiform/civiform/assets/195162/2d72b704-b4f7-42b3-9000-e9de36ef83c7)
+![Create access key button](https://github.com/civiform/civiform/assets/195162/90f699d4-06db-4797-b12b-d6566013b70e)
+![Select CLI from Access key best practices & alternatives](https://github.com/civiform/civiform/assets/195162/e12838ee-2033-4c0d-90dd-b7afca002eda)
+![Set optional description tag](https://github.com/civiform/civiform/assets/195162/10d2ec9c-d955-402b-bfbf-0b548715c419)
+![Copy access keys](https://github.com/civiform/civiform/assets/195162/3723f432-65df-43d0-ae9b-730eaac1c02b)
 </details>
 
 ## Test AWS Authentication From Your Local Machine
@@ -350,7 +348,8 @@ Troubleshooting:
 <details>
   <summary>Screenshots</summary>
   
-  ![Copy DNS name](../../../.gitbook/assets/aws-load-balancer.png)
+![Copy DNS name](https://github.com/civiform/civiform/assets/195162/d69c2786-2da5-43a0-bbe4-df2d34c20923)
+
 </details>
 - The service health checks might also fail because something is wrong with the service. It could be a problem with the values set in `civiform_config.sh` or some other issue. To debug, go to the AWS Service URL output before the health checks, and click into the "Logs" tab to see the tasks that have run. From there, you can click into individual tasks and inspect the logs for those tasks.
 
