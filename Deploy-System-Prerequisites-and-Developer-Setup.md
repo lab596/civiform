@@ -2,7 +2,7 @@
 This page contains instructions for the setup you should go through before you start development work on the deploy system.
 It is intended as a step by step guide and you are encouraged to improve the documentation if any step is not straight forward in its current state.
 
-Note: These steps are AWS specific as there are not any current production deployments using Azure or any cloud provider other than AWS. Please update the documentation accordingly as this changes.
+Note: These steps are AWS specific as there are not any current production deployments using another cloud provider. Azure deployments are currently paused and Azure instructions here may not work. Please update the documentation accordingly as this changes.
 
 ## Install Required Tooling
 
@@ -366,7 +366,7 @@ TODO([#4324](https://github.com/civiform/civiform/issues/4324)) Remove the docum
 1. Required to be installed: bash, python, cloud provider CLIs.
 2. User needs to be authenticated with cloud provider.
    - AWS: run `aws configure` or export `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`
-   - Azure: run `az login`
+   - Azure (currently paused): run `az login`
 
 ## Development setup for development across git branches
 
@@ -410,7 +410,7 @@ For AWS:
 - AWS account
 - (optional) Auth0 Civiform-Staging
 
-For Azure:
+For Azure (currently paused):
 
 - Azure (must be added as a contributor AND owner)
 - AWS account (yes, we use it in Azure deploy)

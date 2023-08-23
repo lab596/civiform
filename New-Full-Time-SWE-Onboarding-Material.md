@@ -2,7 +2,6 @@
 ### Links
 
 * Seattle Staging: [https://civiformstage.seattle.gov](https://civiformstage.seattle.gov)
-* Azure Staging: [https://staging-azure.civiform.dev](https://staging-azure.civiform.dev)
 * AWS Staging: [https://staging-aws.civiform.dev](https://staging-aws.civiform.dev)
 * [Project Tracker and Product Roadmap](https://github.com/orgs/civiform/projects/1)
 
@@ -42,8 +41,8 @@ Ensure your team lead grants you access to the following resources.
   * civiform/civiform
   * civiform/docs
 * Deployment (optional)
-  * Azure
   * AWS
+  * Azure (currently paused)
 * Authentication (optional)
   * Auth0
   * LoginRadius

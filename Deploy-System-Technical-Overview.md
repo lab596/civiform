@@ -1,7 +1,7 @@
 
 ## Main technologies
 
-The deployment system was originally a set of bash scripts. To make the system more maintainable and scalable for development, it is being transitioned to python. Much of the current state of the code base is a result of this ongoing transition. We use terraform, an infrastructure as code tool, to define the infrastructure that a deployment requires and we support AWS and Azure as cloud providers which a civic entity can run their server on.
+The deployment system was originally a set of bash scripts. To make the system more maintainable and scalable for development, it is being transitioned to python. Much of the current state of the code base is a result of this ongoing transition. We use terraform, an infrastructure as code tool, to define the infrastructure that a deployment requires and we support AWS as the cloud provider which a civic entity can run their server on. Azure deployments are currently paused.
 
 ## Code locations
 
@@ -16,6 +16,6 @@ At a high level, the operations team of a civic entity does the following from t
 
 - provide various configuration values for the deployment (see an example config for aws staging [here](https://github.com/civiform/civiform-staging-deploy/blob/main/aws_staging_civiform_config.sh))
 - run the [setup script](https://github.com/civiform/civiform-deploy/blob/main/bin/setup) to start the deployment.
-  The script extracts the provided configuration. It declares the required infrastructure using terraform and brings up the infrastructure and server on the cloud provider(AWS or Azure).
+  The script extracts the provided configuration. It declares the required infrastructure using terraform and brings up the infrastructure and server on the cloud provider.
 
 We recommend also having a look at the [initial deployment instructions](https://docs.civiform.us/it-manual/sre-playbook/initial-deployment) in the it-manual. The it-manual contains instructions for the operations teams who are in charge of deploying a system for a civic entity. Reading it will make you see the system from a users' perspective.

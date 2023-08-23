@@ -19,7 +19,7 @@ See the [Setup Repositories](Deploy-System-Prerequisites-and-Developer-Setup#set
 The most common flow for developers is to run the deployment script on your local machine to test your changes to
 the `cloud-deploy-infra` repository. To do this, create a configuration file for your deployment and then run
 the setup script which pulls in the configuration values and applies them via Terraform to the deployment on your
-chosen cloud provider (AWS/Azure).
+chosen cloud provider (AWS is fully supported, Azure deployments are on pause).
 
 You have two options here:
 
@@ -38,9 +38,7 @@ Inside your `civiform-deploy` git repository and the branch you are working on, 
 1. Create a file named `civiform_config.sh` by copying [civiform_config.example.sh](https://github.com/civiform/civiform-deploy/blob/main/civiform_config.example.sh)
 2. Modify `APP_PREFIX` to be unique, which is used as a prefix for all resources created. For example, you might use your username.
 
-You can use the [AWS](https://github.com/civiform/civiform-staging-deploy/blob/main/aws_staging_civiform_config.sh) and
-[Azure](https://github.com/civiform/civiform-staging-deploy/blob/main/azure_staging_civiform_config.sh)
-config files as additional examples.
+You can use the [AWS](https://github.com/civiform/civiform-staging-deploy/blob/main/aws_staging_civiform_config.sh) config file as an additional example.
 
 TODO(#4324) complete the list of values that need to be changed as a minimal set for deployment to work (step 2).
 

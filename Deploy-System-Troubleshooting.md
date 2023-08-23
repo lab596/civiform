@@ -1,6 +1,3 @@
-
-For Azure specific steps, also see [Dev Azure](Deploying-with-Dev-Azure) page.
-
 ## I can't see my changes in the deployment
 
 Possible reasons when you are running the setup script from the `civiform-deploy` repository and your changes are in the `cloud-deploy-infra` repository:
@@ -33,3 +30,6 @@ To unlock, run:
  terraform -chdir=cloud/aws/templates/aws_oidc force-unlock LOCK_ID
 
 ```
+
+Azure deployments are currently paused. For Azure specific steps, also see [Dev Azure](Deploying-with-Dev-Azure) page.
+

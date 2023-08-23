@@ -15,13 +15,12 @@ NOTE: If the last successful snapshot for ALL environments is not the most recen
 
 #### From Deployment-bot
 
-Check the #ci Slack channel for the latest successful SNAPSHOT for AWS, Seattle, and Azure. This offers a history of previous auto pushes too.
+Check the #ci Slack channel for the latest successful SNAPSHOT for AWS and Seattle. This offers a history of previous auto pushes too.
 
 #### From Staging servers
 
 On the running servers inspect the DOM tree for `<head><meta name="civiform-build-tag">`. Its `content` attribute will only show the current SNAPSHOT for each though.
 
-* [staging-azure](https://staging-azure.civiform.dev/)
 * [staging-AWS](https://staging-aws.civiform.dev/)
 * [Seattle staging](https://civiformstage.seattle.gov/)
 

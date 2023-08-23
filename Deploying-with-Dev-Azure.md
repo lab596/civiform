@@ -1,3 +1,4 @@
+Note: Azure deployments are currently paused.
 
 ## Configuring Github Actions
 

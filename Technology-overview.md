@@ -21,6 +21,7 @@ The `View` classes are generally organized by which role(s) they are viewable by
 * Archimate Output [Diagram](https://drive.google.com/file/d/1qWBlDo8g5ZPydpt9NbC8lqfT3BwfhELo/view?usp=sharing)
 
 ## Azure Infra
+Note: Azure deployments are currently paused. Instructions maybe out of date.
 
 ### Azure App Service
 
