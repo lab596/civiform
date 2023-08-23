@@ -1,4 +1,3 @@
-# Java Debugging
 
 ## Setting up your debugger
 

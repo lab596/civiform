@@ -1,4 +1,3 @@
-# File storage backend
 
 CiviForm currently supports file uploads using AWS S3. There is an effort in progress to add support for Azure Blob Storage. Support for other storage services like Google Cloud Storage is planned. This document will provide an overview of the classes and interfaces that are used to implement support for new storage providers.
 

@@ -1,4 +1,3 @@
-# Technology overview
 
 ## Software Stack
 

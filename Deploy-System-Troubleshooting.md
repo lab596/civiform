@@ -1,4 +1,3 @@
-# Deploy System Troubleshooting
 
 For Azure specific steps, also see [Dev Azure](Deploying-with-Dev-Azure) page.
 

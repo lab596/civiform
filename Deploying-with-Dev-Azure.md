@@ -1,4 +1,3 @@
-# Deploying with Dev Azure
 
 ## Configuring Github Actions
 

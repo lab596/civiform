@@ -1,4 +1,3 @@
-# Prerequisites and developer setup
 
 This page contains instructions for the setup you should go through before you start development work on the deploy system.
 It is intended as a step by step guide and you are encouraged to improve the documentation if any step is not straight forward in its current state.

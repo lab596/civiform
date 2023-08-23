@@ -1,4 +1,3 @@
-# Technical contribution guide
 
 This is a guide for making technical contributions to CiviForm.
 

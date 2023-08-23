@@ -1,4 +1,3 @@
-# Updating caniuse-lite
 
 [caniuse-lite](https://github.com/browserslist/caniuse-lite) keeps an eye on our in-browser JS dependencies and let's us know when polyfills are no longer needed as browsers implement new features, among other helpful things.
 

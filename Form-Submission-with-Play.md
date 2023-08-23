@@ -1,4 +1,3 @@
-# Form submission with Play
 
 ## How to configure forms
 

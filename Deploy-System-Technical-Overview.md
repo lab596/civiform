@@ -1,4 +1,3 @@
-# Deploy system technical overview
 
 ## Main technologies
 

@@ -1,4 +1,3 @@
-# Frontend Development
 
 ## Everything is mostly Java.
 

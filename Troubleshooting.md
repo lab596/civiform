@@ -1,4 +1,3 @@
-# Troubleshooting
 ## ebeans
 
 ### "Model not enhanced"

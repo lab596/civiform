@@ -1,4 +1,3 @@
-# Testing
 
 This guide offers best practices for writing unit and browser tests for
 CiviForm, as well as debugging tips and practices.

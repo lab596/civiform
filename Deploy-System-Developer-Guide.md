@@ -1,4 +1,3 @@
-# Deploy system developer guide
 
 This page contains information for deploy system developers, which go beyond the initial one-off setup.
 You should have worked through the [Prerequisites & dev setup](Deploy-System-Prerequisites-and-Developer-Setup) already

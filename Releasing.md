@@ -1,4 +1,3 @@
-# Releasing
 
 See [Upgrading to a New Release](../../it-manual/sre-playbook/upgrading-to-a-new-release.md) for an overview of CiviForm release practices.
 

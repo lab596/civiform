@@ -1,4 +1,3 @@
-# New full-time SWE onboarding materials
 
 ### Links
 

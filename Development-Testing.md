@@ -1,4 +1,3 @@
-# Development testing
 
 Below are ways to locally evaluate how the system works with external resources.
 

@@ -1,4 +1,3 @@
-# Internationalization (i18n)
 
 ## Types of i18n in CiviForm
 

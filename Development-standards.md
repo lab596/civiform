@@ -1,4 +1,3 @@
-# Development standards
 
 ## Client-server concerns
 
