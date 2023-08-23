@@ -1,6 +1,6 @@
 - [[Home]]
-  - [[Adding-a-new-question-type|Adding-a-new-question-type]]
-  - [[Authentication-Providers]]
+  - [[Adding a new question type|Adding-a-new-question-type]]
+  - [[Authentication Providers|Authentication-Providers]]
   - [[Azure-Deployment-via-Terraform]]
   - [[Backend-data-model]]
   - [[CiviForm-glossary]]
