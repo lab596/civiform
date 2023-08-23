@@ -1,4 +1,5 @@
 - [[Home]]
+  - [[Getting-started]]
   - [[New-Full-Time-SWE-Onboarding-Material]]
   - [[Development-standards]]
   - [[Technical-contribution-guide]]
