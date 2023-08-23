@@ -98,7 +98,9 @@ Note: You only have to log in to your dev account one time. After that, it will 
 
 <details>
   <summary>Screenshots</summary>
-  ![Role history in dropdown](https://github.com/civiform/civiform/assets/195162/fe2fd688-d0af-49f6-85f0-474e7eb246b7)
+
+![Role history in dropdown](https://github.com/civiform/civiform/assets/195162/839416de-ebeb-401a-a51a-b634aaf9ed4d)
+
 </details>
 
 ### Configure new AWS Account
@@ -117,7 +119,6 @@ Note: You only have to log in to your dev account one time. After that, it will 
 
 <details>
   <summary>Screenshots</summary>
-  and hyphens and must be globally unique (if you get an error that the alias already exists, try another string). 
 </details
 ![Create Alias screen](https://github.com/civiform/civiform/assets/195162/6f4b37f7-5a47-4195-a64c-38798b45873c)
 
@@ -126,7 +127,7 @@ Note: You only have to log in to your dev account one time. After that, it will 
 <details>
   <summary>Screenshots</summary>
 
-![Request public certificate page](https://github.com/civiform/civiform/assets/195162/31776803-2119-4904-91ce-4dec88d30816)
+![Request public certificate page](https://github.com/civiform/civiform/assets/195162/a21678a4-2671-4663-9986-eee27b1f8eee)
 
 </details>
 
@@ -134,7 +135,7 @@ Note: You only have to log in to your dev account one time. After that, it will 
 <details>
   <summary>Screenshots</summary>
 
-![Enter certificate details page](https://github.com/civiform/civiform/assets/195162/e112b7c7-f4e9-4efe-9401-81141aab556e)
+![Enter certificate details page](https://github.com/civiform/civiform/assets/195162/a2c9dcc6-bf5b-4e11-85b6-be832b30f01c)
 
 </details>
 
@@ -150,7 +151,7 @@ Note: You only have to log in to your dev account one time. After that, it will 
 <details>
   <summary>Screenshots</summary>
 
-![Certificate details page](https://github.com/civiform/civiform/assets/195162/b55aaffa-c0db-4cf0-8c40-524bf8505a5b)
+![Certificate details page](https://github.com/civiform/civiform/assets/195162/e281f53b-2f8f-4738-bdf8-42d683c668a5)
 
 </details>
 
@@ -158,7 +159,7 @@ Note: You only have to log in to your dev account one time. After that, it will 
 <details>
   <summary>Screenshots</summary>
 
-![Manage civiform.dev dns records](https://github.com/civiform/civiform/assets/195162/b9849689-b42c-4065-adae-474ab5e94fd2)
+![Manage civiform.dev dns records](https://github.com/civiform/civiform/assets/195162/5c97f496-3d41-4ae5-83fd-8270d95d739c)
 
 </details>
 
@@ -167,14 +168,15 @@ list and click "Create new record" (note: the UI is a little buggy you might hav
 <details>
   <summary>Screenshots</summary>
   
-  ![Create new dns record](../../../.gitbook/assets/dns-create-new-record.png)
+![Create new dns record](https://github.com/civiform/civiform/assets/195162/4dab75c8-5d05-40bc-b353-687aa8a439f2)
+
 </details>
 
 10. Input the following details into the new row and click "Save": - Host name: Input the value of the "CNAME name" column you copied in step 7 above. Remove the `civiform.dev` part at the end of the string. Google Domains automatically appends this to whatever you enter. If you do not remove it, you will add a CNAME record for `<random_id>.<dev-account>.civiform.dev.civiform.dev` which is incorrect. - Type: Select "CNAME" - TTL: Leave the default value "3600" - Data: Input the value of the "CNAME value" column you copied in step 7 above.
 <details>
   <summary>Screenshots</summary>
 
-![Save new record details](../../../.gitbook/assets/dns-new-record-details.png)
+![Save new record details](https://github.com/civiform/civiform/assets/195162/70c86be0-08d8-4dd6-9273-b2e2f1383dba)
 
 </details>
 
@@ -182,7 +184,7 @@ list and click "Create new record" (note: the UI is a little buggy you might hav
 <details>
   <summary>Screenshots</summary>
 
-![Certificate successfully issued](../../../.gitbook/assets/aws-cert-issued.png)
+![Certificate successfully issued](https://github.com/civiform/civiform/assets/195162/bd4af2e6-aaf5-4d0c-9555-c51bc1547001)
 
 </details>
 
