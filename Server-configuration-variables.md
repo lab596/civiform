@@ -38,15 +38,13 @@ The variables in `env-var-docs.json` are also used to generate Markdown document
 
 Note that the server reads the values from `application.conf`, while the `SettingsManifest` is derived from the configured environment variables that are dereferenced in that file. This implies a tight (but unenforced) linkage between `application.conf` and `env-var-docs.json`. It is theoretically possible to add a config var to `env-var-docs.json` without *using* the value in `application.conf`, which would result in confusion. Furthermore, if a variable in `application.conf` does not have an overriding environment variable, then no accessor will be available from `SettingsManifest` and direct access to the `Config` object is required to retrieve the value (see [example](https://github.com/civiform/civiform/blob/b4d2a0c3e2b5f3d1244611afdf5ed81bd670a609/server/app/modules/EsriModule.java#L33) of fetching from `Config`).
 
-> [!NOTE]
-> The `SettingsManifest` is generated/updated by either of the following steps:
-> * Executing `bin/generate-settings-manifest`.
-> * Executing `bin/fmt`, which invokes the command above.
->
-> The related Markdown documentation is updated through the GitHub action [Env Variable Docs - Generate](https://github.com/civiform/civiform/actions/workflows/generate_env_var_docs_markdown_for_release.yaml), which is invoked by the [Create Release Workflow](https://github.com/civiform/civiform/actions/workflows/release.yaml).
+**Note 1:** The `SettingsManifest` is generated/updated by either of the following steps:
+* Executing `bin/generate-settings-manifest`.
+* Executing `bin/fmt`, which invokes the command above.
 
-> [!IMPORTANT]
-> If a config variable is added to `env-var-docs.json` with `"required": true`, then all existing deployment configs must be updated to include the new variable in order for the server to start. Consider not requiring the new config variable by providing a reasonable default value in `application.conf`.
+The related Markdown documentation is updated through the GitHub action [Env Variable Docs - Generate](https://github.com/civiform/civiform/actions/workflows/generate_env_var_docs_markdown_for_release.yaml), which is invoked by the [Create Release Workflow](https://github.com/civiform/civiform/actions/workflows/release.yaml).
+
+**Note 2:** If a config variable is added to `env-var-docs.json` with `"required": true`, then all existing deployment configs must be updated to include the new variable in order for the server to start. Consider not requiring the new config variable by providing a reasonable default value in `application.conf`.
 
 ## Setting values for deployments
 
