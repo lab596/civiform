@@ -203,7 +203,7 @@ Here, you'll find instructions for how to setup login.gov authentication. It ass
 
 7. Update `civiform_config.sh`: 
   * Set `CIVIFORM_APPLICANT_IDP` to `"login-gov"`.
-  * Set `APPLICANT_OIDC_DISCOVERY_URI` to `"https://idp.int.identitysandbox.gov/.well-known/openid-configuration"`. Mentioned [here](https://developers.login.gov/oidc/#auto-discovery). For production deployment that value will needs to be updated.
+  * Set `APPLICANT_OIDC_DISCOVERY_URI` to `"https://idp.int.identitysandbox.gov/.well-known/openid-configuration"`. Mentioned [here](https://developers.login.gov/oidc/#auto-discovery). For production deployment that value will needs to be updated to `"https://secure.login.gov/.well-known/openid-configuration"`.
 
 8. Redeploy CiviForm to pickup the updated value. Ensure that it starts healthy.
 
