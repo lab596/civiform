@@ -133,7 +133,7 @@ If authentication is not working - take a look at [Debugging tips](#debugging) b
 ### Generic OIDC
 
 You can use the generic OIDC implementation with any OIDC-based Authentication provider. 
-See the full config [in code](https://github.com/civiform/civiform/blob/d9ad85885b38d0176f85822fd472bd27cc398a95/server/conf/application.conf#L91-L115).
+See the full config [in code](https://github.com/civiform/civiform-deploy/blob/33fdb3971c7a3e245ddb169b979b495b12a144cc/civiform_config.example.sh#L340-382).
 
 Important values in your civiform_config.sh:
 ```sh
