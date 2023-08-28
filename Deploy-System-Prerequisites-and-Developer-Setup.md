@@ -383,7 +383,13 @@ All scripts currently do the following:
 3. Checkout remote repo (see [checkout.sh](https://github.com/civiform/civiform-deploy/blob/main/bin/lib/checkout.sh)) into checkout/ folder.
 4. Call [run.py](https://github.com/civiform/cloud-deploy-infra/blob/main/cloud/shared/bin/run.py)
 
-### Option 2: Using Docker (preferred going forward, but not fully ready yet)
+### Option 2: Updating checkout branch
+
+In cloud-deploy-infra, push the branch you're working on to github and push up commits that you'd like to test.
+
+In your forked civiform-deploy repo, update any references of `main` in your [checkout.sh](https://github.com/civiform/civiform-deploy/blob/main/bin/lib/checkout.sh) file to the branch of cloud-deploy-infra you're working on.
+
+### Option 3: Using Docker (preferred going forward, but not fully ready yet)
 
 Build a new docker image [civiform/civiform-cloud-deployment](https://hub.docker.com/r/civiform/civiform-cloud-deployment) on every commit to `cloud-deploy-infra` repo and use it to run commands.
 
