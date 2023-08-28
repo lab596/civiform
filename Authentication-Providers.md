@@ -23,6 +23,15 @@ To familiarize yourself with OIDC, it is useful to go through a setup using any 
    
 ## Admin Authentication
 
+Specify which authentication mechanism is supported by the Identity Provider for admininstrator access:
+
+```
+# OPTIONAL
+# Identity provider to use to authenticate and authorize admins.
+# Valid values are "adfs" and "generic-oidc-admin". Default is "adfs".
+# export CIVIFORM_ADMIN_IDP="adfs"
+```
+
 ### Azure AD and ADFS (OIDC)
 
 Azure Active Directory (Azure AD) is an identity provider designed by Microsoft. Active Directory Federation Services (ADFS) is a companion tool for single sign on.
@@ -120,6 +129,24 @@ To test admin authentication, try the following:
 2. Logout from CiviForm. In Azure, remove yourself from the security group and try logging in as an admin again. It should take you through the Microsoft login flow and redirect back to CiviForm. You should see "Your programs" and no tabs like "Programs" or "Questions".
 
 If authentication is not working - take a look at [Debugging tips](#debugging) below.
+
+### Generic OIDC
+
+You can use the generic OIDC implementation with any OIDC-based Authentication provider. 
+See the full config [in code](https://github.com/civiform/civiform/blob/d9ad85885b38d0176f85822fd472bd27cc398a95/server/conf/application.conf#L91-L115).
+
+Important values in your civiform_config.sh:
+```sh
+  export CIVIFORM_ADMIN_IDP='generic-oidc-admin' # tell civiform to use the generic OIDC adaptor, enabling the `ADMIN_OIDC_` config values
+  export ADMIN_OIDC_PROVIDER_NAME='provider_name' # this value will be appended to callback URLs
+  export ADMIN_OIDC_DISCOVERY_URI='https://{auth_provider_hostname}/.well-known/openid-configuration'  # provided by your OIDC provider
+ 
+  # Different modes (defaults shown):
+  export ADMIN_OIDC_RESPONSE_MODE='form_post'
+  export ADMIN_OIDC_RESPONSE_TYPE='id_token token'
+  export ADMIN_OIDC_ADDITIONAL_SCOPES=''
+```
+
 ## Applicant Authentication
 
 ### Oracle IDCS 
@@ -140,8 +167,6 @@ Important values in your civiform_config.sh:
   export APPLICANT_AUTH_PROTOCOL='oidc'   # this is a terraform configuration, to make sure resources are configured properly
   export CIVIFORM_APPLICANT_IDP='generic-oidc' # tell civiform to use the generic OIDC adaptor, enabling the `APPLICANT_OIDC_` config values
   export APPLICANT_OIDC_PROVIDER_NAME='provider_name' # this value will be appended to callback URLs
-  export APPLICANT_OIDC_CLIENT_ID='...'  # comes from a secrets manager
-  export APPLICANT_OIDC_CLIENT_SECRET='....'  # comes from a secrets manager
   export APPLICANT_OIDC_DISCOVERY_URI='https://{auth_provider_hostname}/.well-known/openid-configuration'  # provided by your OIDC provider
  
   # Different modes (defaults shown):
