@@ -50,7 +50,7 @@ The related Markdown documentation is updated through the GitHub action [Env Var
 
 Deployments may override default values in their `civiform_config.sh` file. An example file is available [here](https://github.com/civiform/civiform-deploy/blob/main/civiform_config.example.sh).
 
-**Exception**: If the variable contains a value which should be kept secret, it should *not* be set in the config file. Instead, follow the instructions [here](../Adding-secrets) to control the values via a secrets manager.
+**Exception**: If the variable contains a value which should be kept secret, it should *not* be set in the config file. Instead, follow the instructions [here](Adding-secrets) to control the values via a secrets manager.
 
 ## Settings affecting deployment
 
