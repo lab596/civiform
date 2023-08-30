@@ -52,7 +52,7 @@ With those values create the draft release with one of the following options.
 #### Option 2: Manually
 
 Setup:
-* Login to docker as the civiform user. If you don't have the password ask the #github-maintainers Slack channel
+* Login to docker. If you're an Exygy employee, login as the `civiformexygy` user. Otherwise, login with your DockerHub account if you're a part of the DockerHub `civiform` organization. Contact an Exygy engineer if you need to be added.
 * Generate a GH access token and provide it as [documented](https://github.com/civiform/civiform/blob/main/bin/create-release#L14).
 
 When ready run [create-release](https://github.com/civiform/civiform/blob/main/bin/create-release) script:
