@@ -6,3 +6,6 @@ The CiviForm deployment system supports such variables by storing the values in 
 
 This page describes the process of adding a secret to support a new configuration variable.
 
+## Sample PR
+
+Here is an example PR that demonstrates the steps described above: [Add new AWS secrets for admin OIDC](https://github.com/civiform/cloud-deploy-infra/pull/242).
